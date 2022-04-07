@@ -69,12 +69,124 @@ body {
 
     main {
 
-        & .first {
+        & .initial-page {
             position: relative;
             z-index: 0;
             width: 100vw;
             height: 100vh;
             background-image: url(./img/mainPic.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            & .content {
+                background-color: transparent;
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                color: #FFFFFF;
+
+                & .leftarrow {
+                    background-color: transparent;
+                    width: 100px;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    & .iconify {
+                        font-size: 6rem;
+                        cursor: pointer;
+                        -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, .7));
+                        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, .7));
+                        /* Similar syntax to box-shadow */
+                    }
+                }
+
+                & .slide1 {
+                    background-color: transparent;
+                    width: auto;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    display: flex;
+                    flex-direction: column;
+
+                    & .pitayapp {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+
+                        & .main-title {
+                            h1 {
+                                font-size: 10rem;
+                                font-style: italic;
+                                margin: 0;
+                                text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+                            }
+                        }
+
+                        & .description {
+                            text-align: center;
+                            font-size: 2rem;
+                        }
+                    }
+
+                    & .buttons {
+                        display: flex;
+                        margin-top: 8px;
+
+                        & button {
+                            margin: 0px 12px;
+                            background: #F9458E;
+                            mix-blend-mode: normal;
+                            border-radius: 7px;
+                            font-family: 'Lora';
+                            font-style: italic;
+                            font-weight: 700;
+                            font-size: 1.6rem;
+                            line-height: 36px;
+                            text-align: center;
+                            color: #FFFFFF;
+                            border: none;
+                            padding: 12px;
+                            cursor: pointer;
+                            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25)
+                        }
+                    }
+                }
+
+                & .rightarrow {
+                    background-color: transparent;
+                    width: 100px;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    & .iconify {
+                        font-size: 6rem;
+                        cursor: pointer;
+                        -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, .7));
+                        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, .7));
+                        /* Similar syntax to box-shadow */
+                    }
+                }
+            }
+        }
+
+        & .donations {
+            position: relative;
+            z-index: 0;
+            width: 100vw;
+            height: 100vh;
+            background-image: url(./img/donationsPic.jpg);
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
