@@ -69,7 +69,7 @@ body {
 
     main {
 
-        & .first {
+         /* & .first {
             position: relative;
             z-index: 0;
             width: 100vw;
@@ -99,10 +99,12 @@ body {
                     justify-content: center;
                     align-items: center;
 
-                    i {
+                    & .iconify {
                         font-size: 6rem;
                         cursor: pointer;
-                        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+                        -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, .7));
+                        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, .7));
+                        Similar syntax to box-shadow
                     }
                 }
 
@@ -168,13 +170,119 @@ body {
                     justify-content: center;
                     align-items: center;
 
-                    i {
+                    & .iconify {
                         font-size: 6rem;
                         cursor: pointer;
-                        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+                        -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, .7));
+                        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, .7));
+
                     }
                 }
             }
+
+        }*/
+
+        & .about-us {
+            position: relative;
+            z-index: 0;
+            width: 100vw;
+            height: 100vh;
+            background-image: url(./img/about-us-pic.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            & .downslider{
+                font-size: 3rem;
+                font-style: italic;
+                font-weight: 700;
+                margin: 0;
+                display: flex;
+                align-items: flex-end;
+                color: #F9458E;
+                text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+            }
+
+            & .content-about-us {
+                background-color: transparent;
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                color: #FFFFFF;
+
+                & .leftarrow {
+                    background-color: transparent;
+                    width: 100px;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    & .iconify {
+                        font-size: 6rem;
+                        cursor: pointer;
+                        -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, .7));
+                        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, .7));
+                        /* Similar syntax to box-shadow */
+                    }
+                }
+
+                & .slide-left-1 {
+                    background-color: transparent;
+                    width: auto;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+
+                    & .center-content {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+
+                        & .slide-title {
+                            & .h1-about-us {
+                                font-size: 10rem;
+                                font-style: italic;
+                                margin: 0;
+                                text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+                            }
+                        }
+
+                        & .sub-title {
+                            width: 70%;
+                            font-size: 2rem;
+                            text-align: right;
+                            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+                        }
+                    }
+
+                }
+
+                & .rightarrow {
+                    background-color: transparent;
+                    width: 100px;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    & .iconify {
+                        font-size: 6rem;
+                        cursor: pointer;
+                        -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, .7));
+                        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, .7));
+                        /* Similar syntax to box-shadow */
+                    }
+                }
+            }
+            
         }
     }
 
