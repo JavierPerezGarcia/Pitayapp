@@ -134,11 +134,38 @@ body {
 
                         & .knives {
                             font-size: 8rem;
+                            display: flex;
+
+                            & #left_knife {
+                                position: relative;
+                                left: 50px;
+                                -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, .7));
+                                filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, .7));
+                            }
+
+                            & #right_knife {
+                                position: relative;
+                                right: 50px;
+                                color: #F9458E;
+                                z-index: -1;
+                                transform: scaleX(-1);
+                                -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, .7));
+                                filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, .7));
+                            }
                         }
 
                         & .description {
                             text-align: center;
                             font-size: 2rem;
+                        }
+
+                        & .pink_text {
+                            color: #F9458E;
+                            text-align: center;
+                            font-size: 2rem;
+                            font-family: 'Lora';
+                            font-style: italic;
+                            font-weight: bold;
                         }
                     }
 
