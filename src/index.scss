@@ -69,7 +69,7 @@ body {
 
     main {
 
-         /* & .first {
+        /* & .first {
             position: relative;
             z-index: 0;
             width: 100vw;
@@ -196,17 +196,15 @@ body {
             justify-content: center;
             align-items: center;
 
-            & .empty{
+            & .empty {
                 width: 100%;
                 height: 20vh;
-            }    
-
-
+            }
 
             & .content-about-us {
                 background-color: transparent;
                 width: 100%;
-                height: auto;
+                height: 60vh;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
@@ -279,21 +277,21 @@ body {
                     }
                 }
 
-                & .popup-slider{
-                        width: 100%;
-                        height: 20vh;
-                        display: flex;
-                        align-items: flex-end;
-                        justify-content: flex-end;
-                        
-                    & .popup-content{
+                & .popup-slider {
+                    width: 100%;
+                    height: 20vh;
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: flex-end;
+
+                    & .popup-content {
                         width: 30%;
                         height: 50%;
                         display: flex;
                         justify-content: space-evenly;
                         align-items: center;
-                    
-                        & .popup-title{
+
+                        & .popup-title {
                             display: flex;
                             align-items: center;
                             font-family: 'Lora';
@@ -307,39 +305,39 @@ body {
                 }
             }
         }
-        
 
-        
-        
-        
-        
 
-        
-        
-        
-        
-        
-        
 
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 
     footer {
