@@ -14,7 +14,6 @@ body {
         & nav {
             position: absolute;
             z-index: 1;
-            background-color: transparent;
             width: 100%;
             height: 120px;
             display: flex;
@@ -31,6 +30,9 @@ body {
                     height: 4.5rem;
                     margin-left: 45px;
                     cursor: pointer;
+
+                    -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, .3));
+                    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, .3));
                 }
 
                 & .title {
@@ -63,7 +65,7 @@ body {
                     height: 100%;
                     justify-content: space-evenly;
                     align-items: center;
-                    text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.4);
+                    text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.3);
 
                     li {
                         cursor: pointer;
@@ -84,7 +86,6 @@ body {
             color: white;
 
             & .leftarrow {
-                background-color: transparent;
                 width: 100px;
                 height: 100%;
                 display: flex;
@@ -102,7 +103,6 @@ body {
             }
 
             & .rightarrow {
-                background-color: transparent;
                 width: 100px;
                 height: 100%;
                 display: flex;
@@ -134,7 +134,6 @@ body {
             align-items: center;
 
             & .content {
-                background-color: transparent;
                 width: 100%;
                 height: auto;
                 display: flex;
@@ -142,7 +141,6 @@ body {
                 color: #FFFFFF;
 
                 & .slide1 {
-                    background-color: transparent;
                     width: auto;
                     height: 100%;
                     display: flex;
@@ -196,6 +194,111 @@ body {
             }
         }
 
+        & .about-us {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            background-image: url(./img//aboutUsPic.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            & .empty {
+                width: 100%;
+                height: 20vh;
+            }
+
+            & .content-about-us {
+                width: 100%;
+                height: 60vh;
+                display: flex;
+                color: #FFFFFF;
+
+                & .slide-left-1 {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    & .center-content {
+                        width: 50%;
+                        height: auto;
+                        text-align: center;
+                        z-index: 2;
+
+                        & .slide-title {
+                            & .h1-about-us {
+                                font-size: 10rem;
+                                font-style: italic;
+                                margin: 0;
+                                text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+                            }
+                        }
+
+                        & .sub-title {
+                            h2 {
+                                margin: 0;
+                                margin-bottom: 30px;
+                                font-style: italic;
+                                width: 70%;
+                                font-weight: 600;
+                                font-size: 3.5rem;
+                                text-align: right;
+                                text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+                            }
+                        }
+                    }
+                }
+            }
+
+            & .popup {
+                width: 100%;
+                height: 20vh;
+                display: flex;
+                align-items: flex-end;
+                justify-content: flex-end;
+
+                & .popup-cont {
+                    width: 30%;
+                    height: 50%;
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    margin-bottom: 1.25rem;
+                    z-index: 1;
+
+                    & .popup-title {
+                        display: flex;
+                        align-items: center;
+                        font-family: 'Lora';
+                        font-style: italic;
+                        font-weight: 700;
+                        color: #F9458E;
+                        font-size: 2rem;
+                        margin-top: 30px;
+
+                        p {
+                            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+                        }
+                    }
+
+                    & .popup-svg {
+                        cursor: pointer;
+                        -webkit-filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, .3));
+                        filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, .3));
+                        /* Similar syntax to box-shadow */
+                    }
+                }
+            }
+        }
+
         & .donations {
             position: relative;
             //z-index: 1;
@@ -215,15 +318,13 @@ body {
                 height: 20vh;
             }
 
-            & .content {
-                background-color: transparent;
+            & .content-donations {
                 width: 100%;
                 height: 60vh;
                 display: flex;
                 color: #FFFFFF;
 
-                & .slide5 {
-                    background-color: transparent;
+                & .slide-left-2 {
                     width: 100%;
                     height: auto;
                     display: flex;
@@ -231,16 +332,16 @@ body {
                     justify-content: center;
                     align-items: center;
 
-                    & .pitayapp {
+                    & .center-content {
                         display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        width: 860px;
+                        width: 50%;
                         height: auto;
                         text-align: center;
                         z-index: 2;
 
                         & .donations-title {
+                            margin-bottom: 2rem;
+
                             h1 {
                                 font-size: 10rem;
                                 font-style: italic;
@@ -297,8 +398,8 @@ body {
 
                     & .popup-svg {
                         cursor: pointer;
-                        -webkit-filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, .7));
-                        filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, .7));
+                        -webkit-filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, .3));
+                        filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, .3));
                         /* Similar syntax to box-shadow */
                     }
 
@@ -323,7 +424,6 @@ body {
     }
 
     footer {
-        background-color: transparent;
         position: relative;
         width: 100%;
         height: 100px;
@@ -333,7 +433,6 @@ body {
         align-items: center;
 
         & .circles {
-            background-color: transparent;
             width: 250px;
             height: 100%;
             display: flex;
