@@ -192,19 +192,16 @@ body {
             background-position: center;
             background-repeat: no-repeat;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
 
-            & .downslider{
-                font-size: 3rem;
-                font-style: italic;
-                font-weight: 700;
-                margin: 0;
-                display: flex;
-                align-items: flex-end;
-                color: #F9458E;
-                text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-            }
+            & .empty{
+                width: 100%;
+                height: 20vh;
+            }    
+
+
 
             & .content-about-us {
                 background-color: transparent;
@@ -281,9 +278,68 @@ body {
                         /* Similar syntax to box-shadow */
                     }
                 }
+
+                & .popup-slider{
+                        width: 100%;
+                        height: 20vh;
+                        display: flex;
+                        align-items: flex-end;
+                        justify-content: flex-end;
+                        
+                    & .popup-content{
+                        width: 30%;
+                        height: 50%;
+                        display: flex;
+                        justify-content: space-evenly;
+                        align-items: center;
+                    
+                        & .popup-title{
+                            display: flex;
+                            align-items: center;
+                            font-family: 'Lora';
+                            font-style: italic;
+                            font-weight: 700;
+                            color: white;
+                            font-size: 2rem;
+                            margin-top: 30px;
+                        }
+                    }
+                }
             }
-            
         }
+        
+
+        
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     }
 
     footer {
@@ -303,6 +359,7 @@ body {
             display: flex;
             align-items: center;
             justify-content: space-between;
+            margin-bottom: 25px;
 
             & .circle {
                 background-color: rgb(255, 255, 255);
