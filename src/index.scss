@@ -186,7 +186,7 @@ body {
             z-index: 0;
             width: 100vw;
             height: 100vh;
-            background-image: url(./img/contact-bg.jpg);
+            background-image: url(./img/contact-bg.jpeg);
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -252,9 +252,12 @@ body {
                             svg{
                                 width: 70px;
                                 height: 70px;
+                                -webkit-filter: drop-shadow(2px 3px 0px rgba(249, 69, 142, 1));
+                                filter: drop-shadow(2px 3px 0px rgba(249, 69, 142, 1));
                                 border: rgb(255,0,236);
 border: radial-gradient(circle, rgba(255,0,236,1) 32%, rgba(253,29,244,0.5491946778711485) 53%, rgba(255,0,236,1) 71%);
                             }
+                            
                         }
                     }
 
