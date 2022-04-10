@@ -299,6 +299,121 @@ body {
             }
         }
 
+        & .how-it-works {
+            position: relative;
+            z-index: 0;
+            width: 100vw;
+            height: 100vh;
+            background-image: url(./img/howItWorks.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            & .content-how-it-works {
+                width: 100%;
+                height: 60vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #FFFFFF;
+
+                & .slide-right-1 {
+                    width: auto;
+                    height: 100%;
+                    display: flex;
+                    justify-content: end;
+                    align-items: center;
+                    display: flex;
+                    flex-direction: column;
+
+                    & .center-content {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+
+                        & .slide-title {
+                            h1 {
+                                font-size: 10rem;
+                                font-style: italic;
+                                margin: 0;
+                                text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+                            }
+                        }
+
+                        & .knives {
+                            font-size: 8rem;
+                            display: flex;
+                            margin-top: 20px;
+
+                            & #left_knife {
+                                position: relative;
+                                left: 50px;
+                                -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, .7));
+                                filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, .7));
+                            }
+
+                            & #right_knife {
+                                position: relative;
+                                right: 50px;
+                                color: #F9458E;
+                                z-index: -1;
+                                transform: scaleX(-1);
+                                -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, .7));
+                                filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, .7));
+                            }
+                        }
+
+                        & .description {
+                            text-align: center;
+                            font-size: 2rem;
+                        }
+
+                        & .pink_text {
+
+                            color: #F9458E;
+                            text-align: center;
+                            font-size: 2rem;
+                            font-family: 'Lora';
+                            font-style: italic;
+                            font-weight: bold;
+                            width: 20%;
+
+                            p {
+                                margin: 15px;
+                                text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                            }
+                        }
+                    }
+
+                    & .buttons {
+                        display: flex;
+                        margin-top: 8px;
+
+                        & button {
+                            margin: 0px 12px;
+                            background: #F9458E;
+                            mix-blend-mode: normal;
+                            border-radius: 7px;
+                            font-family: 'Lora';
+                            font-style: italic;
+                            font-weight: 700;
+                            font-size: 1.6rem;
+                            line-height: 36px;
+                            text-align: center;
+                            color: #FFFFFF;
+                            border: none;
+                            padding: 12px;
+                            cursor: pointer;
+                            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25)
+                        }
+                    }
+                }
+            }
+        }
+
         & .donations {
             position: relative;
             //z-index: 1;
