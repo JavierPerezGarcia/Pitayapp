@@ -85,7 +85,7 @@ body {
             justify-content: space-between;
             color: white;
 
-            & .leftarrow {
+            & .prev {
                 width: 100px;
                 height: 100%;
                 display: flex;
@@ -102,7 +102,7 @@ body {
                 }
             }
 
-            & .rightarrow {
+            & .next {
                 width: 100px;
                 height: 100%;
                 display: flex;
@@ -133,14 +133,14 @@ body {
             justify-content: center;
             align-items: center;
 
-            & .content {
+            & .initial-content {
                 width: 100%;
                 height: auto;
                 display: flex;
                 justify-content: center;
                 color: #FFFFFF;
 
-                & .slide1 {
+                & .initial-slide {
                     width: auto;
                     height: 100%;
                     display: flex;
@@ -148,14 +148,14 @@ body {
                     align-items: center;
                     flex-direction: column;
 
-                    & .pitayapp {
+                    & .center-content {
                         display: flex;
                         flex-direction: column;
                         align-items: center;
 
-                        & .main-title {
+                        & .initial-title {
                             h1 {
-                                font-size: 10rem;
+                                font-size: 9rem;
                                 font-style: italic;
                                 margin: 0;
                                 text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -172,7 +172,7 @@ body {
                         display: flex;
                         margin-top: 8px;
 
-                        & button {
+                        & .btn {
                             margin: 0px 12px;
                             background: #F9458E;
                             mix-blend-mode: normal;
@@ -188,6 +188,93 @@ body {
                             padding: 12px;
                             cursor: pointer;
                             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25)
+                        }
+                    }
+                }
+            }
+        }
+
+        & .how-it-works {
+            position: relative;
+            z-index: 0;
+            width: 100vw;
+            height: 100vh;
+            background-image: url(./img/howItWorks.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            & .content-how-it-works {
+                width: 100%;
+                height: 60vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #FFFFFF;
+
+                & .slide-right-1 {
+                    width: auto;
+                    height: 100%;
+                    display: flex;
+                    justify-content: end;
+                    align-items: center;
+                    display: flex;
+                    flex-direction: column;
+
+                    & .center-content {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+
+                        & .how-it-works-title {
+                            h1 {
+                                font-size: 9rem;
+                                font-style: italic;
+                                margin: 0;
+                                text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+                            }
+                        }
+
+                        & .knives {
+                            font-size: 8rem;
+                            display: flex;
+                            margin-top: 20px;
+
+                            & #left_knife {
+                                position: relative;
+                                left: 50px;
+                                -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, .7));
+                                filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, .7));
+                            }
+
+                            & #right_knife {
+                                position: relative;
+                                right: 50px;
+                                color: #F9458E;
+                                z-index: -1;
+                                transform: scaleX(-1);
+                                -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, .7));
+                                filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, .7));
+                            }
+                        }
+
+                        & .pink_text {
+
+                            color: #F9458E;
+                            text-align: center;
+                            font-size: 2rem;
+                            font-family: 'Lora';
+                            font-style: italic;
+                            font-weight: bold;
+                            width: 20%;
+
+                            p {
+                                margin: 15px;
+                                text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                            }
                         }
                     }
                 }
@@ -232,9 +319,9 @@ body {
                         text-align: center;
                         z-index: 2;
 
-                        & .slide-title {
-                            & .h1-about-us {
-                                font-size: 10rem;
+                        & .about-us-title {
+                            h1 {
+                                font-size: 9rem;
                                 font-style: italic;
                                 margin: 0;
                                 text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -264,7 +351,7 @@ body {
                 align-items: flex-end;
                 justify-content: flex-end;
 
-                & .popup-cont {
+                & .popup-container {
                     width: 30%;
                     height: 50%;
                     display: flex;
@@ -299,12 +386,12 @@ body {
             }
         }
 
-        & .how-it-works {
+        & .contact-with-us {
             position: relative;
             z-index: 0;
             width: 100vw;
             height: 100vh;
-            background-image: url(./img/howItWorks.jpg);
+            background-image: url(./img/contactPic.jpg);
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -312,21 +399,22 @@ body {
             justify-content: center;
             align-items: center;
 
-            & .content-how-it-works {
+            & .content-contact {
+                background-color: transparent;
                 width: 100%;
-                height: 60vh;
+                height: auto;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 color: #FFFFFF;
 
-                & .slide-right-1 {
+                & .slide-right-2 {
+                    background-color: transparent;
                     width: auto;
                     height: 100%;
                     display: flex;
-                    justify-content: end;
+                    justify-content: center;
                     align-items: center;
-                    display: flex;
                     flex-direction: column;
 
                     & .center-content {
@@ -334,85 +422,41 @@ body {
                         flex-direction: column;
                         align-items: center;
 
-                        & .slide-title {
-                            h1 {
-                                font-size: 10rem;
-                                font-style: italic;
-                                margin: 0;
-                                text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-                            }
+                        & h1 {
+                            font-size: 9rem;
+                            font-style: italic;
+                            margin: 0;
+                            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+
                         }
 
-                        & .knives {
-                            font-size: 8rem;
+                        & .social-media-logos {
                             display: flex;
-                            margin-top: 20px;
+                            justify-content: center;
+                            align-items: center;
+                            width: 100%;
 
-                            & #left_knife {
-                                position: relative;
-                                left: 50px;
-                                -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, .7));
-                                filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, .7));
+                            & .logo-bar {
+
+                                width: 100%;
+                                display: flex;
+                                justify-content: space-evenly;
+                                margin-top: 35px;
+
+                                svg {
+                                    width: 5.5rem;
+                                    height: 5.5rem;
+                                    cursor: pointer;
+                                    -webkit-filter: drop-shadow(5px 5px 2px rgba(249, 69, 142, 1));
+                                    filter: drop-shadow(5px 5px 2px rgba(249, 69, 142, 1));
+                                }
                             }
-
-                            & #right_knife {
-                                position: relative;
-                                right: 50px;
-                                color: #F9458E;
-                                z-index: -1;
-                                transform: scaleX(-1);
-                                -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, .7));
-                                filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, .7));
-                            }
-                        }
-
-                        & .description {
-                            text-align: center;
-                            font-size: 2rem;
-                        }
-
-                        & .pink_text {
-
-                            color: #F9458E;
-                            text-align: center;
-                            font-size: 2rem;
-                            font-family: 'Lora';
-                            font-style: italic;
-                            font-weight: bold;
-                            width: 20%;
-
-                            p {
-                                margin: 15px;
-                                text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-                            }
-                        }
-                    }
-
-                    & .buttons {
-                        display: flex;
-                        margin-top: 8px;
-
-                        & button {
-                            margin: 0px 12px;
-                            background: #F9458E;
-                            mix-blend-mode: normal;
-                            border-radius: 7px;
-                            font-family: 'Lora';
-                            font-style: italic;
-                            font-weight: 700;
-                            font-size: 1.6rem;
-                            line-height: 36px;
-                            text-align: center;
-                            color: #FFFFFF;
-                            border: none;
-                            padding: 12px;
-                            cursor: pointer;
-                            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25)
                         }
                     }
                 }
             }
         }
+
 
         & .donations {
             position: relative;
@@ -458,7 +502,7 @@ body {
                             margin-bottom: 2rem;
 
                             h1 {
-                                font-size: 10rem;
+                                font-size: 9rem;
                                 font-style: italic;
                                 margin: 0;
                                 text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.45), 0px 4px 4px rgba(0, 0, 0, 0.45);
@@ -547,7 +591,7 @@ body {
         justify-content: center;
         align-items: center;
 
-        & .circles {
+        & .dots {
             width: 250px;
             height: 100%;
             display: flex;
@@ -555,7 +599,7 @@ body {
             justify-content: space-between;
             margin-bottom: 25px;
 
-            & .circle {
+            & .dot {
                 background-color: rgb(255, 255, 255);
                 width: 25px;
                 height: 25px;
@@ -563,7 +607,7 @@ body {
                 border: 3px solid #979797;
             }
 
-            & .three {
+            & .main-pita {
                 border-color: white;
                 background-color: #F9458E;
             }
