@@ -1,4 +1,4 @@
-const DOM = {
+/*const DOM = {
     prevSection: document.querySelector(".prev"),
     nextSection: document.querySelector(".next"),
     dotDonate: document.querySelector(".donations-pita"),
@@ -53,4 +53,5 @@ function showSlides(id) {
 
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active";
-}
+}*/
+

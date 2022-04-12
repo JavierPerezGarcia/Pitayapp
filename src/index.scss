@@ -8,6 +8,7 @@ body {
     font-family: Lora, serif;
     width: 100vw;
     height: 100vh;
+    //font-size: 62.5%;
 
     header {
 
@@ -228,6 +229,7 @@ body {
                         display: flex;
                         flex-direction: column;
                         align-items: center;
+                        z-index: 2;
 
                         & .how-it-works-title {
                             h1 {
@@ -269,7 +271,7 @@ body {
                             font-family: 'Lora';
                             font-style: italic;
                             font-weight: bold;
-                            width: 20%;
+                            width: 20%; //60% cuando cambiamos al popup
 
                             p {
                                 margin: 15px;
@@ -278,6 +280,15 @@ body {
                         }
                     }
                 }
+            }
+
+            & .hidden-content {
+                position: absolute;
+                margin-top: 100px;
+                width: 1600px;
+                height: 815px;
+                background-color: #FFFFFF;
+                opacity: 0.65;
             }
         }
 
@@ -607,7 +618,7 @@ body {
                 border: 3px solid #979797;
             }
 
-            & .main-pita {
+            & .initial-pita {
                 border-color: white;
                 background-color: #F9458E;
             }
