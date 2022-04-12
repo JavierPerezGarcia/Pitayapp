@@ -55,3 +55,16 @@ function showSlides(id) {
     dots[slideIndex - 1].className += " active";
 }*/
 
+// var swiper = new Swiper("#main", {
+//     slidesPerView: 1,
+//     spaceBetween: 30,
+//     loop: true,
+//     pagination: {
+//         el: ".dots",
+//         clickable: true,
+//         },
+//     navigation: {
+//         nextEl: ".next",
+//         prevEl: ".prev",
+//         },
+//       });

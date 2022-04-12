@@ -10,6 +10,21 @@
   <script defer src="index.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
   <!--<script src="https://kit.fontawesome.com/737fcc8aee.js" crossorigin="anonymous"></script>-->
   <title>PitayappPrueba</title>
 </head>
@@ -34,126 +49,142 @@
     </nav>
   </header>
   <main>
-    <div class="arrows">
-      <div class="prev">
-        <span class="iconify" data-icon="dashicons:arrow-left-alt2"></span>
-      </div>
-      <div class="next">
-        <span class="iconify" data-icon="dashicons:arrow-right-alt2"></span>
-      </div>
-    </div>
-    <section class="slide donations">
-      <div class="empty"></div>
-      <div class="content-donations">
-        <div class="slide-left-2">
-          <div class="center-content">
-            <div class="donations-title">
-              <h1>¿Quieres apoyarnos?</h1>
-            </div>
-          </div>
+    <div class="swiper mySwiper">
+      <div class="arrows">
+        <div class="swiper-button-prev">
+          <span class="iconify" data-icon="dashicons:arrow-left-alt2"></span>
+        </div>
+        <div class="swiper-button-next">
+          <span class="iconify" data-icon="dashicons:arrow-right-alt2"></span>
         </div>
       </div>
-      <div class="popup">
-        <div class="popup-cont">
-          <div class="popup-svg">
-            <img src="./svg/popupLeft.svg" alt="">
-          </div>
-          <div class="popup-title">
-            <p>Pincha aquí para saber más</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="slide about-us">
-      <div class="empty"></div>
-      <div class="content-about-us">
-        <div class="slide-left-1">
-          <div class="center-content">
-            <div class="about-us-title">
-              <h1>Acerca de</h1>
-            </div>
-            <div class="sub-title">
-              <h2>PITAYAPP</h2>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="popup">
-        <div class="popup-container">
-          <div class="popup-title">
-            <p>Despliega para enterarte</p>
-          </div>
-          <div class="popup-svg">
-            <img src="./svg/popupRight.svg" alt="">
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="slide initial-page">
-      <div class="initial-content">
-        <div class="initial-slide">
-          <div class="center-content">
-            <div class="initial-title">
-              <h1>Pitayapp</h1>
-            </div>
-            <div class="description">
-              <p>El portal de comida vegetal para la gente que quiere cambiar el mundo.</p>
-            </div>
-          </div>
-          <div class="buttons">
-            <button class="btn register">REGÍSTRATE</button>
-            <button class="btn sign-in">INICIAR SESIÓN</button>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="slide how-it-works">
-      <div class="content-how-it-works">
-        <div class="slide-right-1">
-          <div class="center-content">
-            <div class="how-it-works-title">
-              <h1>¿Cómo funciona?</h1>
-            </div>
-            <div class="knives">
-              <span class="iconify" id="left_knife" data-icon="mdi:knife"></span>
-              <span class="iconify" id="right_knife" data-icon="mdi:knife"></span>
-            </div>
-            <div class="pink_text">
-              <p>Pulsa en los cuchillos</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- <div class="hidden-content">
-
-      </div> -->
-    </section>
-    <section class="slide contact-with-us">
-      <div class="content-contact">
-        <div class="slide-right-2">
-          <div class="center-content">
-            <h1>Contáctanos por</h1>
-            <div class="social-media-logos">
-              <div class="logo-bar">
-                <span class="iconify" id="instagram" data-width="70" data-icon="cib:instagram"></span>
-                <span class="iconify" data-width="70" data-icon="brandico:facebook-rect"></span>
-                <span class="iconify" data-width="70" data-icon="entypo:email"></span>
-                <span class="iconify" data-width="70" data-icon="brandico:linkedin-rect"></span>
-                <span class="iconify" data-icon="entypo-social:twitter-with-circle"></span>
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <section class="slide donations">
+            <div class="empty"></div>
+            <div class="content-donations">
+              <div class="slide-left-2">
+                <div class="center-content">
+                  <div class="donations-title">
+                    <h1>¿Quieres apoyarnos?</h1>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
+            <div class="popup">
+              <div class="popup-cont">
+                <div class="popup-svg">
+                  <img src="./svg/popupLeft.svg" alt="">
+                </div>
+                <div class="popup-title">
+                  <p>Pincha aquí para saber más</p>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
+        <div class="swiper-slide">
+          <section class="slide about-us">
+            <div class="empty"></div>
+            <div class="content-about-us">
+              <div class="slide-left-1">
+                <div class="center-content">
+                  <div class="about-us-title">
+                    <h1>Acerca de</h1>
+                  </div>
+                  <div class="sub-title">
+                    <h2>PITAYAPP</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="popup">
+              <div class="popup-container">
+                <div class="popup-title">
+                  <p>Despliega para enterarte</p>
+                </div>
+                <div class="popup-svg">
+                  <img src="./svg/popupRight.svg" alt="">
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="swiper-slide">
+          <section class="slide initial-page">
+            <div class="initial-content">
+              <div class="initial-slide">
+                <div class="center-content">
+                  <div class="initial-title">
+                    <h1>Pitayapp</h1>
+                  </div>
+                  <div class="description">
+                    <p>El portal de comida vegetal para la gente que quiere cambiar el mundo.</p>
+                  </div>
+                </div>
+                <div class="buttons">
+                  <button class="btn register">REGÍSTRATE</button>
+                  <button class="btn sign-in">INICIAR SESIÓN</button>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="swiper-slide">
+          <section class="slide how-it-works swiper-slide">
+            <div class="content-how-it-works">
+              <div class="slide-right-1">
+                <div class="center-content">
+                  <div class="how-it-works-title">
+                    <h1>¿Cómo funciona?</h1>
+                  </div>
+                  <div class="knives">
+                    <span class="iconify" id="left_knife" data-icon="mdi:knife"></span>
+                    <span class="iconify" id="right_knife" data-icon="mdi:knife"></span>
+                  </div>
+                  <div class="pink_text">
+                    <p>Pulsa en los cuchillos</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="hidden-content">
+
+            </div> -->
+          </section>
+        </div>
+        <div class="swiper-slide">
+          <section class="slide contact-with-us swiper-slide">
+            <div class="content-contact">
+              <div class="slide-right-2">
+                <div class="center-content">
+                  <h1>Contáctanos por</h1>
+                  <div class="social-media-logos">
+                    <div class="logo-bar">
+                      <span class="iconify" id="instagram" data-width="70" data-icon="cib:instagram"></span>
+                      <span class="iconify" data-width="70" data-icon="brandico:facebook-rect"></span>
+                      <span class="iconify" data-width="70" data-icon="entypo:email"></span>
+                      <span class="iconify" data-width="70" data-icon="brandico:linkedin-rect"></span>
+                      <span class="iconify" data-icon="entypo-social:twitter-with-circle"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
       </div>
-    </section>
+    </div>
+  </div>
   </main>
   <footer>
-    <div class="dots">
-      <div class="dot donations-pita"></div>
-      <div class="dot about-pita"></div>
-      <div class="dot initial-pita"></div>
-      <div class="dot how-works-pita"></div>
-      <div class="dot contact-pita"></div>
+    <div class="swiper-pagination">
+      <div class="dots">
+        <div class="dot donations-pita"></div>
+        <div class="dot about-pita"></div>
+        <div class="dot initial-pita"></div>
+        <div class="dot how-works-pita"></div>
+        <div class="dot contact-pita"></div>
+      </div>
     </div>
   </footer>
 </body>
