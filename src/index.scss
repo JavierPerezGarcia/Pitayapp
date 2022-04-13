@@ -14,7 +14,7 @@ body {
 
         & nav {
             position: absolute;
-            z-index: 1;
+            z-index: 2;
             width: 100%;
             height: 120px;
             display: flex;
@@ -78,6 +78,16 @@ body {
 
     main {
 
+        & #prev {
+            color: white;
+            margin-left: 15px;
+        }
+
+        & #next {
+            color: white;
+            margin-right: 15px;
+        }
+
         & .arrows {
             position: absolute;
             width: 100vw;
@@ -121,7 +131,7 @@ body {
             }
         }
 
-        & .initial-page {
+        & #initial-page {
             position: relative;
             z-index: 0;
             width: 100vw;
@@ -191,11 +201,21 @@ body {
                             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25)
                         }
                     }
+
+                    & .guest {
+                        color: #FFFFFF;
+                        font-size: 1.8rem;
+                        font-weight: bold;
+                        margin: 1rem;
+                        cursor: pointer;
+                        //text-decoration: underline;
+                        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+                    }
                 }
             }
         }
 
-        & .how-it-works {
+        & #how-it-works {
             position: relative;
             z-index: 0;
             width: 100vw;
@@ -292,7 +312,7 @@ body {
             }
         }
 
-        & .about-us {
+        & #about-us {
             position: relative;
             width: 100vw;
             height: 100vh;
@@ -397,7 +417,7 @@ body {
             }
         }
 
-        & .contact-with-us {
+        & #contact-with-us {
             position: relative;
             z-index: 0;
             width: 100vw;
@@ -468,8 +488,7 @@ body {
             }
         }
 
-
-        & .donations {
+        & #donations {
             position: relative;
             //z-index: 1;
             width: 100vw;
@@ -590,6 +609,24 @@ body {
                     }
                 }
             }
+        }
+
+        & .swiper-pagination-bullet {
+            background-color: rgb(255, 255, 255);
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            border: 2px solid #979797;
+            opacity: 1;
+        }
+
+        & .swiper-pagination-bullet-active {
+            border-color: white;
+            background-color: #F9458E;
+        }
+
+        & .swiper-pagination {
+            margin-bottom: 20px;
         }
     }
 
