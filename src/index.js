@@ -14,16 +14,21 @@
 }); */
 
 const swiper = new Swiper(".mySwiper", {
+    loop: true,
+    initialSlide: 2,
     cssMode: true,
-    spaceBetween: 50,
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
     },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
 });
 const swiper2 = new Swiper(".mySwiper2", {
     direction: "vertical",
-    spaceBetween: 50,
+    spaceBetween: 30,
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
