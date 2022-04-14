@@ -12,6 +12,7 @@ module.exports = {
   },
   rules: {
     quotes: ["error", "double"],
+    indent: 4,
     semi: ["error", "always"],
     "comma-dangle": ["error", "only-multiline"],
     "space-before-function-paren": ["error", "never"]
