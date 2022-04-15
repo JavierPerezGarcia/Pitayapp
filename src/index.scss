@@ -199,7 +199,7 @@ body {
                             padding: 12px;
                             cursor: pointer;
                             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-                            
+
                             & a {
                                 text-decoration: none;
                                 outline: none;
@@ -241,6 +241,7 @@ body {
                 justify-content: center;
                 align-items: center;
                 color: #FFFFFF;
+                position: relative;
 
                 & .slide-right-1 {
                     width: auto;
@@ -250,6 +251,7 @@ body {
                     align-items: center;
                     display: flex;
                     flex-direction: column;
+
 
                     & .center-content {
                         display: flex;
@@ -308,13 +310,115 @@ body {
                 }
             }
 
-            & .hidden-content {
-                position: absolute;
-                margin-top: 100px;
-                width: 1600px;
-                height: 815px;
-                background-color: #FFFFFF;
-                opacity: 0.65;
+            /* Aquí empieza el scss del slider cómo funciona,
+la parte del popup o slider vertical */
+            & .transparent {
+                width: 80vw;
+                height: 83vh;
+                background-color: rgb(255, 255, 255, 0.6);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 5rem;
+
+                & .first-container {
+                    width: 37.5%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: end;
+
+                    & .first-text {
+                        width: 85%;
+                        height: 80%;
+                        background-color: rgb(255, 255, 255, 0.9);
+                        border-radius: 1%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        padding: 3rem;
+                        box-sizing: border-box;
+
+                        & h2 {
+                            font-family: 'Lora';
+                            font-style: normal;
+                            font-weight: 700;
+                            display: flex;
+                            align-items: center;
+                            text-align: center;
+                            color: #663C11;
+                        }
+
+                        & p {
+                            font-family: 'Lora';
+                            font-style: normal;
+                            font-weight: 500;
+                            display: flex;
+                            align-items: center;
+
+                            color: #663C11;
+                        }
+                    }
+                }
+
+                & .second-container {
+                    width: 37.5%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+
+                    & .second-text {
+                        width: 85%;
+                        height: 80%;
+                        background-color: rgb(255, 255, 255, 0.9);
+                        border-radius: 1%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        padding: 3rem;
+                        box-sizing: border-box;
+
+                        & h2 {
+                            font-family: 'Lora';
+                            font-style: normal;
+                            font-weight: 700;
+                            display: flex;
+                            align-items: center;
+                            text-align: center;
+                            color: #663C11;
+                        }
+
+                        & p {
+                            font-family: 'Lora';
+                            font-style: normal;
+                            font-weight: 500;
+                            display: flex;
+                            align-items: center;
+
+                            color: #663C11;
+                        }
+                    }
+                }
+
+
+                & .space {
+                    width: 25%;
+                    height: 100%;
+
+                    & .secondary-title {
+                        font-family: 'Lora';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 3rem;
+                        display: flex;
+                        align-items: center;
+                        text-align: center;
+                        color: #F9458E;
+                        margin-top: 2rem;
+                    }
+                }
             }
         }
 
