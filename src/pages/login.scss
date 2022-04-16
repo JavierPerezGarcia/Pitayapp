@@ -8,6 +8,8 @@ body {
     font-family: Lora, serif;
     width: 100vw;
     height: 100vh;
+
+
     //font-size: 62.5%;
     & .login {
         width: 100%;
@@ -16,39 +18,88 @@ body {
         place-items: center;
     }
 
-    header {
+    & .login {
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-        & nav {
-            position: absolute;
-            z-index: 1;
-            width: 100%;
-            height: 120px;
+        & .container {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
 
             & .logo {
-                width: 250px;
+                width: 4.5rem;
+                height: 4.5rem;
+                cursor: pointer;
+            }
+
+            & .title {
+                color: #F9458E;
+                font-weight: bold;
+                font-size: 1.5rem;
+                margin-bottom: 3rem;
+
+                h2 {
+                    margin: 0;
+                }
+            }
+
+            & .form {
                 display: flex;
-                justify-content: space-around;
-                align-items: center;
+                flex-direction: column;
 
-                & img {
-                    width: 4.5rem;
-                    height: 4.5rem;
-                    margin-left: 45px;
-                    cursor: pointer;
-                    
-                }
-
-                & .title {
-                    color: #F9458E;
+                & .login-text {
+                    border: none;
+                    margin-bottom: 1rem;
                     font-weight: bold;
-                    font-size: 1.5rem;
-                    display: flex;
-                    align-items: flex-end;
-                    margin-left: 8px;
-                    visibility: visible;
                 }
+
+                & .input {
+                    background-color: #f7f7f7;
+                    border: none;
+                    border-radius: 0.5rem;
+                    height: 1rem;
+                    padding: 0.5rem;
+                    margin-bottom: 12px;
+                }
+
+                & .login-button {
+                    background-color: #F9458E;
+                    border-radius: 0.5rem;
+                    border: none;
+                    color: white;
+                    width: 100%;
+                    cursor: pointer;
+                    font-size: 0.9rem;
+                    font-weight: bold;
+                    height: 2.5rem;
+                    margin-top: 1rem;
+                    margin-bottom: 1rem;
+                }
+
+                & a {
+                    color: #F9458E;
+                    font-size: 0.8rem;
+                    text-align: center;
+                    text-decoration: none;
+                    margin-bottom: 0.5rem;
+                }
+            }
+
+            & .signup-button {
+                background-color: white;
+                border-radius: 0.5rem;
+                border: 1px solid #F9458E;
+                color: #F9458E;
+                width: 100%;
+                cursor: pointer;
+                font-size: 0.9rem;
+                font-weight: bold;
+                height: 2.5rem;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
             }
         }
     }
