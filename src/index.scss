@@ -78,7 +78,7 @@ body {
 
     main {
 
-        & #prev {
+     & #prev {
             color: white;
             margin-left: 15px;
         }
@@ -108,7 +108,7 @@ body {
                     cursor: pointer;
                     -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, .7));
                     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, .7));
-                    /* Similar syntax to box-shadow */
+                    // Similar syntax to box-shadow
                     z-index: 1;
                 }
             }
@@ -125,7 +125,7 @@ body {
                     cursor: pointer;
                     -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, .7));
                     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, .7));
-                    /* Similar syntax to box-shadow */
+                    // Similar syntax to box-shadow
                     z-index: 1;
                 }
             }
@@ -411,7 +411,7 @@ body {
                         cursor: pointer;
                         -webkit-filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, .3));
                         filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, .3));
-                        /* Similar syntax to box-shadow */
+                        // Similar syntax to box-shadow
                     }
                 }
             }
@@ -589,7 +589,7 @@ body {
                         cursor: pointer;
                         -webkit-filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, .3));
                         filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, .3));
-                        /* Similar syntax to box-shadow */
+                        // similar syntax to box-shadow
                     }
 
                     & .popup-title {
@@ -628,6 +628,8 @@ body {
         & .swiper-pagination {
             margin-bottom: 20px;
         }
+
+
     }
 
     footer {
