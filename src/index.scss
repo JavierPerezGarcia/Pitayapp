@@ -1,39 +1,63 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
 
+@mixin flex($justifyCont, $alignItems) {
+    display: flex;
+    justify-content: $justifyCont;
+    align-items: $alignItems;
+}
+
+@mixin sizing($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin spaces($margin, $padding) {
+    margin: $margin;
+    padding: $padding;
+}
+
+@mixin backgrounds($image, $bgSize, $bgPosition, $bgRepeat) {
+    background-image: $image;
+    background-size: $bgSize;
+    background-position: $bgPosition;
+    background-repeat: $bgRepeat;
+}
+
+@mixin fonts($fontFamily, $fontStyle, $fontWeight, $fontSize, $textAlign) {
+    font-family: $fontFamily;
+    font-style: $fontStyle;
+    font-weight: $fontWeight;
+    font-size: $fontSize;
+    text-align: $textAlign;
+}
+
 html {
     position: relative;
-    height: 100%;
+    @include sizing(none, 100%);
 }
 
 body {
     position: relative;
-    height: 100%;
+    @include sizing(none, 100%);
+    @include spaces(0, 0);
     background: #eee;
     font-family: Lora, serif;
-    //font-size: 14px;
     color: #000;
-    margin: 0;
-    padding: 0;
 
     header {
 
         & nav {
             position: absolute;
             z-index: 2;
-            width: 100%;
-            height: 120px;
-            display: flex;
-            justify-content: space-between;
+            @include sizing(45%, 7.5rem);
+            @include flex(space-between, none);
 
             & .logo {
-                width: 250px;
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
+                @include sizing(15.625rem, none);
+                @include flex(space-around, center);
 
                 & img {
-                    width: 4.5rem;
-                    height: 4.5rem;
+                    @include sizing(4.5rem, 4.5rem);
                     margin-left: 45px;
                     cursor: pointer;
 
@@ -43,34 +67,24 @@ body {
 
                 & .title {
                     color: white;
-                    font-weight: bold;
-                    font-size: 1.5rem;
-                    display: flex;
-                    align-items: flex-end;
+                    @include fonts('Lora', normal, bold, 1.5rem, none);
+                    @include flex(none, flex-end);
                     margin-left: 8px;
                     visibility: hidden;
                 }
             }
 
             & .menu {
-                width: 800px;
-                height: auto;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                @include sizing(65rem, auto);
+                @include flex(center, center);
 
                 & ul {
                     list-style: none;
                     color: white;
-                    font-weight: bold;
-                    font-size: 1.8rem;
-                    display: flex;
-                    margin: 0;
-                    padding: 0;
-                    width: 100%;
-                    height: 100%;
-                    justify-content: space-evenly;
-                    align-items: center;
+                    @include fonts('Lora', normal, bold, 1.8rem, none);
+                    @include flex(space-evenly, center);
+                    @include spaces(0, 0);
+                    @include sizing(100%, 100%);
                     text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.3);
 
                     li {
@@ -82,15 +96,14 @@ body {
     }
 
     & .swiper {
-        width: 100%;
-        height: 100%;
+        @include sizing(100%, 100%);
     }
 
     & .swiper-slide {
-        text-align: center;
-        font-size: 18px;
+        @include fonts('Lora', normal, none, 1.125rem, center);
         background: #fff;
 
+        /* WARNING: Don't touch this properties, don't include in mixins */
         /* Center slide text vertically */
         display: -webkit-box;
         display: -ms-flexbox;
@@ -112,7 +125,7 @@ body {
 
     & #prev {
         color: white;
-        width: 6rem;
+        @include sizing(6rem, auto);
 
         & .iconify {
             font-size: 6rem;
@@ -129,11 +142,7 @@ body {
 
     & #next {
         color: white;
-        width: 6rem;
-
-        background-image: url(./svg/rightArrow.svg) !important;
-        background-repeat: no-repeat;
-        background-size: contain;
+        @include sizing(6rem, auto);
 
         & .iconify {
             font-size: 6rem;
@@ -148,73 +157,88 @@ body {
         content: none;
     }
 
+    & #up-down {
+
+        top: 90%;
+        left: 1%;
+        position: absolute;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        img {
+            transform-origin: center;
+            //transform: rotate(-45deg);
+            transition: all 1.4s;
+        }
+
+        .infoSwipeUp {
+            @include fonts('Lora', italic, 700, 2rem, none);
+            color: #ffffff;
+            @include spaces(0px 0px 0px 15px, 0);
+        }
+
+        & .rotate {
+            transform-origin: center;
+            transform: rotate(135deg);
+            transition: all 1.4s;
+        }
+    }
+
+    & #up-down::after {
+        content: none;
+    }
+
     & #initial-page {
         position: relative;
         z-index: 0;
-        width: 100vw;
-        height: 100vh;
-        background-image: url(./img/mainPic.jpg);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include sizing(100vw, 100vh);
+        @include backgrounds(url(./img/mainPic.jpg), cover, center, no-repeat);
+        @include flex(center, center);
 
         & .initial-content {
-            width: 100%;
-            height: auto;
-            display: flex;
-            justify-content: center;
+            @include sizing(100%, auto);
+            @include flex(center, none);
             color: #FFFFFF;
 
             & .initial-slide {
-                width: auto;
-                height: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                @include sizing(auto, 100%);
+                @include flex(center, center);
                 flex-direction: column;
 
                 & .center-content {
-                    display: flex;
+                    @include flex(none, center);
                     flex-direction: column;
-                    align-items: center;
 
                     & .initial-title {
+
                         h1 {
-                            font-size: 9rem;
-                            font-style: italic;
-                            margin: 0;
+                            @include fonts('Lora', italic, none, 9rem, none);
+                            @include spaces(0, 0);
                             text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
                         }
                     }
 
                     & .description {
-                        text-align: center;
-                        font-size: 2rem;
+                        @include fonts('Lora', normal, none, 2rem, center);
                         text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
                     }
                 }
 
                 & .buttons {
                     display: flex;
-                    margin-top: 8px;
+                    margin-top: 0.5rem;
 
                     & .btn {
-                        margin: 0px 12px;
+                        @include spaces(0px 12px, 12px);
+                        @include fonts('Lora', italic, 700, 1.6rem, center);
                         background: #F9458E;
                         mix-blend-mode: normal;
                         border-radius: 7px;
-                        font-family: 'Lora';
-                        font-style: italic;
-                        font-weight: 700;
-                        font-size: 1.6rem;
                         line-height: 36px;
-                        text-align: center;
                         color: #FFFFFF;
                         border: none;
-                        padding: 12px;
                         cursor: pointer;
                         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25)
                     }
@@ -222,9 +246,8 @@ body {
 
                 & .guest {
                     color: #FFFFFF;
-                    font-size: 1.8rem;
-                    font-weight: bold;
-                    margin: 1rem;
+                    @include fonts('Lora', normal, bold, 1.8rem, none);
+                    @include spaces(1rem, 0);
                     cursor: pointer;
                     //text-decoration: underline;
                     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -236,44 +259,29 @@ body {
     & #how-it-works {
         position: relative;
         z-index: 0;
-        width: 100vw;
-        height: 100vh;
-        background-image: url(./img/howItWorks.jpg);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include sizing(100vw, 100vh);
+        @include backgrounds(url(./img/howItWorks.jpg), cover, center, no-repeat);
+        @include flex(center, center);
 
         & .content-how-it-works {
-            width: 100%;
-            height: 60vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include sizing(100%, 60vh);
+            @include flex(center, center);
             color: #FFFFFF;
 
             & .slide-right-1 {
-                width: auto;
-                height: 100%;
-                display: flex;
-                justify-content: end;
-                align-items: center;
-                display: flex;
+                @include sizing(auto, 100%);
+                @include flex(end, center);
                 flex-direction: column;
 
                 & .center-content {
-                    display: flex;
+                    @include flex(none, center);
                     flex-direction: column;
-                    align-items: center;
                     z-index: 2;
 
                     & .how-it-works-title {
                         h1 {
-                            font-size: 9rem;
-                            font-style: italic;
-                            margin: 0;
+                            @include fonts('Lora', italic, none, 9rem, none);
+                            @include spaces(0, 0);
                             text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
                         }
                     }
@@ -302,17 +310,12 @@ body {
                     }
 
                     & .pink_text {
-
                         color: #F9458E;
-                        text-align: center;
-                        font-size: 2rem;
-                        font-family: 'Lora';
-                        font-style: italic;
-                        font-weight: bold;
-                        width: 20%; //60% cuando cambiamos al popup
+                        @include fonts('Lora', italic, bold, 2rem, center);
+                        @include sizing(20%, none); //60% cuando cambiamos al popup
 
                         p {
-                            margin: 15px;
+                            @include spaces(1rem, 0);
                             text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
                         }
                     }
@@ -323,60 +326,44 @@ body {
 
     & #about-us {
         position: relative;
-        width: 100vw;
-        height: 100vh;
-        background-image: url(./img//aboutUsPic.jpg);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        display: flex;
+        @include sizing(100vw, 100vh);
+        @include backgrounds(url(./img/aboutUsPic.jpg), cover, center, no-repeat);
+        @include flex(center, center);
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
 
         & .empty {
-            width: 100%;
-            height: 20vh;
+            @include sizing(100%, 20vh);
         }
 
         & .content-about-us {
-            width: 100%;
-            height: 60vh;
+            @include sizing(100%, 60vh);
             display: flex;
             color: #FFFFFF;
 
             & .slide-left-1 {
-                width: 100%;
-                height: auto;
-                display: flex;
+                @include sizing(100%, auto);
+                @include flex(center, center);
                 flex-direction: column;
-                justify-content: center;
-                align-items: center;
 
                 & .center-content {
-                    width: 50%;
-                    height: auto;
+                    @include sizing(50%, auto);
                     text-align: center;
                     z-index: 2;
 
                     & .about-us-title {
                         h1 {
-                            font-size: 9rem;
-                            font-style: italic;
-                            margin: 0;
+                            @include fonts('Lora', italic, none, 9rem, none);
+                            @include spaces(0, 0);
                             text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
                         }
                     }
 
                     & .sub-title {
                         h2 {
-                            margin: 0;
-                            margin-bottom: 30px;
-                            font-style: italic;
-                            width: 70%;
-                            font-weight: 600;
-                            font-size: 3.5rem;
-                            text-align: right;
+                            @include spaces(0, 0);
+                            @include fonts('Lora', italic, 600, 3.5rem, center);
+                            margin-bottom: 25px;
+                            margin-left: 130px;
                             text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
                         }
                     }
@@ -385,34 +372,23 @@ body {
         }
 
         & .popup {
-            width: 100%;
-            height: 20vh;
-            display: flex;
-            align-items: flex-end;
-            justify-content: flex-end;
+            @include sizing(100%, 20vh);
+            @include flex(end, end);
 
             & .popup-container {
-                width: 30%;
-                height: 50%;
-                display: flex;
-                justify-content: space-evenly;
-                align-items: center;
-                margin-bottom: 1.25rem;
+                @include sizing(30%, 50%);
+                @include flex(space-evenly, center);
+                margin-bottom: 20px;
                 z-index: 1;
 
                 & .popup-title {
-                    display: flex;
-                    align-items: center;
-                    font-family: 'Lora';
-                    font-style: italic;
-                    font-weight: 700;
+                    @include flex(none, center);
+                    @include fonts('Lora', italic, 700, 2rem, none);
                     color: #F9458E;
-                    font-size: 2rem;
                     margin-top: 30px;
 
                     p {
                         text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
                     }
                 }
 
@@ -420,7 +396,7 @@ body {
                     cursor: pointer;
                     -webkit-filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, .3));
                     filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, .3));
-                    /* Similar syntax to box-shadow */
+                    //Similar syntax to box-shadow
                 }
             }
         }
@@ -429,63 +405,42 @@ body {
     & #contact-with-us {
         position: relative;
         z-index: 0;
-        width: 100vw;
-        height: 100vh;
-        background-image: url(./img/contactPic.jpg);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include sizing(100vw, 100vh);
+        @include flex(center, center);
+        @include backgrounds(url(./img/contactPic.jpg), cover, center, no-repeat);
 
         & .content-contact {
-            background-color: transparent;
-            width: 100%;
-            height: auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include sizing(100%, auto);
+            @include flex(center, center);
             color: #FFFFFF;
 
             & .slide-right-2 {
-                background-color: transparent;
-                width: auto;
-                height: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                @include sizing(auto, 100%);
+                @include flex(center, center);
                 flex-direction: column;
 
                 & .center-content {
-                    display: flex;
+                    @include flex(none, center);
                     flex-direction: column;
-                    align-items: center;
 
                     & h1 {
-                        font-size: 9rem;
-                        font-style: italic;
-                        margin: 0;
+                        @include fonts('Lora', italic, none, 9rem, none);
+                        @include spaces(0, 0);
                         text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-
                     }
 
                     & .social-media-logos {
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        width: 100%;
+                        @include flex(center, center);
+                        @include sizing(100%, none);
 
                         & .logo-bar {
 
-                            width: 100%;
-                            display: flex;
-                            justify-content: space-evenly;
+                            @include sizing(100%, none);
+                            @include flex(space-evenly, none);
                             margin-top: 35px;
 
                             svg {
-                                width: 5.5rem;
-                                height: 5.5rem;
+                                @include sizing(5.5rem, 5.5rem);
                                 cursor: pointer;
                                 -webkit-filter: drop-shadow(5px 5px 2px rgba(249, 69, 142, 1));
                                 filter: drop-shadow(5px 5px 2px rgba(249, 69, 142, 1));
@@ -500,40 +455,24 @@ body {
     & #donations {
         position: relative;
         //z-index: 1;
-        width: 100vw;
-        height: 100vh;
-        background-image: url(./img/donationsPic.jpg);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        display: flex;
+        @include sizing(100vw, 100vh);
+        @include flex(center, center);
+        @include backgrounds(url(./img/donationsPic.jpg), cover, center, no-repeat);
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        & .empty {
-            width: 100%;
-            height: 20vh;
-        }
 
         & .content-donations {
-            width: 100%;
-            height: 60vh;
+            @include sizing(100%, 60vh);
             display: flex;
             color: #FFFFFF;
 
             & .slide-left-2 {
-                width: 100%;
-                height: auto;
-                display: flex;
+                @include sizing(100%, auto);
+                @include flex(center, center);
                 flex-direction: column;
-                justify-content: center;
-                align-items: center;
 
                 & .center-content {
                     display: flex;
-                    width: 50%;
-                    height: auto;
+                    @include sizing(50%, auto);
                     text-align: center;
                     z-index: 2;
 
@@ -541,16 +480,14 @@ body {
                         margin-bottom: 2rem;
 
                         h1 {
-                            font-size: 9rem;
-                            font-style: italic;
-                            margin: 0;
+                            @include fonts('Lora', italic, none, 9rem, none);
+                            @include spaces(0, 0);
                             text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.45), 0px 4px 4px rgba(0, 0, 0, 0.45);
                         }
                     }
 
                     & .description {
-                        text-align: center;
-                        font-size: 2rem;
+                        @include fonts('Lora', normal, none, 2rem, center);
                     }
                 }
 
@@ -559,19 +496,14 @@ body {
                     margin-top: 8px;
 
                     & button {
-                        margin: 0px 12px;
+                        @include spaces(0px 12px, 12px);
+                        @include fonts('Lora', italic, 700, 1.6rem, center);
                         background: #F9458E;
                         mix-blend-mode: normal;
                         border-radius: 7px;
-                        font-family: 'Lora';
-                        font-style: italic;
-                        font-weight: 700;
-                        font-size: 1.6rem;
                         line-height: 36px;
-                        text-align: center;
                         color: #FFFFFF;
                         border: none;
-                        padding: 12px;
                         cursor: pointer;
                         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25)
                     }
@@ -580,162 +512,128 @@ body {
         }
 
         & .popup {
-            width: 100%;
-            height: 20vh;
-            display: flex;
-            align-items: flex-end;
+            @include sizing(100%, 20vh);
+            @include flex(none, end);
 
             & .popup-cont {
-                width: 30%;
-                height: 50%;
-                display: flex;
-                justify-content: space-evenly;
-                align-items: center;
-                margin-bottom: 1.25rem;
+                @include sizing(30%, 50%);
+                @include flex(space-evenly, center);
+                margin-bottom: 20px;
                 z-index: 1;
 
                 & .popup-svg {
                     cursor: pointer;
                     -webkit-filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, .3));
                     filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, .3));
-                    /* Similar syntax to box-shadow */
+                    //Similar syntax to box-shadow
                 }
 
                 & .popup-title {
-                    display: flex;
-                    align-items: center;
-                    font-family: 'Lora';
-                    font-style: italic;
-                    font-weight: 700;
+                    @include flex(none, center);
+                    @include fonts('Lora', italic, 700, 2rem, none);
                     color: white;
-                    font-size: 2rem;
                     margin-top: 30px;
 
                     p {
                         text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
                     }
                 }
             }
         }
     }
 
-    & .swiper-pagination-bullet {
+    & #navbar-pag>.swiper-pagination-bullet {
+        background-color: transparent;
+        @include sizing(auto, 3rem);
+        @include spaces(0, 0 1rem);
+        border-radius: 5px;
+        //border: 2px solid #979797;
+        opacity: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    & #navbar-pag>.swiper-pagination-bullet-active {
+        border: 2px solid white;
+        background-color: #f9458e;
+    }
+
+    & #horizontal-pag>.swiper-pagination-bullet {
         background-color: rgb(255, 255, 255);
-        width: 15px;
-        height: 15px;
+        @include sizing(1rem, 1rem);
         border-radius: 50%;
         border: 2px solid #979797;
         opacity: 1;
     }
 
-    & .swiper-pagination-bullet-active {
+    & #horizontal-pag>.swiper-pagination-bullet-active {
         border-color: white;
         background-color: #F9458E;
     }
 
-    & .swiper-pagination {
-        margin-bottom: 20px;
-    }
-
-    //font-size: 62.5%;
-
-    /* header {
-
-        & nav {
-            position: absolute;
-            z-index: 2;
-            width: 100%;
-            height: 120px;
-            display: flex;
-            justify-content: space-between;
-
-            & .logo {
-                width: 250px;
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
-
-                & img {
-                    width: 4.5rem;
-                    height: 4.5rem;
-                    margin-left: 45px;
-                    cursor: pointer;
-
-                    -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, .3));
-                    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, .3));
-                }
-
-                & .title {
-                    color: white;
-                    font-weight: bold;
-                    font-size: 1.5rem;
-                    display: flex;
-                    align-items: flex-end;
-                    margin-left: 8px;
-                    visibility: hidden;
-                }
-            }
-
-            & .menu {
-                width: 800px;
-                height: auto;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-
-                & ul {
-                    list-style: none;
-                    color: white;
-                    font-weight: bold;
-                    font-size: 1.8rem;
-                    display: flex;
-                    margin: 0;
-                    padding: 0;
-                    width: 100%;
-                    height: 100%;
-                    justify-content: space-evenly;
-                    align-items: center;
-                    text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.3);
-
-                    li {
-                        cursor: pointer;
-                    }
-                }
-            }
-        }
-    } */
-
-
-    /* footer {
-        position: relative;
-        width: 100%;
-        height: 100px;
-        bottom: 100px;
+    & #vertical-pag>.swiper-pagination-bullet,
+    #vertical-pag-2>.swiper-pagination-bullet {
+        background-color: rgb(255, 255, 255);
+        @include sizing(3rem, 3rem);
+        @include flex(center, center);
+        @include fonts('Lora', normal, bold, 2rem, none);
+        border-radius: 10%;
+        border: 2px solid #979797;
+        opacity: 1;
         display: flex;
         justify-content: center;
         align-items: center;
+    }
 
-        & .dots {
-            width: 250px;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 25px;
+    & #vertical-pag>.swiper-pagination-bullet-active,
+    #vertical-pag-2>.swiper-pagination-bullet-active {
+        color: white;
+        border-color: white;
+        background-color: #F9458E;
+    }
 
-            & .dot {
-                background-color: rgb(255, 255, 255);
-                width: 25px;
-                height: 25px;
-                border-radius: 50%;
-                border: 3px solid #979797;
-            }
+    & #horizontal-pag {
+        margin-bottom: 20px;
+        width: 40%;
+        left: 30%;
+        font-size: 0px;
+    }
 
-            & .initial-pita {
-                border-color: white;
-                background-color: #F9458E;
-            }
+    & #navbar-pag {
+        width: 55%;
+        height: 7.5rem;
+        left: 45%;
+        top: 0%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        span {
+            @include fonts('Lora', normal, bold, 1.8rem, none);
+            color: white;
         }
+    }
+
+    /* & .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+        margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 7px);
     } */
+
+    & #vertical-pag {
+        right: 1%;
+        top: 95%;
+        transform: translate3d(0px, -73%, 0);
+        color: #000000;
+    }
+
+    & #vertical-pag-2 {
+        /* right: none; */
+        left: 1%;
+        top: 95%;
+        transform: translate3d(0px, -73%, 0);
+        color: #000000;
+        z-index: 15;
+    }
+
+
 }
