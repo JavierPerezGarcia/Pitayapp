@@ -372,7 +372,7 @@ body {
         }
 
         & .popup {
-            @include sizing(100%, 20vh);
+            @include sizing(100%, 100%);
             @include flex(end, end);
 
             & .popup-container {
@@ -412,7 +412,7 @@ body {
         & .pink-background{
             position: relative;
             @include sizing(100vw, 100vh);
-            background-color: #F9458E;
+            background-color: rgba(249, 69, 142, 0.4);
         }
 
         & .empty {
