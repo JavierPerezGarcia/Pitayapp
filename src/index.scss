@@ -99,11 +99,6 @@ body {
         @include sizing(100%, 100%);
     }
 
-<<<<<<< HEAD
-     & #prev {
-            color: white;
-            margin-left: 15px;
-=======
     & .swiper-slide {
         @include fonts('Lora', normal, none, 1.125rem, center);
         background: #fff;
@@ -138,7 +133,6 @@ body {
             -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, .7));
             filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, .7));
             /* Similar syntax to box-shadow */
->>>>>>> 2b8ef5d0a9d971c6ac75a7d121c9cbe1d56f45ec
         }
     }
 
@@ -165,17 +159,6 @@ body {
 
     & #up-down {
 
-<<<<<<< HEAD
-                & .iconify {
-                    font-size: 6rem;
-                    cursor: pointer;
-                    -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, .7));
-                    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, .7));
-                    // Similar syntax to box-shadow
-                    z-index: 1;
-                }
-            }
-=======
         top: 90%;
         left: 1%;
         position: absolute;
@@ -183,7 +166,6 @@ body {
         display: flex;
         align-items: center;
         cursor: pointer;
->>>>>>> 2b8ef5d0a9d971c6ac75a7d121c9cbe1d56f45ec
 
         img {
             transform-origin: center;
@@ -191,22 +173,10 @@ body {
             transition: all 1.4s;
         }
 
-<<<<<<< HEAD
-                & .iconify {
-                    font-size: 6rem;
-                    cursor: pointer;
-                    -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, .7));
-                    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, .7));
-                    // Similar syntax to box-shadow
-                    z-index: 1;
-                }
-            }
-=======
         .infoSwipeUp {
             @include fonts('Lora', italic, 700, 2rem, none);
             color: #ffffff;
             @include spaces(0px 0px 0px 15px, 0);
->>>>>>> 2b8ef5d0a9d971c6ac75a7d121c9cbe1d56f45ec
         }
 
         & .rotate {
@@ -422,20 +392,11 @@ body {
                     }
                 }
 
-<<<<<<< HEAD
-                    & .popup-svg {
-                        cursor: pointer;
-                        -webkit-filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, .3));
-                        filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, .3));
-                        // Similar syntax to box-shadow
-                    }
-=======
                 & .popup-svg {
                     cursor: pointer;
                     -webkit-filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, .3));
                     filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, .3));
                     //Similar syntax to box-shadow
->>>>>>> 2b8ef5d0a9d971c6ac75a7d121c9cbe1d56f45ec
                 }
             }
         }
@@ -544,13 +505,7 @@ body {
                         color: #FFFFFF;
                         border: none;
                         cursor: pointer;
-<<<<<<< HEAD
-                        -webkit-filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, .3));
-                        filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, .3));
-                        // similar syntax to box-shadow
-=======
                         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25)
->>>>>>> 2b8ef5d0a9d971c6ac75a7d121c9cbe1d56f45ec
                     }
                 }
             }
@@ -604,20 +559,12 @@ body {
         background-color: #f9458e;
     }
 
-<<<<<<< HEAD
-        & .swiper-pagination {
-            margin-bottom: 20px;
-        }
-
-
-=======
     & #horizontal-pag>.swiper-pagination-bullet {
         background-color: rgb(255, 255, 255);
         @include sizing(1rem, 1rem);
         border-radius: 50%;
         border: 2px solid #979797;
         opacity: 1;
->>>>>>> 2b8ef5d0a9d971c6ac75a7d121c9cbe1d56f45ec
     }
 
     & #horizontal-pag>.swiper-pagination-bullet-active {
@@ -667,9 +614,6 @@ body {
             color: white;
         }
     }
-<<<<<<< HEAD
-}
-=======
 
     /* & .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
         margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 7px);
@@ -693,4 +637,3 @@ body {
 
 
 }
->>>>>>> 2b8ef5d0a9d971c6ac75a7d121c9cbe1d56f45ec
