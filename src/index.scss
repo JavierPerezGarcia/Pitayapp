@@ -70,7 +70,7 @@ body {
                     @include fonts('Lora', normal, bold, 1.5rem, none);
                     @include flex(none, flex-end);
                     margin-left: 8px;
-                    visibility: hidden;
+                    //visibility: hidden;
                 }
             }
 
