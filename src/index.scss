@@ -402,6 +402,53 @@ body {
         }
     }
 
+    & #swipe-up-about-us {
+        position: relative;
+        @include sizing(100vw, 100vh);
+        @include backgrounds(url(./img/aboutUsPic.jpg), cover, center, no-repeat);
+        @include flex(center, center);
+        flex-direction: column;
+
+        & .pink-background{
+            position: relative;
+            @include sizing(100vw, 100vh);
+            background-color: #F9458E;
+        }
+
+        & .empty {
+            @include sizing(100%, 20vh);
+        }
+
+        & .content-swipe-up-about-us {
+            @include sizing(100%, 60vh);
+            display: flex;
+            color: #FFFFFF;
+        }
+
+        & .popup-out{
+            @include sizing(100%, 20vh);
+            @include flex(end, end);
+
+            & .popup-out-container{
+
+            @include sizing(30%, 50%);
+            @include flex(space-evenly, center);
+            margin-bottom: 20px;
+            z-index: 1;
+
+            & .popup-out-title{
+
+                @include flex(none, center);
+                    @include fonts('Lora', italic, 700, 2rem, none);
+                    color: #FFFFFF;
+                    margin-top: 30px;
+            }
+
+            }
+        }
+
+    }
+
     & #contact-with-us {
         position: relative;
         z-index: 0;
