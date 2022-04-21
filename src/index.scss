@@ -422,7 +422,26 @@ body {
         & .content-swipe-up-about-us {
             @include sizing(100%, 60vh);
             display: flex;
+            flex-direction: row;
             color: #FFFFFF;
+
+            & .sub-title-team {
+               display: flex;
+               flex-direction: row;
+            }
+
+            & .swipe-up-center-content{
+               flex-direction: row;
+            }
+
+            & .team-photos{
+                background-color: #FFFFFF;
+                color: black;
+                border-radius: 100%;
+                @include flex(center, center);
+                @include sizing(400px, 400px);
+
+            }
         }
 
         & .popup-out{
