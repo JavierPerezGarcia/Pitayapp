@@ -407,64 +407,107 @@ body {
         @include sizing(100vw, 100vh);
         @include backgrounds(url(./img/aboutUsPic.jpg), cover, center, no-repeat);
         @include flex(center, center);
-        flex-direction: column;
+        // @include flex(space-between, center);
 
         & .pink-background{
-            position: relative;
+            position: fixed;
             @include sizing(100vw, 100vh);
             background-color: rgba(249, 69, 142, 0.4);
+            z-index: -1;
+
+            & .empty {
+                @include sizing(100%, 20vh);
+            }
+
+                & .slide-swipe-up{
+                    @include flex(space-around, center);
+                    margin-left: 120px;
+                    margin-right: 120px;
+
+                    & .swiper-up-left-content {
+                        display: flex;
+                        flex-direction: column;
+                        color: #FFFFFF;
+                        @include sizing(30%, 100%);
+
+                        & .about-us-title-team{
+                            font-weight: bold;
+                            display: flex;
+                            justify-content: flex-start;
+
+                            & h2{
+                                font-size: 2rem;
+                            }
+                        }
+
+                        & .sub-title-team {
+                            display: flex;
+                            flex-direction: column;
+                            text-align: left;
+
+                            & #paragraph {
+                                font-weight: bold;
+                                font-style: italic;
+                                font-size: 1.2rem;
+                            }
+                        }
+                    }
+
+                        & .swipe-up-center-content{
+                            // @include flex(center, center);
+                            flex-direction: column;
+                            color: white;
+                            @include sizing(10%, 100%);
+
+                            & .our-team-title{
+                                font-size: 2rem;
+                                font-weight: bold;
+                                font-style: italic;
+
+                            }
+
+                            & #github{
+                                margin-top: 30px;
+                                @include sizing(6.5rem, 6.5rem);
+                            }
+
+                        }
+
+                        & .circle-container{
+                            background-color: #FFFFFF;
+                            color: black;
+                            border-radius: 100%;
+                            @include sizing(400px, 400px);
+                            display: grid;
+                        }
+
+                }
+
         }
 
-        & .empty {
-            @include sizing(100%, 20vh);
-        }
+                    & .popup-out{
 
-        & .content-swipe-up-about-us {
-            @include sizing(100%, 60vh);
-            display: flex;
-            flex-direction: row;
-            color: #FFFFFF;
+                        @include sizing(100%, 20vh);
+                        @include flex(end, end);
 
-            & .sub-title-team {
-               display: flex;
-               flex-direction: row;
-            }
 
-            & .swipe-up-center-content{
-               flex-direction: row;
-            }
+                        & .popup-out-container{
 
-            & .team-photos{
-                background-color: #FFFFFF;
-                color: black;
-                border-radius: 100%;
-                @include flex(center, center);
-                @include sizing(400px, 4 00px);
+                        @include sizing(30%, 50%);
+                        @include flex(space-evenly, center);
+                        margin-bottom: 20px;
+                        z-index: 1;
 
-            }
-        }
+                        & .popup-out-title{
 
-        & .popup-out{
-            @include sizing(100%, 20vh);
-            @include flex(end, end);
+                            @include flex(none, center);
+                                @include fonts('Lora', italic, 700, 2rem, none);
+                                color: #FFFFFF;
+                                margin-top: 30px;
+                        }
 
-            & .popup-out-container{
-
-            @include sizing(30%, 50%);
-            @include flex(space-evenly, center);
-            margin-bottom: 20px;
-            z-index: 1;
-
-            & .popup-out-title{
-
-                @include flex(none, center);
-                    @include fonts('Lora', italic, 700, 2rem, none);
-                    color: #FFFFFF;
-                    margin-top: 30px;
-            }
-
-            }
-        }
+                        }
+                    }
 
     }
 
