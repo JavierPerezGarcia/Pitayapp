@@ -485,7 +485,7 @@ body {
                             gap: 15px;
 
                             & .div1 {
-                                background-color: #97F9EF;
+                                @include backgrounds(url(./img/javi-pitayappteam.jpg), cover, center, no-repeat);
                                 grid-row-start: 1;
                                 grid-column-start: 2;
                                 grid-row-end: 3;
@@ -493,7 +493,7 @@ body {
                                 border-radius: 100%;
                             }
                             & .div2 {
-                                background-color: #B75CB5;
+                                @include backgrounds(url(./img/antonio-pitayappteam.jpg), cover, center, no-repeat);
                                 grid-row-start: 1;
                                 grid-column-start: 4;
                                 grid-row-end: 3;
@@ -501,7 +501,7 @@ body {
                                 border-radius: 100%;
                             }
                             & .div3 {
-                                background-color: #F8A97C;
+                                @include backgrounds(url(./img/andrea-pitayappteam.jpg), cover, center, no-repeat);
                                 grid-row-start: 3;
                                 grid-column-start: 1;
                                 grid-row-end: 5;
@@ -517,7 +517,7 @@ body {
                                 border-radius: 100%;
                             }
                             & .div5 {
-                                background-color: #9F7BB8;
+                                @include backgrounds(url(./img/irene-pitayappteam.jpg), cover, center, no-repeat);
                                 grid-row-start: 3;
                                 grid-column-start: 5;
                                 grid-row-end: 5;
