@@ -478,7 +478,69 @@ body {
                             color: black;
                             border-radius: 100%;
                             @include sizing(400px, 400px);
+                            padding: 30px;
                             display: grid;
+                            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+                            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+                            gap: 15px;
+
+                            & .div1 {
+                                background-color: #97F9EF;
+                                grid-row-start: 1;
+                                grid-column-start: 2;
+                                grid-row-end: 3;
+                                grid-column-end: 4;
+                                border-radius: 100%;
+                            }
+                            & .div2 {
+                                background-color: #B75CB5;
+                                grid-row-start: 1;
+                                grid-column-start: 4;
+                                grid-row-end: 3;
+                                grid-column-end: 6;
+                                border-radius: 100%;
+                            }
+                            & .div3 {
+                                background-color: #F8A97C;
+                                grid-row-start: 3;
+                                grid-column-start: 1;
+                                grid-row-end: 5;
+                                grid-column-end: 3;
+                                border-radius: 100%;
+                            }
+                            & .div4 {
+                                background-color: #9BCB9C;
+                                grid-row-start: 3;
+                                grid-column-start: 3;
+                                grid-row-end: 5;
+                                grid-column-end: 5;
+                                border-radius: 100%;
+                            }
+                            & .div5 {
+                                background-color: #9F7BB8;
+                                grid-row-start: 3;
+                                grid-column-start: 5;
+                                grid-row-end: 5;
+                                grid-column-end: 7;
+                                border-radius: 100%;
+                            }
+                            & .div6 {
+                                background-color: #8B7855;
+                                grid-row-start: 5;
+                                grid-column-start: 2;
+                                grid-row-end: 7;
+                                grid-column-end: 4;
+                                border-radius: 100%;
+                            }
+                            & .div7 {
+                                background-color: #7E577F;
+                                grid-row-start: 5;
+                                grid-column-start: 4;
+                                grid-row-end: 7;
+                                grid-column-end: 6;
+                                border-radius: 100%;
+                            }
+
                         }
 
                 }
