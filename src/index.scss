@@ -436,7 +436,7 @@ body {
                             justify-content: flex-start;
 
                             & h2{
-                                font-size: 2rem;
+                                font-size: 2.5rem;
                             }
                         }
 
@@ -469,6 +469,13 @@ body {
                             & #github{
                                 margin-top: 30px;
                                 @include sizing(6.5rem, 6.5rem);
+                            }
+
+                            & .team-arrow{
+                                @include sizing(7.5rem, 7.5rem);
+                                transform: rotate(30deg);
+                                margin-top: 30px;
+                                margin-left: 40px;;
                             }
 
                         }
@@ -509,7 +516,7 @@ body {
                                 border-radius: 100%;
                             }
                             & .div4 {
-                                background-color: #9BCB9C;
+                                background-color: rgb(218, 218, 218);
                                 grid-row-start: 3;
                                 grid-column-start: 3;
                                 grid-row-end: 5;
@@ -533,7 +540,7 @@ body {
                                 border-radius: 100%;
                             }
                             & .div7 {
-                                background-color: #7E577F;
+                                background-color: rgb(218, 218, 218);
                                 grid-row-start: 5;
                                 grid-column-start: 4;
                                 grid-row-end: 7;
