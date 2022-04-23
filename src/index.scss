@@ -436,19 +436,16 @@ body {
                             justify-content: flex-start;
 
                             & h2{
-                                font-size: 2.5rem;
+                                font-size: 3rem;
                             }
                         }
 
                         & .sub-title-team {
-                            display: flex;
-                            flex-direction: column;
                             text-align: left;
 
                             & #paragraph {
                                 font-weight: bold;
-                                font-style: italic;
-                                font-size: 1.2rem;
+                                font-size: 1.4rem;
                             }
                         }
                     }
@@ -462,7 +459,6 @@ body {
                             & .our-team-title{
                                 font-size: 2rem;
                                 font-weight: bold;
-                                font-style: italic;
 
                             }
 
@@ -498,6 +494,32 @@ body {
                                 grid-row-end: 3;
                                 grid-column-end: 4;
                                 border-radius: 100%;
+
+                                & .javi-container{
+
+                                        @include sizing(100%, 100%);
+                                        @include flex(center, center);
+                                        border-radius: 100%;
+                                        opacity: 0;
+                                        transition: .6s ease;
+
+                                    & .javi {
+                                        color: white;
+                                        font-size: 20px;
+                                        text-align: center;
+                                        text-decoration: none;
+                                        margin: 20px;
+
+                                        }
+
+                                        &:hover{
+                                        background-color: #000;
+                                        opacity: 0.7;
+                                        transition: .5s ease-in-out;
+                                        }
+                                    }
+
+
                             }
                             & .div2 {
                                 @include backgrounds(url(./img/antonio-pitayappteam.jpg), cover, center, no-repeat);
@@ -506,7 +528,32 @@ body {
                                 grid-row-end: 3;
                                 grid-column-end: 6;
                                 border-radius: 100%;
+
+                                & .antonio-container{
+
+                                        @include sizing(100%, 100%);
+                                        @include flex(center, center);
+                                        border-radius: 100%;
+                                        opacity: 0;
+                                        transition: .6s ease;
+
+                                    & .antonio {
+                                        color: white;
+                                        font-size: 20px;
+                                        text-align: center;
+                                        text-decoration: none;
+                                        margin: 20px;
+
+                                        }
+
+                                        &:hover{
+                                        background-color: #000;
+                                        opacity: 0.7;
+                                        transition: .5s ease-in-out;
+                                        }
+                                    }
                             }
+
                             & .div3 {
                                 @include backgrounds(url(./img/andrea-pitayappteam.jpg), cover, center, no-repeat);
                                 grid-row-start: 3;
@@ -514,7 +561,32 @@ body {
                                 grid-row-end: 5;
                                 grid-column-end: 3;
                                 border-radius: 100%;
+
+                                & .andrea-container{
+
+                                        @include sizing(100%, 100%);
+                                        @include flex(center, center);
+                                        border-radius: 100%;
+                                        opacity: 0;
+                                        transition: .6s ease;
+
+                                    & .andrea {
+                                        color: white;
+                                        font-size: 20px;
+                                        text-align: center;
+                                        text-decoration: none;
+                                        margin: 20px;
+
+                                        }
+
+                                        &:hover{
+                                        background-color: #000;
+                                        opacity: 0.7;
+                                        transition: .5s ease-in-out;
+                                        }
+                                    }
                             }
+
                             & .div4 {
                                 background-color: rgb(218, 218, 218);
                                 grid-row-start: 3;
@@ -522,7 +594,10 @@ body {
                                 grid-row-end: 5;
                                 grid-column-end: 5;
                                 border-radius: 100%;
+
+
                             }
+
                             & .div5 {
                                 @include backgrounds(url(./img/irene-pitayappteam.jpg), cover, center, no-repeat);
                                 grid-row-start: 3;
@@ -530,7 +605,32 @@ body {
                                 grid-row-end: 5;
                                 grid-column-end: 7;
                                 border-radius: 100%;
+
+                                & .irene-container{
+
+                                        @include sizing(100%, 100%);
+                                        @include flex(center, center);
+                                        border-radius: 100%;
+                                        opacity: 0;
+                                        transition: .6s ease;
+
+                                    & .irene {
+                                        color: white;
+                                        font-size: 20px;
+                                        text-align: center;
+                                        text-decoration: none;
+                                        margin: 20px;
+
+                                        }
+
+                                        &:hover{
+                                        background-color: #000;
+                                        opacity: 0.7;
+                                        transition: .5s ease-in-out;
+                                        }
+                                    }
                             }
+
                             & .div6 {
                                 @include backgrounds(url(./img/regy-pitayappteam.jpg), cover, center, no-repeat);
                                 grid-row-start: 5;
@@ -538,6 +638,30 @@ body {
                                 grid-row-end: 7;
                                 grid-column-end: 4;
                                 border-radius: 100%;
+
+                                & .regina-container{
+
+                                        @include sizing(100%, 100%);
+                                        @include flex(center, center);
+                                        border-radius: 100%;
+                                        opacity: 0;
+                                        transition: .6s ease;
+
+                                    & .regina {
+                                        color: white;
+                                        font-size: 20px;
+                                        text-align: center;
+                                        text-decoration: none;
+                                        margin: 20px;
+
+                                        }
+
+                                        &:hover{
+                                        background-color: #000;
+                                        opacity: 0.7;
+                                        transition: .5s ease-in-out;
+                                        }
+                                    }
                             }
                             & .div7 {
                                 background-color: rgb(218, 218, 218);
@@ -546,6 +670,30 @@ body {
                                 grid-row-end: 7;
                                 grid-column-end: 6;
                                 border-radius: 100%;
+
+                                & .noelia-container{
+
+                                        @include sizing(100%, 100%);
+                                        @include flex(center, center);
+                                        border-radius: 100%;
+                                        opacity: 0;
+                                        transition: .6s ease;
+
+                                    & .noelia {
+                                        color: white;
+                                        font-size: 20px;
+                                        text-align: center;
+                                        text-decoration: none;
+
+
+                                        }
+
+                                        &:hover{
+                                        background-color: #000;
+                                        opacity: 0.7;
+                                        transition: .5s ease-in-out;
+                                        }
+                                    }
                             }
 
                         }
