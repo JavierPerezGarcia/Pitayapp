@@ -59,32 +59,209 @@ main {
                 }
             }
         }
+    }
 
-        & .popup {
-            @include m.sizing(100%, 20vh);
-            @include m.flex(none, end);
+    & #swipe-donations {
+        position: relative;
+        //z-index: 1;
+        @include m.sizing(100vw, 100vh);
+        @include m.flex(center, center);
+        @include m.backgrounds(url(./img/donationsPic.jpg), cover, center, no-repeat);
+        flex-direction: column;
 
-            & .popup-cont {
-                @include m.sizing(30%, 50%);
-                @include m.flex(space-evenly, center);
-                margin-bottom: 20px;
-                z-index: 1;
+        & .layer-white {
+            position: absolute;
+            @include m.sizing(100vw, 100vh);
+            background: rgba(255, 255, 255, 0.65);
+        }
 
-                & .popup-svg {
-                    cursor: pointer;
-                    -webkit-filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, .3));
-                    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, .3));
-                    //Similar syntax to box-shadow
+        & .layer-brown {
+            position: absolute;
+            @include m.sizing(100vw, 100vh);
+            background: rgba(102, 60, 17, 0.6);
+        }
+
+        & .content-swipe-donations {
+            @include m.sizing(100%, 75vh);
+            display: flex;
+            flex-direction: column;
+            color: #FFFFFF;
+            z-index: 2;
+
+            & .donations-explain {
+                @include m.sizing(100%, 60%);
+                //background-color: green;
+                @include m.flex(center, center);
+
+                & .box {
+                    @include m.spaces(0rem 3rem, 0);
                 }
 
-                & .popup-title {
-                    @include m.flex(none, center);
-                    @include m.fonts('Lora', italic, 700, 2rem, none);
-                    color: white;
-                    margin-top: 30px;
+                & .posit-left {
+                    @include m.sizing(25%, 70%);
+                    background-color: #FFF0D4;
+                    @include m.flex(center, center);
+
+                    img {
+                        @include m.sizing(6.5rem, 6.5rem);
+                        position: absolute;
+                    }
 
                     p {
-                        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                        @include m.fonts('Lora', normal, 600, 2rem, none);
+                        color: #663C11;
+                    }
+
+                    /* & .left-tape {}
+
+                    & .right-tape {} */
+                }
+
+                & .posit-center {
+
+                    & .iconify {
+                        position: absolute;
+                        @include m.sizing(5rem, 5rem);
+                        margin-bottom: 12.5rem;
+
+                        circle {
+                            fill: #F9458E;
+                        }
+
+                        ellipse {
+                            fill: white;
+                        }
+
+                        path {
+                            fill: #99AAB5;
+                        }
+                    }
+
+                    @include m.sizing(15%, 40%);
+                    background-color: #FFF0D4;
+                    @include m.flex(center, center);
+                    @include m.fonts('Lora', normal, bold, 1.3rem, none);
+                    color: #F9458E;
+                }
+
+                & .posit-right {
+                    @include m.sizing(25%, 70%);
+                    background-color: #FFF0D4;
+                }
+            }
+
+            & .methods-to-donate {
+                @include m.sizing(100%, 40%);
+                //background-color: aqua;
+                display: flex;
+                justify-content: center;
+
+                & .box {
+                    @include m.sizing(10%, 100%);
+                    @include m.flex(center, center);
+                    flex-direction: column;
+                    @include m.spaces(0rem 1rem, 0);
+                    transition: all 1s;
+
+                    & .title {
+                        margin: 0;
+                        @include m.fonts('Lora', italic, bold, 2rem, none);
+                        color: #FFF0D4;
+                        text-shadow: 4px 4px 0px #663C11;
+                        transition: all 1s;
+                    }
+
+                    & .btn {
+                        @include m.sizing(9.25rem, 9.25rem);
+                        @include m.flex(center, center);
+                        @include m.spaces(1.5rem 0rem 0rem 0rem, 0);
+                        background-color: #FFF0D4;
+                        border-radius: 2.2rem;
+                        box-shadow: 12px 12px 0px #663C11;
+                        transition: all 1s;
+
+                        svg {
+                            @include m.sizing(5.5rem, 6rem);
+                        }
+                    }
+
+                    /* & .btn:hover {
+                        transform: translate(12px, 12px);
+                        box-shadow: none;
+                        transition: all 1s;
+                    } */
+
+                    & .paypal {
+
+                        & .iconify {
+
+                            & path:nth-child(1) {
+                                fill: #663C11;
+                            }
+
+                            & path:nth-child(2) {
+                                fill: #663C11;
+                            }
+
+                            & path:nth-child(3) {
+                                fill: #ffffff;
+                            }
+
+                            & path:last-child {
+                                fill: #663C11;
+                            }
+                        }
+                    }
+
+                    & .ko-fi {
+                        svg {
+                            color: #663C11;
+                        }
+                    }
+
+                    & .klarna {
+                        svg {
+                            color: #663C11;
+                        }
+                    }
+
+                    & .credit {
+
+                        & .iconify {
+
+                            & path:nth-child(1) {
+                                fill: #663C11;
+                            }
+
+                            & path:nth-child(2) {
+                                fill: #ffffff;
+                            }
+
+                            & path:nth-child(3) {
+                                fill: #ffffff;
+                            }
+                        }
+                    }
+                }
+
+                & .box:hover {
+                    transition: all 1s;
+
+                    & .title {
+                        transform: translate(12px, 4px);
+                        text-shadow: none;
+                        //transition: all 1.2s;
+                        //color: #ffffff;
+                        font-size: 2rem;
+                        background-color: #663C11;
+                        padding: 0.5rem 1rem;
+                        border-radius: 10px;
+                    }
+
+                    & .btn {
+                        transform: translate(12px, 12px);
+                        box-shadow: none;
+                        //transition: all 1.2s;
                     }
                 }
             }

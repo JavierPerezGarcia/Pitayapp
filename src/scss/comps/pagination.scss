@@ -24,6 +24,7 @@ body {
         border-radius: 50%;
         border: 2px solid #979797;
         opacity: 1;
+        @include m.spaces(0px 10px, 0);
     }
 
     & #horizontal-pag>.swiper-pagination-bullet-active {
