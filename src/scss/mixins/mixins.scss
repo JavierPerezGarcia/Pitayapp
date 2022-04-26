@@ -1,0 +1,30 @@
+@mixin flex($justifyCont, $alignItems) {
+    display: flex;
+    justify-content: $justifyCont;
+    align-items: $alignItems;
+}
+
+@mixin sizing($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin spaces($margin, $padding) {
+    margin: $margin;
+    padding: $padding;
+}
+
+@mixin backgrounds($image, $bgSize, $bgPosition, $bgRepeat) {
+    background-image: $image;
+    background-size: $bgSize;
+    background-position: $bgPosition;
+    background-repeat: $bgRepeat;
+}
+
+@mixin fonts($fontFamily, $fontStyle, $fontWeight, $fontSize, $textAlign) {
+    font-family: $fontFamily;
+    font-style: $fontStyle;
+    font-weight: $fontWeight;
+    font-size: $fontSize;
+    text-align: $textAlign;
+}
