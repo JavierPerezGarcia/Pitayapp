@@ -57,7 +57,7 @@ let titleHeader = document.querySelector(".title");
 (function () {
     swipeUpLeft.addEventListener('click', changeProps) //swiper2.navigation.nextEl
     //swipeUpLeft.addEventListener('keydown', changeProps)
-    showTitle();
+    // showTitle();
 })();
 
 
