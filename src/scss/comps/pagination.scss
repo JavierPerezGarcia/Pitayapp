@@ -1,0 +1,90 @@
+@use '../mixins/mixins.scss'as m;
+
+body {
+    & #navbar-pag>.swiper-pagination-bullet {
+        background-color: transparent;
+        @include m.sizing(auto, 3rem);
+        @include m.spaces(0, 0 1rem);
+        border-radius: 5px;
+        //border: 2px solid #979797;
+        opacity: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    & #navbar-pag>.swiper-pagination-bullet-active {
+        border: 2px solid white;
+        background-color: #f9458e;
+    }
+
+    & #horizontal-pag>.swiper-pagination-bullet {
+        background-color: rgb(255, 255, 255);
+        @include m.sizing(1rem, 1rem);
+        border-radius: 50%;
+        border: 2px solid #979797;
+        opacity: 1;
+    }
+
+    & #horizontal-pag>.swiper-pagination-bullet-active {
+        border-color: white;
+        background-color: #F9458E;
+    }
+
+    & #vertical-pag>.swiper-pagination-bullet,
+    #vertical-pag-2>.swiper-pagination-bullet {
+        background-color: rgb(255, 255, 255);
+        @include m.sizing(3rem, 3rem);
+        @include m.flex(center, center);
+        @include m.fonts('Lora', normal, bold, 2rem, none);
+        border-radius: 10%;
+        border: 2px solid #979797;
+        opacity: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    & #vertical-pag>.swiper-pagination-bullet-active,
+    #vertical-pag-2>.swiper-pagination-bullet-active {
+        color: white;
+        border-color: white;
+        background-color: #F9458E;
+    }
+
+    & #horizontal-pag {
+        margin-bottom: 20px;
+        width: 40%;
+        left: 30%;
+        font-size: 0px;
+    }
+
+    & #navbar-pag {
+        width: 55%;
+        height: 7.5rem;
+        left: 45%;
+        top: 0%;
+        @include m.flex(space-evenly, center);
+
+        span {
+            @include m.fonts('Lora', normal, bold, 1.8rem, none);
+            color: white;
+        }
+    }
+
+    & #vertical-pag {
+        right: 1%;
+        top: 95%;
+        transform: translate3d(0px, -73%, 0);
+        color: #000000;
+    }
+
+    & #vertical-pag-2 {
+        // right: none;
+        left: 1%;
+        top: 95%;
+        transform: translate3d(0px, -73%, 0);
+        color: #000000;
+        z-index: 15;
+    }
+}

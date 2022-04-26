@@ -1,0 +1,52 @@
+@use '../mixins/mixins.scss'as m;
+
+header {
+
+    & nav {
+        position: absolute;
+        z-index: 2;
+        @include m.sizing(45%, 7.5rem);
+        @include m.flex(space-between, none);
+
+        & .logo {
+            @include m.sizing(15.625rem, none);
+            @include m.flex(space-around, center);
+
+            & img {
+                @include m.sizing(4.5rem, 4.5rem);
+                margin-left: 45px;
+                cursor: pointer;
+
+                -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, .3));
+                filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, .3));
+            }
+
+            & .title {
+                color: white;
+                @include m.fonts('Lora', normal, bold, 1.5rem, none);
+                @include m.flex(none, flex-end);
+                margin-left: 8px;
+                //visibility: hidden;
+            }
+        }
+
+        & .menu {
+            @include m.sizing(65rem, auto);
+            @include m.flex(center, center);
+
+            & ul {
+                list-style: none;
+                color: white;
+                @include m.fonts('Lora', normal, bold, 1.8rem, none);
+                @include m.flex(space-evenly, center);
+                @include m.spaces(0, 0);
+                @include m.sizing(100%, 100%);
+                text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.3);
+
+                li {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
