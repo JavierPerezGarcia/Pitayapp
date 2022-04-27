@@ -131,7 +131,7 @@ main {
                     }
 
                     & .middle-text-container {
-                        width: 80%;
+                        width: 92%;
                         height: 70%;
                         display: flex;
                         flex-direction: column;
@@ -139,6 +139,7 @@ main {
                         justify-content: center;
                         padding: 1.5rem;
                         box-sizing: border-box;
+                        line-height: 120%;
 
                         & h2 {
                             font-family: 'Lora';
@@ -148,6 +149,7 @@ main {
                             align-items: center;
                             text-align: center;
                             color: #663C11;
+                            line-height: 100%;
                         }
 
                         & p {
@@ -157,6 +159,7 @@ main {
                             display: flex;
                             align-items: center;
                             text-align: center;
+                            line-height: 100%;
 
                             color: #663C11;
                         }
@@ -208,6 +211,7 @@ main {
                         justify-content: center;
                         padding: 1.5rem;
                         box-sizing: border-box;
+                        line-height: 120%;
 
                         & h2 {
                             font-family: 'Lora';
@@ -217,6 +221,7 @@ main {
                             align-items: center;
                             text-align: center;
                             color: #663C11;
+                            line-height: 100%;
                         }
 
                         & p {
@@ -225,6 +230,7 @@ main {
                             font-weight: 500;
                             display: flex;
                             align-items: center;
+                            line-height: 100%;
 
                             color: #663C11;
                         }
@@ -330,6 +336,202 @@ main {
                         font-weight: bold;
                         padding: 0 2rem 2rem;
                     } */
+                }
+            }
+
+            & .top-container-mobile {
+                display: none;
+            }
+
+            & .text-container-mobile {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    main {
+
+        & #how-it-works {
+
+            & .content-how-it-works {
+
+                & .slide-right-1 {
+                    @include m.flex(center, center);
+
+                    & .center-content {
+
+                        & .how-it-works-title {
+                            h1 {
+                                font-size: 4rem;
+                            }
+                        }
+
+                        & .knives {
+                            font-size: 6rem;
+
+                            & #left_knife {
+                                left: 20%;
+                            }
+
+                            & #right_knife {
+                                right: 20%;
+                            }
+                        }
+
+                        & .pink_text {
+                            font-size: 1.8rem;
+                            @include m.sizing(60%, none); //60% cuando cambiamos al popup
+                        }
+                    }
+                }
+            }
+
+
+            & .transparent {
+                @include m.sizing(100%, 100%);
+                @include m.flex(space-between, center);
+                flex-direction: column;
+
+                & .leftcorners {
+                    display: none;
+                }
+
+                & .rightcorners {
+                    display: none;
+                }
+
+                & .first-container {
+                    display: none;
+                }
+
+                & .second-container {
+                    display: none;
+                }
+
+                & .space {
+                    display: none;
+                }
+
+                & .top-container-mobile {
+                    @include m.flex(start, center);
+                    flex-direction: column;
+                    @include m.sizing(60%, 10%);
+                    font-family: 'Lora';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 2.5rem;
+                    text-align: center;
+                    color: #F9458E;
+                    margin-top: 1rem;
+                }
+
+                & .text-container-mobile {
+                    @include m.sizing(85%, 70%);
+                    background-color: rgb(255, 255, 255, 0.9);
+                    border-radius: 1%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    padding: 1rem;
+                    box-sizing: border-box;
+                    margin-bottom: 25%;
+
+                    & .topcorners-mobile {
+                        display: flex;
+                        flex-direction: row;
+                        width: 100%;
+                        height: 15%;
+                        justify-content: space-between;
+                    }
+
+                    & .bottomcorners-mobile {
+                        display: flex;
+                        flex-direction: row;
+                        width: 100%;
+                        height: 15%;
+                        justify-content: space-between;
+                        align-items: flex-end;
+                    }
+
+                    & .text-mobile {
+                        width: 92%;
+                        height: 70%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 1.5rem;
+                        box-sizing: border-box;
+                        line-height: 120%;
+
+                        & h2 {
+                            font-size: 1.5rem;
+                            font-family: 'Lora';
+                            font-style: normal;
+                            font-weight: 700;
+                            display: flex;
+                            align-items: center;
+                            text-align: center;
+                            color: #663C11;
+                        }
+
+                        & p {
+                            font-size: 1.1rem;
+                            font-family: 'Lora';
+                            font-style: normal;
+                            font-weight: 500;
+                            display: flex;
+                            align-items: center;
+
+                            color: #663C11;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (min-width: 640px) and (max-width: 1280px) {
+    main {
+
+        & #how-it-works {
+
+            & .content-how-it-works {
+
+                & .slide-right-1 {
+                    @include m.flex(center, center);
+
+                    & .center-content {
+
+                        & .how-it-works-title {
+                            h1 {
+                                font-size: 8rem;
+                            }
+                        }
+
+                        & .knives {
+                            font-size: 9rem;
+
+                            & #left_knife {
+                                left: 20%;
+                            }
+
+                            & #right_knife {
+                                right: 20%;
+                            }
+                        }
+
+                        & .pink_text {
+                            font-size: 3rem;
+                            @include m.sizing(60%, none); //60% cuando cambiamos al popup
+                        }
+                    }
                 }
             }
         }
