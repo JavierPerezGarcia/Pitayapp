@@ -378,29 +378,6 @@ main {
                 }
 
         }
-                    /*  & .popup-out-swipe-up{
-
-                        @include sizing(100%, 20vh);
-                        @include flex(end, end);
-
-
-                        & .popup-out-container{
-
-                        @include sizing(30%, 50%);
-                        @include flex(space-evenly, center);
-                        margin-bottom: 20px;
-                        z-index: 1;
-
-                        & .popup-out-title{
-
-                            @include flex(none, center);
-                                @include fonts('Lora', italic, 700, 2rem, none);
-                                color: #FFFFFF;
-                                margin-top: 30px;
-                        }
-
-                        }
-                    } */
 
     }
 }
