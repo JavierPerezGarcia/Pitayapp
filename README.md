@@ -29,7 +29,12 @@ $ pnpm run dev
 ```
 
 Happy coding!
+<<<<<<< HEAD
 :goat:
 
 
 ![image](https://user-images.githubusercontent.com/35624830/162229606-067c8f84-38b8-476b-b5ac-df73ee521dc2.png)
+=======
+:goat: :goat: :goat:
+
+>>>>>>> dev_andrear

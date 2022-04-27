@@ -1,0 +1,383 @@
+@use '../mixins/mixins.scss'as m;
+
+main {
+    & #about-us {
+        position: relative;
+        @include m.sizing(100vw, 100vh);
+        @include m.backgrounds(url(./img/aboutUsPic.jpg), cover, center, no-repeat);
+        @include m.flex(center, center);
+        flex-direction: column;
+
+        & .empty {
+            @include m.sizing(100%, 20vh);
+        }
+
+        & .content-about-us {
+            @include m.sizing(100%, 60vh);
+            display: flex;
+            color: #FFFFFF;
+
+            & .slide-left-1 {
+                @include m.sizing(100%, auto);
+                @include m.flex(center, center);
+                flex-direction: column;
+
+                & .center-content {
+                    @include m.sizing(50%, auto);
+                    text-align: center;
+                    z-index: 2;
+
+                    & .about-us-title {
+                        h1 {
+                            @include m.fonts('Lora', italic, none, 9rem, none);
+                            @include m.spaces(0, 0);
+                            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+                        }
+                    }
+
+                    & .sub-title {
+                        h2 {
+                            @include m.spaces(0, 0);
+                            @include m.fonts('Lora', italic, 600, 3.5rem, center);
+                            margin-bottom: 25px;
+                            margin-left: 130px;
+                            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+                        }
+                    }
+                }
+            }
+        }
+
+        & .popup {
+            @include m.sizing(100%, 20vh);
+            @include m.flex(end, end);
+
+            & .popup-container {
+                @include m.sizing(30%, 50%);
+                @include m.flex(space-evenly, center);
+                margin-bottom: 20px;
+                z-index: 1;
+
+                & .popup-title {
+                    @include m.flex(none, center);
+                    @include m.fonts('Lora', italic, 700, 2rem, none);
+                    color: #F9458E;
+                    margin-top: 30px;
+
+                    p {
+                        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                    }
+                }
+
+                & .popup-svg {
+                    cursor: pointer;
+                    -webkit-filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, .3));
+                    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, .3));
+                    //Similar syntax to box-shadow
+                }
+            }
+        }
+    }
+
+    & #swipe-up-about-us {
+        position: relative;
+        @include m.sizing(100vw, 100vh);
+        @include m.backgrounds(url(./img/aboutUsPic.jpg), cover, center, no-repeat);
+        @include m.flex(center, center);
+        // @include flex(space-between, center);
+
+        & .pink-background{
+            position: fixed;
+            @include m.sizing(100vw, 100vh);
+            background-color: rgba(249, 69, 142, 0.4);
+            z-index: -1;
+
+            & .empty {
+                @include m.sizing(100%, 20vh);
+            }
+
+                & .slide-swipe-up{
+                    @include m.flex(space-around, center);
+                    margin-left: 120px;
+                    margin-right: 120px;
+
+                    & .swiper-up-left-content {
+                        display: flex;
+                        flex-direction: column;
+                        color: #FFFFFF;
+                        @include m.sizing(30%, 100%);
+
+                        & .about-us-title-team{
+                            font-weight: bold;
+                            display: flex;
+                            justify-content: flex-start;
+
+                            & h2{
+                                font-size: 3rem;
+                            }
+                        }
+
+                        & .sub-title-team {
+                            text-align: left;
+
+                            & #paragraph {
+                                font-weight: bold;
+                                font-size: 1.4rem;
+                            }
+                        }
+                    }
+
+                        & .swipe-up-center-content{
+                            // @include flex(center, center);
+                            flex-direction: column;
+                            color: white;
+                            @include m.sizing(10%, 100%);
+
+                            & .our-team-title{
+                                font-size: 2rem;
+                                font-weight: bold;
+
+                            }
+
+                            & #github{
+                                margin-top: 30px;
+                                @include m.sizing(6.5rem, 6.5rem);
+                            }
+
+                            & .team-arrow{
+                                @include m.sizing(7.5rem, 7.5rem);
+                                transform: rotate(30deg);
+                                margin-top: 30px;
+                                margin-left: 40px;;
+                            }
+
+                        }
+
+                        & .circle-container{
+                            background-color: #FFFFFF;
+                            color: black;
+                            border-radius: 100%;
+                            @include m.sizing(400px, 400px);
+                            padding: 30px;
+                            display: grid;
+                            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+                            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+                            gap: 15px;
+
+                            & .div1 {
+                                @include m.backgrounds(url(./img/javi-pitayappteam.jpg), cover, center, no-repeat);
+                                grid-row-start: 1;
+                                grid-column-start: 2;
+                                grid-row-end: 3;
+                                grid-column-end: 4;
+                                border-radius: 100%;
+
+                                & .javi-container{
+
+                                        @include m.sizing(100%, 100%);
+                                        @include m.flex(center, center);
+                                        border-radius: 100%;
+                                        opacity: 0;
+                                        transition: .6s ease;
+
+                                    & .javi {
+                                        color: white;
+                                        font-size: 20px;
+                                        text-align: center;
+                                        text-decoration: none;
+                                        margin: 20px;
+
+                                        }
+
+                                        &:hover{
+                                        background-color: #000;
+                                        opacity: 0.7;
+                                        transition: .5s ease-in-out;
+                                        }
+                                    }
+
+
+                            }
+                            & .div2 {
+                                @include m.backgrounds(url(./img/antonio-pitayappteam.jpg), cover, center, no-repeat);
+                                grid-row-start: 1;
+                                grid-column-start: 4;
+                                grid-row-end: 3;
+                                grid-column-end: 6;
+                                border-radius: 100%;
+
+                                & .antonio-container{
+
+                                        @include m.sizing(100%, 100%);
+                                        @include m.flex(center, center);
+                                        border-radius: 100%;
+                                        opacity: 0;
+                                        transition: .6s ease;
+
+                                    & .antonio {
+                                        color: white;
+                                        font-size: 20px;
+                                        text-align: center;
+                                        text-decoration: none;
+                                        margin: 20px;
+
+                                        }
+
+                                        &:hover{
+                                        background-color: #000;
+                                        opacity: 0.7;
+                                        transition: .5s ease-in-out;
+                                        }
+                                    }
+                            }
+
+                            & .div3 {
+                                @include m.backgrounds(url(./img/andrea-pitayappteam.jpg), cover, center, no-repeat);
+                                grid-row-start: 3;
+                                grid-column-start: 1;
+                                grid-row-end: 5;
+                                grid-column-end: 3;
+                                border-radius: 100%;
+
+                                & .andrea-container{
+
+                                        @include m.sizing(100%, 100%);
+                                        @include m.flex(center, center);
+                                        border-radius: 100%;
+                                        opacity: 0;
+                                        transition: .6s ease;
+
+                                    & .andrea {
+                                        color: white;
+                                        font-size: 20px;
+                                        text-align: center;
+                                        text-decoration: none;
+                                        margin: 20px;
+
+                                        }
+
+                                        &:hover{
+                                        background-color: #000;
+                                        opacity: 0.7;
+                                        transition: .5s ease-in-out;
+                                        }
+                                    }
+                            }
+
+                            & .div4 {
+                                background-color: rgb(218, 218, 218);
+                                grid-row-start: 3;
+                                grid-column-start: 3;
+                                grid-row-end: 5;
+                                grid-column-end: 5;
+                                border-radius: 100%;
+
+
+                            }
+
+                            & .div5 {
+                                @include m.backgrounds(url(./img/irene-pitayappteam.jpg), cover, center, no-repeat);
+                                grid-row-start: 3;
+                                grid-column-start: 5;
+                                grid-row-end: 5;
+                                grid-column-end: 7;
+                                border-radius: 100%;
+
+                                & .irene-container{
+
+                                        @include m.sizing(100%, 100%);
+                                        @include m.flex(center, center);
+                                        border-radius: 100%;
+                                        opacity: 0;
+                                        transition: .6s ease;
+
+                                    & .irene {
+                                        color: white;
+                                        font-size: 20px;
+                                        text-align: center;
+                                        text-decoration: none;
+                                        margin: 20px;
+
+                                        }
+
+                                        &:hover{
+                                        background-color: #000;
+                                        opacity: 0.7;
+                                        transition: .5s ease-in-out;
+                                        }
+                                    }
+                            }
+
+                            & .div6 {
+                                @include m.backgrounds(url(./img/regy-pitayappteam.jpg), cover, center, no-repeat);
+                                grid-row-start: 5;
+                                grid-column-start: 2;
+                                grid-row-end: 7;
+                                grid-column-end: 4;
+                                border-radius: 100%;
+
+                                & .regina-container{
+
+                                        @include m.sizing(100%, 100%);
+                                        @include m.flex(center, center);
+                                        border-radius: 100%;
+                                        opacity: 0;
+                                        transition: .6s ease;
+
+                                    & .regina {
+                                        color: white;
+                                        font-size: 20px;
+                                        text-align: center;
+                                        text-decoration: none;
+                                        margin: 20px;
+
+                                        }
+
+                                        &:hover{
+                                        background-color: #000;
+                                        opacity: 0.7;
+                                        transition: .5s ease-in-out;
+                                        }
+                                    }
+                            }
+                            & .div7 {
+                                background-color: rgb(218, 218, 218);
+                                grid-row-start: 5;
+                                grid-column-start: 4;
+                                grid-row-end: 7;
+                                grid-column-end: 6;
+                                border-radius: 100%;
+
+                                & .noelia-container{
+
+                                        @include m.sizing(100%, 100%);
+                                        @include m.flex(center, center);
+                                        border-radius: 100%;
+                                        opacity: 0;
+                                        transition: .6s ease;
+
+                                    & .noelia {
+                                        color: white;
+                                        font-size: 20px;
+                                        text-align: center;
+                                        text-decoration: none;
+
+
+                                        }
+
+                                        &:hover{
+                                        background-color: #000;
+                                        opacity: 0.7;
+                                        transition: .5s ease-in-out;
+                                        }
+                                    }
+                            }
+
+                        }
+
+                }
+
+        }
+
+    }
+}
