@@ -68,19 +68,20 @@ main {
 
                 & .slide-swipe-up{
                     @include m.flex(space-around, center);
-                    margin-left: 120px;
-                    margin-right: 120px;
+                    margin-left: 10%;
+                    margin-right: 10%;
 
                     & .swiper-up-left-content {
                         display: flex;
                         flex-direction: column;
                         color: #FFFFFF;
                         @include m.sizing(30%, 100%);
+                        line-height: 25px;
 
                         & .about-us-title-team{
-
                             display: flex;
                             justify-content: flex-start;
+
 
                             & h2{
                                 font-size: 3rem;
@@ -389,31 +390,37 @@ main {
 
     #swipe-up-about-us {
 
-        @include m.sizing(100vw, 100vh);
+        @include m.sizing(50%, 30%);
         @include m.flex(center, center);
-        flex-direction: column;
 
         & .pink-background{
 
-                & .slide-swipe-up{
+                & .empty {
+                @include m.sizing(100%, 20vh);
+                }
 
-                    margin: 0px;
+                & .slide-swipe-up{
+                    @include m.flex(center, center);
+                    flex-direction: column;
+                    margin-left: 0%;
+                    margin-right: 0%;
 
                     & .swiper-up-left-content {
+                        width: 100% !important;
+                        height: 10% !important;
                         display: flex;
                         flex-direction: column;
                         color: #FFFFFF;
-                        @include m.sizing(100%,20%);
+
 
                         & .about-us-title-team{
 
-                            display: flex;
-                            justify-content: center;
+                            @include m.flex(center, center);
                             flex-direction: column;
 
                             & h2{
                                 font-weight: normal;
-                                font-size: 1.5rem;
+                                font-size: 1rem !important;
 
                             }
                         }
@@ -421,11 +428,12 @@ main {
                         & .sub-title-team {
                             display: flex;
                             flex-direction: column;
-                            text-align: justify;
+                            text-align: center;
 
                             & #paragraph {
                                 font-weight: italic;
-                                font-size: 0.5rem;
+                                font-size: 0.5rem !important;
+                                line-height: 20px;
 
                             }
                         }
@@ -438,21 +446,21 @@ main {
                             @include m.sizing(10%, 100%);
 
                             & .our-team-title{
-                                font-size: 2rem;
+                                font-size: 1rem;
                                 font-weight: bold;
 
                             }
 
                             & #github{
                                 margin-top: 30px;
-                                @include m.sizing(3.5rem, 3.5rem);
+                                @include m.sizing(1.5rem, 1.5rem);
                             }
 
                             & .team-arrow{
                                 @include m.sizing(2.5rem, 2.5rem);
                                 transform: rotate(30deg);
                                 margin-top: 30px;
-                                margin-left: 40px;;
+                                margin-left: 40px;
                             }
 
                         }
@@ -461,12 +469,7 @@ main {
                             background-color: #FFFFFF;
                             color: black;
                             border-radius: 100%;
-                            @include m.sizing(200px, 200px);
-                            padding: 30px;
-                            display: grid;
-                            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-                            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-                            gap: 15px;
+                            @include m.sizing(50px, 50px);
 
                         }
 
