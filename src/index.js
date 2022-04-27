@@ -1,4 +1,5 @@
 var menu = ['AYÚDANOS', 'ACERCA DE', 'INICIO', 'USO', 'CONTACTO'];
+var menuDeploy = ['AYÚDANOS', 'ACERCA DE', 'INICIO', 'USO', 'CONTACTO'];
 
 const swiper = new Swiper(".swiper-container", {
     loop: true,
@@ -10,7 +11,7 @@ const swiper = new Swiper(".swiper-container", {
         onlyInViewport: false,
     },
     pagination: {
-        el: ".swiper-pagination.pagination-bottom, .swiper-pagination.pagination-top",
+        el: ".swiper-pagination.pagination-bottom, .swiper-pagination.pagination-top, .swiper-pagination.pagination-extra",
         clickable: true,
         renderBullet: function (index, className) {
             return '<span class="' + className + '">' + (menu[index]) + '</span>';
@@ -45,26 +46,11 @@ const swiper2 = new Swiper(".swiper-container2", {
     }
 });
 
+let burguerMenu = document.querySelector("#menu");
 
-/* let swipeUpLeft = document.querySelector(".swiper-button-down");
-let svgLeft = document.querySelector(".svg-up-down");
-let titleLeft = document.querySelector(".infoSwipeUp");
+burguerMenu.addEventListener("click", openMenu);
 
-let horizontalPag = document.querySelector("#horizontal-pag");
-let titleHeader = document.querySelector(".title");
-
-
-(function () {
-    swipeUpLeft.addEventListener('click', changeProps) //swiper2.navigation.nextEl
-    //swipeUpLeft.addEventListener('keydown', changeProps)
-    showTitle();
-})();
-
-
-
-function changeProps() {
-
-    swipeUpLeft.classList.replace(".swiper-button-down", ".swiper-button-up");
-    svgLeft.classList.toggle("rotate");
-    titleLeft.textContent = "Pulsa para salir";
-} */
+function openMenu() {
+    document.querySelector("#menu").classList.toggle("deploy");
+    document.querySelector(".hamburguer").classList.toggle("completed");
+}

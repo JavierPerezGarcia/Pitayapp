@@ -31,19 +31,24 @@
   <div class="swiper-button-next" id="next">
     <span class="iconify" data-icon="dashicons:arrow-right-alt2"></span>
   </div>
+
   <main class="swiper swiper-container swiper-h">
     <div class="swiper-pagination pagination-top" id="navbar-pag"></div>
+    <aside class="hamburguer">
+      <div class="icon">
+        <svg id="menu" height="50" width="50" xmlns="http://www.w3.org/2000/svg">
+          <path id="line1" d="M 0 5 L 50 5" stroke="white" stroke-width="5" />
+          <path id="line2" d="M 0 25 L 50 25" stroke="white" stroke-width="5" />
+          <path id="line3" d="M 0 45 L 50 45" stroke="white" stroke-width="5" />
+        </svg>
+      </div>
+      <div class="swiper-pagination pagination-extra" id="deploy-nav-pag"></div>
+    </aside>
     <div class="swiper-wrapper">
       <div class="swiper-slide">
-        <!-- <div class="swiper-button-down" id="up-down">
-          <img class="svg-up-down" src="./svg/swipeupLeft.svg" alt="">
-          <p class="infoSwipeUp">Pulsa aquí</p>
-        </div> -->
-
         <div class="swiper swiper-container2 swiper-v">
           <div class="swiper-wrapper">
             <div class="swiper-slide" id="donations">
-              <!-- <div class="empty"></div> -->
               <div class="content-donations">
                 <div class="slide-left-2">
                   <div class="center-content">
@@ -59,17 +64,44 @@
               <div class="layer-brown"></div>
               <div class="content-swipe-donations">
                 <div class="donations-explain">
-                  <div class="box posit-left">
-                    <img class="left-tape" src="./svg/tapeLeft.svg" alt="">
-                    <p>¿Quieres apoyarnos? De la petanca no se puede vivir, pero queremos compartir y hacer crecer este
-                      proyecto.</p>
-                    <img class="right-tape" src="./svg/tapeRight.svg" alt="">
+                  <div class="box first-container">
+                    <div class="first-tape">
+                      <img class="left-tape" src="./svg/tapeLeft.svg" alt="">
+                    </div>
+                    <div class="postit-left">
+                      <div class="text">
+                        <p>¿Quieres ayudarnos? De la petanca no se puede vivir, pero queremos compartir y hacer crecer
+                          este proyecto.</p>
+                      </div>
+                    </div>
+                    <div class="second-tape">
+                      <img class="right-tape" src="./svg/tapeRight.svg" alt="">
+                    </div>
                   </div>
-                  <div class="box posit-center">
-                    <span class="iconify" data-icon="fxemoji:roundpushpin"></span>
-                    <h1>¿Quieres apoyarnos?</h1>
+                  <div class="box second-container">
+                    <div class="icon">
+                      <span class="iconify" data-icon="fxemoji:roundpushpin"></span>
+                    </div>
+                    <div class="postit-center">
+                      <div class="title">
+                        <h1>¿Quieres apoyarnos?</h1>
+                      </div>
+                    </div>
                   </div>
-                  <div class="box posit-right"></div>
+                  <div class="box third-container">
+                    <div class="first-tape">
+                      <img class="left-tape" src="./svg/tapeLeft.svg" alt="">
+                    </div>
+                    <div class="postit-right">
+                      <div class="text">
+                        <p>Todos estos gastos irán exclusivamente al mantenimiento y creación de contenido. ¡Una pequeña
+                          cantidad hace la diferencia! :)</p>
+                      </div>
+                    </div>
+                    <div class="second-tape">
+                      <img class="right-tape" src="./svg/tapeRight.svg" alt="">
+                    </div>
+                  </div>
                 </div>
                 <div class="methods-to-donate">
                   <div class="box">
@@ -103,13 +135,6 @@
                     </a>
                   </div>
                 </div>
-                <!-- <div class="slide-left-2">
-                  <div class="center-content">
-                    <div class="donations-title">
-                      <h1>¿Quieres apoyarnos?</h1>
-                    </div>
-                  </div>
-                </div> -->
               </div>
             </div>
           </div>
