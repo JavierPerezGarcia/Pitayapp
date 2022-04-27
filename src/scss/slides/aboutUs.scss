@@ -9,7 +9,7 @@ main {
         flex-direction: column;
 
         & .empty {
-            @include m.sizing(100%, 20vh);
+            @include m.sizing(100%, 10vh);
         }
 
         & .content-about-us {
@@ -47,36 +47,6 @@ main {
                 }
             }
         }
-
-        & .popup {
-            @include m.sizing(100%, 20vh);
-            @include m.flex(end, end);
-
-            & .popup-container {
-                @include m.sizing(30%, 50%);
-                @include m.flex(space-evenly, center);
-                margin-bottom: 20px;
-                z-index: 1;
-
-                & .popup-title {
-                    @include m.flex(none, center);
-                    @include m.fonts('Lora', italic, 700, 2rem, none);
-                    color: #F9458E;
-                    margin-top: 30px;
-
-                    p {
-                        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-                    }
-                }
-
-                & .popup-svg {
-                    cursor: pointer;
-                    -webkit-filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, .3));
-                    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, .3));
-                    //Similar syntax to box-shadow
-                }
-            }
-        }
     }
 
     & #swipe-up-about-us {
@@ -108,7 +78,7 @@ main {
                         @include m.sizing(30%, 100%);
 
                         & .about-us-title-team{
-                            font-weight: bold;
+
                             display: flex;
                             justify-content: flex-start;
 
@@ -381,3 +351,129 @@ main {
 
     }
 }
+
+@media (max-width: 640px){
+
+    main {
+
+        & #about-us {
+            & .empty {
+                @include m.sizing(100%, 10vh);
+            }
+
+            & .content-about-us {
+
+                & .slide-left-1 {
+
+                    & .center-content {
+
+                        & .about-us-title {
+                            h1 {
+                                font-size: 4.5rem;
+                                line-height: 70px;
+                            }
+                        }
+
+                        & .sub-title {
+                            h2 {
+                                font-size: 3rem;
+                                margin-top: 10px;
+                                margin-left: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #swipe-up-about-us {
+
+        @include m.sizing(100vw, 100vh);
+        @include m.flex(center, center);
+        flex-direction: column;
+
+        & .pink-background{
+
+                & .slide-swipe-up{
+
+                    margin: 0px;
+
+                    & .swiper-up-left-content {
+                        display: flex;
+                        flex-direction: column;
+                        color: #FFFFFF;
+                        @include m.sizing(100%,20%);
+
+                        & .about-us-title-team{
+
+                            display: flex;
+                            justify-content: center;
+                            flex-direction: column;
+
+                            & h2{
+                                font-weight: normal;
+                                font-size: 1.5rem;
+
+                            }
+                        }
+
+                        & .sub-title-team {
+                            display: flex;
+                            flex-direction: column;
+                            text-align: justify;
+
+                            & #paragraph {
+                                font-weight: italic;
+                                font-size: 0.5rem;
+
+                            }
+                        }
+                    }
+
+                        & .swipe-up-center-content{
+                            @include m.flex(center, center);
+                            flex-direction: column;
+                            color: white;
+                            @include m.sizing(10%, 100%);
+
+                            & .our-team-title{
+                                font-size: 2rem;
+                                font-weight: bold;
+
+                            }
+
+                            & #github{
+                                margin-top: 30px;
+                                @include m.sizing(3.5rem, 3.5rem);
+                            }
+
+                            & .team-arrow{
+                                @include m.sizing(2.5rem, 2.5rem);
+                                transform: rotate(30deg);
+                                margin-top: 30px;
+                                margin-left: 40px;;
+                            }
+
+                        }
+
+                        & .circle-container{
+                            background-color: #FFFFFF;
+                            color: black;
+                            border-radius: 100%;
+                            @include m.sizing(200px, 200px);
+                            padding: 30px;
+                            display: grid;
+                            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+                            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+                            gap: 15px;
+
+                        }
+
+                }
+
+        }
+
+    }
+}
+/* 640 a 1280 */
