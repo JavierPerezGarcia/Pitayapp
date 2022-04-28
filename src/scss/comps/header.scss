@@ -38,3 +38,20 @@ header {
         display: block !important;
     }
 }
+
+@media (max-width: 640px) {
+    header {
+        & nav {
+            & .logo {
+                & img {
+                    margin-left: 1rem;
+                }
+
+                & .title {
+                    margin-left: 0;
+                    margin-right: 1rem;
+                }
+            }
+        }
+    }
+}

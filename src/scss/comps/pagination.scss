@@ -126,8 +126,6 @@ body {
         background-color: transparent;
         -webkit-clip-path: polygon(67% 4%, 95% 4%, 95% 18%, 67% 18%);
         clip-path: polygon(67% 4%, 95% 4%, 95% 18%, 67% 18%);
-        /* -webkit-transition: -webkit-clip-path 0.5625s, clip-path 0.375s;
-        transition: -webkit-clip-path 0.5625s, clip-path 0.375s; */
         -webkit-transition-timing-function: ease-out;
         transition-timing-function: ease-out;
         -webkit-transition-duration: 0.75s;
@@ -210,5 +208,69 @@ body {
         -webkit-clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 0%);
         clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 0%);
         background-color: white;
+    }
+}
+
+@media (max-width: 640px) {
+    body {
+        & aside {
+
+            right: 1rem;
+        }
+
+        & #vertical-pag {
+            right: 2%;
+            top: 95%;
+        }
+
+        & #horizontal-pag {
+            margin-bottom: 1rem;
+            width: 52%;
+            left: 24%;
+        }
+
+        & #horizontal-pag>.swiper-pagination-bullet {
+            @include m.sizing(1.5rem, 1.5rem);
+        }
+    }
+}
+
+/* @media (max-width: 480px) {
+    body {
+        & #horizontal-pag {
+            margin-bottom: 1rem;
+            width: 35%;
+            left: 32.5%;
+        }
+    }
+}
+
+@media (max-width: 460px) {
+    body {
+        & #horizontal-pag {
+            margin-bottom: 1rem;
+            width: 40%;
+            left: 30%;
+        }
+    }
+} */
+
+@media (max-width: 480px) {
+    body {
+        & #horizontal-pag {
+            margin-bottom: 1rem;
+            width: 38%;
+            left: 31%;
+        }
+    }
+}
+
+@media (max-width: 380px) {
+    body {
+        & #horizontal-pag {
+            margin-bottom: 1rem;
+            width: 40%;
+            left: 30%;
+        }
     }
 }
