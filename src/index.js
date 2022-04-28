@@ -27,7 +27,7 @@ const swiper2 = new Swiper(".swiper-container2", {
     //loop: true,
     direction: "vertical",
     spaceBetween: 30,
-    allowTouchMove: true,
+    allowTouchMove: false,
     speed: 1400,
     keyboard: {
         enabled: true,
