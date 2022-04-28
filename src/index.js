@@ -4,7 +4,7 @@ var menuDeploy = ['AYÚDANOS', 'ACERCA DE', 'INICIO', 'USO', 'CONTACTO'];
 const swiper = new Swiper(".swiper-container", {
     loop: true,
     initialSlide: 2,
-    allowTouchMove: false,
+    allowTouchMove: true,
     speed: 1000,
     keyboard: {
         enabled: true,
@@ -27,7 +27,7 @@ const swiper2 = new Swiper(".swiper-container2", {
     //loop: true,
     direction: "vertical",
     spaceBetween: 30,
-    allowTouchMove: false,
+    allowTouchMove: true,
     speed: 1400,
     keyboard: {
         enabled: true,
