@@ -1,0 +1,81 @@
+@use '../mixins/mixins.scss'as m;
+
+main {
+    & #about-us {
+        position: relative;
+        @include m.sizing(100vw, 100vh);
+        @include m.backgrounds(url(./img/aboutUsPic.jpg), cover, center, no-repeat);
+        @include m.flex(center, center);
+        flex-direction: column;
+
+        & .empty {
+            @include m.sizing(100%, 20vh);
+        }
+
+        & .content-about-us {
+            @include m.sizing(100%, 60vh);
+            display: flex;
+            color: #FFFFFF;
+
+            & .slide-left-1 {
+                @include m.sizing(100%, auto);
+                @include m.flex(center, center);
+                flex-direction: column;
+
+                & .center-content {
+                    @include m.sizing(50%, auto);
+                    text-align: center;
+                    z-index: 2;
+
+                    & .about-us-title {
+                        h1 {
+                            @include m.fonts('Lora', italic, none, 9rem, none);
+                            @include m.spaces(0, 0);
+                            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+                        }
+                    }
+
+                    & .sub-title {
+                        h2 {
+                            @include m.spaces(0, 0);
+                            @include m.fonts('Lora', italic, 600, 3.5rem, center);
+                            margin-bottom: 25px;
+                            margin-left: 130px;
+                            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+                        }
+                    }
+                }
+            }
+        }
+
+        & .popup {
+            @include m.sizing(100%, 20vh);
+            @include m.flex(end, end);
+
+            & .popup-container {
+                @include m.sizing(30%, 50%);
+                @include m.flex(space-evenly, center);
+                margin-bottom: 20px;
+                z-index: 1;
+
+                & .popup-title {
+                    @include m.flex(none, center);
+                    @include m.fonts('Lora', italic, 700, 2rem, none);
+                    color: #F9458E;
+                    margin-top: 30px;
+
+                    p {
+                        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                    }
+                }
+
+                & .popup-svg {
+                    cursor: pointer;
+                    -webkit-filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, .3));
+                    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, .3));
+                    //Similar syntax to box-shadow
+                }
+            }
+        }
+    }
+}

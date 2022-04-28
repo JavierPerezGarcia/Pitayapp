@@ -7,71 +7,238 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./index.scss">
   <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+  <script type="module" src="./index.js"></script>
   <!--<script src="https://kit.fontawesome.com/737fcc8aee.js" crossorigin="anonymous"></script>-->
   <title>PitayappPrueba</title>
 </head>
 
 <body>
   <header>
-    <nav>
+    <nav class="navbar">
       <div class="logo">
-        <img src="./img/pitayapp-isotipo-white.png" alt="Pitayapp">
+        <img src="./svg/pitayappLogo.svg" alt="Pitayapp">
         <div class="title">
-          <p>Pitayapp</p>
+          <p class="header-title">Pitayapp</p>
         </div>
       </div>
-      <div class="menu">
+      <!-- <div class="menu">
         <ul>
-          <li>PRECIOS</li>
+          <li>AYÚDANOS</li>
           <li>ACERCA DE</li>
+          <li>INICIO</li>
           <li>USO</li>
           <li>CONTACTO</li>
         </ul>
-      </div>
+      </div> -->
     </nav>
   </header>
-  <main>
-    <section class="first">
-      <div class="content">
-        <div class="leftarrow">
-          <!--<img src="./img/angle-left-solid.svg" alt="">-->
-          <!--<i class="fa-solid fa-angle-left"></i>-->
-          <span class="iconify" data-icon="dashicons:arrow-left-alt2"></span>
+
+  <div class="swiper-button-prev" id="prev">
+    <span class="iconify" data-icon="dashicons:arrow-left-alt2"></span>
+  </div>
+  <div class="swiper-button-next" id="next">
+    <span class="iconify" data-icon="dashicons:arrow-right-alt2"></span>
+  </div>
+  <main class="swiper swiper-container swiper-h">
+    <div class="swiper-pagination pagination-top" id="navbar-pag"></div>
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="swiper-button-down" id="up-down">
+          <img class="svg-up-down" src="./svg/swipeupLeft.svg" alt="">
+          <p class="infoSwipeUp">Pulsa aquí</p>
         </div>
-        <div class="slide1">
-          <div class="pitayapp">
-            <div class="main-title">
-              <h1>Pitayapp</h1>
+
+        <div class="swiper swiper-container2 swiper-v">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" id="donations">
+              <!-- <div class="empty"></div> -->
+              <div class="content-donations">
+                <div class="slide-left-2">
+                  <div class="center-content">
+                    <div class="donations-title">
+                      <h1>¿Quieres apoyarnos?</h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="popup">
+                <div class="popup-cont">
+                  <div class="popup-svg">
+                    <img src="./svg/swipeupLeft.svg" alt="">
+                  </div>
+                  <div class="popup-title">
+                    <p>Pincha aquí para saber más</p>
+                  </div>
+                </div>
+              </div> -->
             </div>
-            <div class="description">
-              <p>El portal de comida vegetal para la gente que quiere cambiar el mundo.</p>
+            <div class="swiper-slide" id="donations">
+              <div class="content-donations">
+                <div class="slide-left-2">
+                  <div class="center-content">
+                    <div class="donations-title">
+                      <h1>¿Quieres apoyarnos?</h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="popup">
+                <div class="popup-cont">
+                  <div class="popup-svg">
+                    <img src="./svg/swipeupLeft.svg" alt="">
+                  </div>
+                  <div class="popup-title">
+                    <p>Pincha aquí para saber más</p>
+                  </div>
+                </div>
+              </div> -->
             </div>
           </div>
-          <div class="buttons">
-            <button class="btn register">REGÍSTRATE</button>
-            <button class="btn sign-in">INICIAR SESIÓN</button>
-          </div>
-        </div>
-        <div class="rightarrow">
-          <!--<i class="fa-solid fa-angle-right"></i>-->
-          <span class="iconify" data-icon="dashicons:arrow-right-alt2"></span>
+          <div class="swiper-pagination" id="vertical-pag"></div>
         </div>
       </div>
-    </section>
-    <section></section>
-    <section></section>
-    <section></section>
-    <section></section>
-  </main>
-  <footer>
-    <div class="circles">
-      <div class="circle one"></div>
-      <div class="circle two"></div>
-      <div class="circle three"></div>
-      <div class="circle four"></div>
-      <div class="circle five"></div>
+      <div class="swiper-slide">
+        <div class="swiper swiper-container2 swiper-v">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" id="about-us">
+              <div class="empty"></div>
+              <div class="content-about-us">
+                <div class="slide-left-1">
+                  <div class="center-content">
+                    <div class="about-us-title">
+                      <h1>Acerca de</h1>
+                    </div>
+                    <div class="sub-title">
+                      <h2>PITAYAPP</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="popup">
+                <div class="popup-container">
+                  <div class="popup-title">
+                    <p>Despliega para enterarte</p>
+                  </div>
+                  <div class="popup-svg">
+                    <img src="./svg/popupRight.svg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide" id="about-us">
+              <div class="empty"></div>
+              <div class="content-about-us">
+                <div class="slide-left-1">
+                  <div class="center-content">
+                    <div class="about-us-title">
+                      <h1>Acerca de</h1>
+                    </div>
+                    <div class="sub-title">
+                      <h2>PITAYAPP</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="popup">
+                <div class="popup-container">
+                  <div class="popup-title">
+                    <p>Despliega para enterarte</p>
+                  </div>
+                  <div class="popup-svg">
+                    <img src="./svg/popupRight.svg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination" id="vertical-pag-2"></div>
+        </div>
+      </div>
+      <div class="swiper-slide" id="initial-page">
+        <div class="initial-content">
+          <div class="initial-slide">
+            <div class="center-content">
+              <div class="initial-title">
+                <h1>Pitayapp</h1>
+              </div>
+              <div class="description">
+                <p>El portal de comida vegetal para la gente que quiere cambiar el mundo.</p>
+              </div>
+            </div>
+            <div class="buttons">
+              <button class="btn register">REGÍSTRATE</button>
+              <button class="btn sign-in">INICIAR SESIÓN</button>
+            </div>
+            <div class="guest">Entrar como invitado</div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="swiper swiper-container2 swiper-v">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" id="how-it-works">
+              <div class="content-how-it-works">
+                <div class="slide-right-1">
+                  <div class="center-content">
+                    <div class="how-it-works-title">
+                      <h1>¿Cómo funciona?</h1>
+                    </div>
+                    <div class="knives">
+                      <span class="iconify" id="left_knife" data-icon="mdi:knife"></span>
+                      <span class="iconify" id="right_knife" data-icon="mdi:knife"></span>
+                    </div>
+                    <div class="pink_text">
+                      <p>Pulsa en los cuchillos</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide" id="how-it-works">
+              <div class="content-how-it-works">
+                <div class="slide-right-1">
+                  <div class="center-content">
+                    <div class="how-it-works-title">
+                      <h1>¿Cómo funciona?</h1>
+                    </div>
+                    <div class="knives">
+                      <span class="iconify" id="left_knife" data-icon="mdi:knife"></span>
+                      <span class="iconify" id="right_knife" data-icon="mdi:knife"></span>
+                    </div>
+                    <div class="pink_text">
+                      <p>Pulsa en los cuchillos</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination" id="vertical-pag"></div>
+        </div>
+      </div>
+      <div class="swiper-slide" id="contact-with-us">
+        <div class="content-contact">
+          <div class="slide-right-2">
+            <div class="center-content">
+              <h1>Contáctanos por</h1>
+              <div class="social-media-logos">
+                <div class="logo-bar">
+                  <span class="iconify" id="instagram" data-width="70" data-icon="cib:instagram"></span>
+                  <span class="iconify" data-width="70" data-icon="brandico:facebook-rect"></span>
+                  <span class="iconify" data-width="70" data-icon="entypo:email"></span>
+                  <span class="iconify" data-width="70" data-icon="brandico:linkedin-rect"></span>
+                  <span class="iconify" data-icon="entypo-social:twitter-with-circle"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </footer>
+    <div class="swiper-pagination pagination-bottom" id="horizontal-pag"></div>
+  </main>
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 </body>
 
 </html>
