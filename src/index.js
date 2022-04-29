@@ -45,7 +45,7 @@ const swiper2 = new Swiper(".swiper-container2", {
     }
 });
 
-
+/*
 let swipeUpLeft = document.querySelector(".swiper-button-down");
 let svgLeft = document.querySelector(".svg-up-down");
 let titleLeft = document.querySelector(".infoSwipeUp");
@@ -67,7 +67,7 @@ function changeProps() {
     swipeUpLeft.classList.replace(".swiper-button-down", ".swiper-button-up");
     svgLeft.classList.toggle("rotate");
     titleLeft.textContent = "Pulsa para salir";
-}
+} */
 
 /* function showTitle() {
 
