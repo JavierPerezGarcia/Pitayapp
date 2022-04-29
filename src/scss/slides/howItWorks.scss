@@ -68,5 +68,943 @@ main {
                 }
             }
         }
+
+        & .transparent {
+            width: 80vw;
+            height: 83vh;
+            background-color: rgb(255, 255, 255, 0.6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 5rem;
+
+            & .leftcorners {
+                display: flex;
+                flex-direction: column;
+                align-content: space-between;
+                height: 100%;
+                justify-content: space-between;
+            }
+
+            & .rightcorners {
+                display: flex;
+                flex-direction: column;
+                align-content: space-between;
+                height: 100%;
+                justify-content: space-between;
+            }
+
+            & .first-container {
+                width: 37.5%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: end;
+
+                & .first-text {
+                    width: 85%;
+                    height: 80%;
+                    background-color: rgb(255, 255, 255, 0.9);
+                    border-radius: 1%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    padding: 1rem;
+                    box-sizing: border-box;
+
+                    & .topcorners {
+                        display: flex;
+                        flex-direction: row;
+                        width: 100%;
+                        height: 15%;
+                        justify-content: space-between;
+                    }
+
+                    & .bottomcorners {
+                        display: flex;
+                        flex-direction: row;
+                        width: 100%;
+                        height: 15%;
+                        justify-content: space-between;
+                        align-items: flex-end;
+                    }
+
+                    & .middle-text-container {
+                        width: 92%;
+                        height: 70%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 1.5rem;
+                        box-sizing: border-box;
+                        line-height: 120%;
+
+                        & h2 {
+                            font-family: 'Lora';
+                            font-style: normal;
+                            font-weight: 700;
+                            display: flex;
+                            align-items: center;
+                            text-align: center;
+                            color: #663C11;
+                            // line-height: 100%;
+                            margin-bottom: auto;
+                        }
+
+                        & p {
+                            font-family: 'Lora';
+                            font-style: normal;
+                            font-weight: 500;
+                            display: flex;
+                            align-items: center;
+                            text-align: center;
+                            // line-height: 100%;
+                            margin-bottom: auto;
+                            color: #663C11;
+                        }
+                    }
+                }
+            }
+
+            & .second-container {
+                width: 37.5%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+
+                & .second-text {
+                    width: 85%;
+                    height: 80%;
+                    background-color: rgb(255, 255, 255, 0.9);
+                    border-radius: 1%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    padding: 1rem;
+                    box-sizing: border-box;
+
+                    & .topcorners {
+                        display: flex;
+                        flex-direction: row;
+                        width: 100%;
+                        height: 15%;
+                        justify-content: space-between;
+                    }
+
+                    & .bottomcorners {
+                        display: flex;
+                        flex-direction: row;
+                        width: 100%;
+                        height: 15%;
+                        justify-content: space-between;
+                        align-items: flex-end;
+                    }
+
+                    & .middle-text-container {
+                        width: 92%;
+                        height: 70%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 1.5rem;
+                        box-sizing: border-box;
+                        line-height: 120%;
+
+                        & h2 {
+                            font-family: 'Lora';
+                            font-style: normal;
+                            font-weight: 700;
+                            display: flex;
+                            align-items: center;
+                            text-align: center;
+                            color: #663C11;
+                            line-height: 100%;
+                            margin-bottom: auto;
+                        }
+
+                        & p {
+                            font-family: 'Lora';
+                            font-style: normal;
+                            font-weight: 500;
+                            display: flex;
+                            align-items: center;
+                            line-height: 100%;
+                            color: #663C11;
+                            margin-bottom: auto;
+                        }
+                    }
+                }
+            }
+
+
+            & .space {
+                width: 25%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                & .secondary-title {
+                    font-family: 'Lora';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 3rem;
+                    text-align: center;
+                    color: #F9458E;
+                    margin-top: 2rem;
+                }
+
+                & .pitayapp-label {
+                    height: 3.6rem;
+                    width: 75%;
+                    background-color: #FFFFFF;
+                    font-family: 'Lora';
+                    font-style: italic;
+                    font-weight: 700;
+                    color: #F9458E;
+                    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+                    /* border: 3px solid #663C11; */
+                    //He comentado el borde porque no sigue las líneas recortadas con el clip-path
+                    font-size: 2rem;
+                    text-align: center;
+                    line-height: 3.6rem;
+                    margin-top: 2rem;
+                    clip-path: polygon(0 0, 100% 0, 95% 12.5%, 100% 25%, 95% 37.5%, 100% 50%, 95% 62.5%, 100% 75%, 95% 87.5%, 100% 100%, 0 100%, 5% 87.5%, 0% 75%, 5% 62.5%, 0% 50%, 5% 37.5%, 0% 25%, 5% 12.5%);
+                }
+
+                & .knives-container {
+                    height: 60%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    & .knives {
+                        font-size: 8rem;
+                        display: flex;
+                        margin-top: 20px;
+
+                        & #left_knife {
+                            position: relative;
+                            left: 50px;
+                            color: #FFFFFF;
+                            z-index: 1;
+                            -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, .7));
+                            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, .7));
+                        }
+
+                        & #right_knife {
+                            position: relative;
+                            right: 50px;
+                            color: #F9458E;
+                            transform: scaleX(-1);
+                            -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, .7));
+                            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, .7));
+                        }
+
+                        /* font-size: 8rem;
+                        display: flex;
+                        justify-content: center;
+                        cursor: pointer;
+
+                        & #left_knife {
+                            color: #FFFFFF;
+                            left: 50px;
+                            -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, .7));
+                            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, .7));
+                            // transform: rotate(-45deg);
+                        }
+
+                        & #right_knife {
+                            color: #F9458E;
+                            right: 50px;
+                            -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, .7));
+                            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, .7));
+                            // transform: matrix(-0.71, -0.71, -0.71, 0.71, 0, 0);
+                            transform: scaleX(-1);
+                        } */
+                    }
+
+                    //Este texto decidimos eliminarlo, lo comento por si hay un cambio de planes
+                    /* & .pink_text {
+                        color: #F9458E;
+                        text-align: center;
+                        font-size: 1.5rem;
+                        font-family: 'Lora';
+                        font-style: italic;
+                        font-weight: bold;
+                        padding: 0 2rem 2rem;
+                    } */
+                }
+            }
+
+            & .top-container-mobile {
+                display: none;
+            }
+
+            & .text-container-mobile {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 385px) {
+    main {
+
+        & #how-it-works {
+
+            & .content-how-it-works {
+
+                & .slide-right-1 {
+                    @include m.flex(center, center);
+
+                    & .center-content {
+
+                        & .how-it-works-title {
+                            h1 {
+                                font-size: 4rem;
+                            }
+                        }
+
+                        & .knives {
+                            font-size: 6rem;
+
+                            & #left_knife {
+                                left: 20%;
+                            }
+
+                            & #right_knife {
+                                right: 20%;
+                            }
+                        }
+
+                        & .pink_text {
+                            font-size: 1.8rem;
+                            @include m.sizing(60%, none); //60% cuando cambiamos al popup
+                        }
+                    }
+                }
+            }
+
+
+            & .transparent {
+                @include m.sizing(100%, 100%);
+                @include m.flex(space-between, center);
+                flex-direction: column;
+
+                & .leftcorners {
+                    display: none;
+                }
+
+                & .rightcorners {
+                    display: none;
+                }
+
+                & .first-container {
+                    display: none;
+                }
+
+                & .second-container {
+                    display: none;
+                }
+
+                & .space {
+                    display: none;
+                }
+
+                & .top-container-mobile {
+                    @include m.flex(start, center);
+                    flex-direction: column;
+                    @include m.sizing(60%, 10%);
+                    font-family: 'Lora';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 2rem;
+                    text-align: center;
+                    color: #F9458E;
+                    margin-top: 1rem;
+                    z-index: 3;
+                }
+
+                & .text-container-mobile {
+                    @include m.sizing(85%, 68%);
+                    background-color: rgb(255, 255, 255, 0.9);
+                    border-radius: 1%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    padding: 1rem;
+                    box-sizing: border-box;
+                    margin-bottom: 30%;
+
+                    & .topcorners-mobile {
+                        display: flex;
+                        flex-direction: row;
+                        width: 100%;
+                        height: 15%;
+                        justify-content: space-between;
+                    }
+
+                    & .bottomcorners-mobile {
+                        display: flex;
+                        flex-direction: row;
+                        width: 100%;
+                        height: 15%;
+                        justify-content: space-between;
+                        align-items: flex-end;
+                    }
+
+                    & .text-mobile {
+                        width: 92%;
+                        height: 70%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 1.5rem;
+                        box-sizing: border-box;
+                        line-height: 120%;
+
+                        & h2 {
+                            font-size: 1.5rem;
+                            font-family: 'Lora';
+                            font-style: normal;
+                            font-weight: 700;
+                            display: flex;
+                            align-items: center;
+                            text-align: center;
+                            color: #663C11;
+                            margin: 0.5rem;
+                        }
+
+                        & p {
+                            font-size: 0.9rem;
+                            font-family: 'Lora';
+                            font-style: normal;
+                            font-weight: 500;
+                            display: flex;
+                            align-items: center;
+                            margin: 0.5rem;
+                            color: #663C11;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 385px) and (max-width: 640px) {
+    main {
+
+        & #how-it-works {
+
+            & .content-how-it-works {
+
+                & .slide-right-1 {
+                    @include m.flex(center, center);
+
+                    & .center-content {
+
+                        & .how-it-works-title {
+                            h1 {
+                                font-size: 4rem;
+                            }
+                        }
+
+                        & .knives {
+                            font-size: 6rem;
+
+                            & #left_knife {
+                                left: 20%;
+                            }
+
+                            & #right_knife {
+                                right: 20%;
+                            }
+                        }
+
+                        & .pink_text {
+                            font-size: 1.8rem;
+                            @include m.sizing(60%, none); //60% cuando cambiamos al popup
+                        }
+                    }
+                }
+            }
+
+
+            & .transparent {
+                @include m.sizing(100%, 100%);
+                @include m.flex(space-between, center);
+                flex-direction: column;
+
+                & .leftcorners {
+                    display: none;
+                }
+
+                & .rightcorners {
+                    display: none;
+                }
+
+                & .first-container {
+                    display: none;
+                }
+
+                & .second-container {
+                    display: none;
+                }
+
+                & .space {
+                    display: none;
+                }
+
+                & .top-container-mobile {
+                    @include m.flex(start, center);
+                    flex-direction: column;
+                    @include m.sizing(60%, 10%);
+                    font-family: 'Lora';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 2.5rem;
+                    text-align: center;
+                    color: #F9458E;
+                    margin-top: 1rem;
+                    z-index: 3;
+                }
+
+                & .text-container-mobile {
+                    @include m.sizing(85%, 70%);
+                    background-color: rgb(255, 255, 255, 0.9);
+                    border-radius: 1%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    padding: 1rem;
+                    box-sizing: border-box;
+                    margin-bottom: 30%;
+
+                    & .topcorners-mobile {
+                        display: flex;
+                        flex-direction: row;
+                        width: 100%;
+                        height: 15%;
+                        justify-content: space-between;
+                    }
+
+                    & .bottomcorners-mobile {
+                        display: flex;
+                        flex-direction: row;
+                        width: 100%;
+                        height: 15%;
+                        justify-content: space-between;
+                        align-items: flex-end;
+                    }
+
+                    & .text-mobile {
+                        width: 92%;
+                        height: 70%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 1.5rem;
+                        box-sizing: border-box;
+                        line-height: 120%;
+
+                        & h2 {
+                            font-size: 1.5rem;
+                            font-family: 'Lora';
+                            font-style: normal;
+                            font-weight: 700;
+                            display: flex;
+                            align-items: center;
+                            text-align: center;
+                            color: #663C11;
+                            margin: 0.5rem;
+                        }
+
+                        & p {
+                            font-size: 1.1rem;
+                            font-family: 'Lora';
+                            font-style: normal;
+                            font-weight: 500;
+                            display: flex;
+                            align-items: center;
+                            margin: 0.5rem;
+                            color: #663C11;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (min-width: 640px) and (max-width: 850px) {
+    main {
+
+        & #how-it-works {
+
+            & .content-how-it-works {
+
+                & .slide-right-1 {
+                    @include m.flex(center, center);
+
+                    & .center-content {
+
+                        & .how-it-works-title {
+                            h1 {
+                                font-size: 8rem;
+                            }
+                        }
+
+                        & .knives {
+                            font-size: 9rem;
+
+                            & #left_knife {
+                                left: 20%;
+                            }
+
+                            & #right_knife {
+                                right: 20%;
+                            }
+                        }
+
+                        & .pink_text {
+                            font-size: 3rem;
+                            @include m.sizing(60%, none); //60% cuando cambiamos al popup
+                        }
+                    }
+                }
+            }
+
+            & .transparent {
+                @include m.sizing(100%, 100%);
+                @include m.flex(space-between, center);
+
+                & .leftcorners {
+                    display: none;
+                }
+
+                & .rightcorners {
+                    display: none;
+                }
+
+                & .first-container {
+                    width: 48%;
+
+                    & .first-text {
+                        height: 50%;
+
+                        & .middle-text-container {
+                            padding: 1rem;
+                        }
+                    }
+                }
+
+                & .second-container {
+                    width: 48%;
+
+                    & .second-text {
+                        height: 50%;
+
+                        & .middle-text-container {
+                            padding: 1rem;
+                        }
+                    }
+                }
+
+
+                & .space {
+                    width: 4%;
+
+                    & .secondary-title {
+                        font-size: 3.5rem;
+                        text-align: center;
+                        color: #F9458E;
+                        margin-top: 4rem;
+                        z-index: 3;
+                    }
+
+                    & .pitayapp-label {
+                        display: none;
+                    }
+
+                    & .knives-container {
+                        display: none;
+                    }
+                }
+
+                & .top-container-mobile {
+                    display: none;
+                }
+
+                & .text-container-mobile {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 850px) and (max-width: 1000px) {
+    main {
+
+        & #how-it-works {
+
+            & .content-how-it-works {
+
+                & .slide-right-1 {
+                    @include m.flex(center, center);
+
+                    & .center-content {
+
+                        & .how-it-works-title {
+                            h1 {
+                                font-size: 8rem;
+                            }
+                        }
+
+                        & .knives {
+                            font-size: 9rem;
+
+                            & #left_knife {
+                                left: 20%;
+                            }
+
+                            & #right_knife {
+                                right: 20%;
+                            }
+                        }
+
+                        & .pink_text {
+                            font-size: 3rem;
+                            @include m.sizing(60%, none); //60% cuando cambiamos al popup
+                        }
+                    }
+                }
+            }
+
+            & .transparent {
+                @include m.sizing(100%, 100%);
+                @include m.flex(space-between, center);
+
+                & .leftcorners {
+                    display: none;
+                }
+
+                & .rightcorners {
+                    display: none;
+                }
+
+                & .first-container {
+                    width: 48%;
+
+                    & .first-text {
+                        height: 45%;
+
+                        & .middle-text-container {
+                            padding: 1rem;
+
+                            h2 {
+                                font-size: 1.6rem;
+                                margin-bottom: auto;
+                            }
+
+                            p {
+                                font-size: 1.2rem;
+                                margin-bottom: auto;
+                            }
+                        }
+                    }
+                }
+
+                & .second-container {
+                    width: 48%;
+
+                    & .second-text {
+                        height: 45%;
+
+                        & .middle-text-container {
+                            padding: 1rem;
+
+                            h2 {
+                                font-size: 1.6rem;
+                                margin-bottom: auto;
+                            }
+
+                            p {
+                                font-size: 1.2rem;
+                                margin-bottom: auto;
+                            }
+                        }
+                    }
+                }
+
+
+                & .space {
+                    width: 4%;
+
+                    & .secondary-title {
+                        font-size: 3.5rem;
+                        text-align: center;
+                        color: #F9458E;
+                        margin-top: 4rem;
+                        z-index: 3;
+                    }
+
+                    & .pitayapp-label {
+                        display: none;
+                    }
+
+                    & .knives-container {
+                        display: none;
+                    }
+                }
+
+                & .top-container-mobile {
+                    display: none;
+                }
+
+                & .text-container-mobile {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1280px) {
+    main {
+
+        & #how-it-works {
+
+            & .content-how-it-works {
+
+                & .slide-right-1 {
+                    @include m.flex(center, center);
+
+                    & .center-content {
+
+                        & .how-it-works-title {
+                            h1 {
+                                font-size: 8rem;
+                            }
+                        }
+
+                        & .knives {
+                            font-size: 8rem;
+
+                            & #left_knife {
+                                left: 20%;
+                            }
+
+                            & #right_knife {
+                                right: 20%;
+                            }
+                        }
+
+                        & .pink_text {
+                            font-size: 3rem;
+                            @include m.sizing(60%, none); //60% cuando cambiamos al popup
+                        }
+                    }
+                }
+            }
+
+            & .transparent {
+                @include m.sizing(100%, 100%);
+                @include m.flex(space-between, center);
+
+                & .leftcorners {
+                    display: none;
+                }
+
+                & .rightcorners {
+                    display: none;
+                }
+
+                & .first-container {
+                    width: 48%;
+
+                    & .first-text {
+                        height: 55%;
+
+                        & .middle-text-container {
+                            padding: 1rem;
+
+                            h2 {
+                                font-size: 1.6rem;
+                                margin-bottom: auto;
+                            }
+
+                            p {
+                                font-size: 1rem;
+                                margin-bottom: auto;
+                            }
+                        }
+                    }
+                }
+
+                & .second-container {
+                    width: 48%;
+
+                    & .second-text {
+                        height: 55%;
+
+                        & .middle-text-container {
+                            padding: 1rem;
+
+                            h2 {
+                                font-size: 1.6rem;
+                                margin-bottom: auto;
+                            }
+
+                            p {
+                                font-size: 1rem;
+                                margin-bottom: auto;
+                            }
+                        }
+                    }
+                }
+
+
+                & .space {
+                    width: 4%;
+
+                    & .secondary-title {
+                        font-size: 2.5rem;
+                        text-align: center;
+                        color: #F9458E;
+                        margin-top: 2rem;
+                        z-index: 3;
+                    }
+
+                    & .pitayapp-label {
+                        display: none;
+                    }
+
+                    & .knives-container {
+                        display: none;
+                    }
+                }
+
+                & .top-container-mobile {
+                    display: none;
+                }
+
+                & .text-container-mobile {
+                    display: none;
+                }
+            }
+        }
     }
 }
