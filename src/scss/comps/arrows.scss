@@ -67,3 +67,13 @@ body {
         content: none;
     }
 }
+
+@media (max-width: 640px) {
+    #prev {
+        display: none;
+    }
+
+    #next {
+        display: none;
+    }
+}
