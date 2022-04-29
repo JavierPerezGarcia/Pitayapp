@@ -52,4 +52,189 @@ body {
     .swiper-v {
         background: #eee;
     }
+
+    & #donations {
+        position: relative;
+        //z-index: 1;
+        @include sizing(100vw, 100vh);
+        @include flex(center, center);
+        @include backgrounds(url(./img/donationsPic.jpg), cover, center, no-repeat);
+        flex-direction: column;
+
+        & .content-donations {
+            @include sizing(100%, 60vh);
+            display: flex;
+            color: #FFFFFF;
+
+            & .slide-left-2 {
+                @include sizing(100%, auto);
+                @include flex(center, center);
+                flex-direction: column;
+
+                & .center-content {
+                    display: flex;
+                    @include sizing(50%, auto);
+                    text-align: center;
+                    z-index: 2;
+
+                    & .donations-title {
+                        margin-bottom: 2rem;
+
+                        h1 {
+                            @include fonts('Lora', italic, none, 9rem, none);
+                            @include spaces(0, 0);
+                            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.45), 0px 4px 4px rgba(0, 0, 0, 0.45);
+                        }
+                    }
+
+                    & .description {
+                        @include fonts('Lora', normal, none, 2rem, center);
+                    }
+                }
+
+                & .buttons {
+                    display: flex;
+                    margin-top: 8px;
+
+                    & button {
+                        @include spaces(0px 12px, 12px);
+                        @include fonts('Lora', italic, 700, 1.6rem, center);
+                        background: #F9458E;
+                        mix-blend-mode: normal;
+                        border-radius: 7px;
+                        line-height: 36px;
+                        color: #FFFFFF;
+                        border: none;
+                        cursor: pointer;
+                        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25)
+                    }
+                }
+            }
+        }
+
+        & .popup {
+            @include sizing(100%, 20vh);
+            @include flex(none, end);
+
+            & .popup-cont {
+                @include sizing(30%, 50%);
+                @include flex(space-evenly, center);
+                margin-bottom: 20px;
+                z-index: 1;
+
+                & .popup-svg {
+                    cursor: pointer;
+                    -webkit-filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, .3));
+                    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, .3));
+                    //Similar syntax to box-shadow
+                }
+
+                & .popup-title {
+                    @include flex(none, center);
+                    @include fonts('Lora', italic, 700, 2rem, none);
+                    color: white;
+                    margin-top: 30px;
+
+                    p {
+                        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                    }
+                }
+            }
+        }
+    }
+
+    & #navbar-pag>.swiper-pagination-bullet {
+        background-color: transparent;
+        @include sizing(auto, 3rem);
+        @include spaces(0, 0 1rem);
+        border-radius: 5px;
+        //border: 2px solid #979797;
+        opacity: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    & #navbar-pag>.swiper-pagination-bullet-active {
+        border: 2px solid white;
+        background-color: #f9458e;
+    }
+
+    & #horizontal-pag>.swiper-pagination-bullet {
+        background-color: rgb(255, 255, 255);
+        @include sizing(1rem, 1rem);
+        border-radius: 50%;
+        border: 2px solid #979797;
+        opacity: 1;
+    }
+
+    & #horizontal-pag>.swiper-pagination-bullet-active {
+        border-color: white;
+        background-color: #F9458E;
+    }
+
+    & #vertical-pag>.swiper-pagination-bullet,
+    #vertical-pag-2>.swiper-pagination-bullet {
+        background-color: rgb(255, 255, 255);
+        @include sizing(3rem, 3rem);
+        @include flex(center, center);
+        @include fonts('Lora', normal, bold, 2rem, none);
+        border-radius: 10%;
+        border: 2px solid #979797;
+        opacity: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    & #vertical-pag>.swiper-pagination-bullet-active,
+    #vertical-pag-2>.swiper-pagination-bullet-active {
+        color: white;
+        border-color: white;
+        background-color: #F9458E;
+    }
+
+    & #horizontal-pag {
+        margin-bottom: 20px;
+        width: 40%;
+        left: 30%;
+        font-size: 0px;
+    }
+
+    & #navbar-pag {
+        width: 55%;
+        height: 7.5rem;
+        left: 45%;
+        top: 0%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        span {
+            @include fonts('Lora', normal, bold, 1.8rem, none);
+            color: white;
+        }
+    }
+
+    /* & .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+        margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 7px);
+    } */
+
+    & #vertical-pag {
+        right: 1%;
+        top: 95%;
+        transform: translate3d(0px, -73%, 0);
+        color: #000000;
+    }
+
+    & #vertical-pag-2 {
+        /* right: none; */
+        left: 1%;
+        top: 95%;
+        transform: translate3d(0px, -73%, 0);
+        color: #000000;
+        z-index: 15;
+    }
+
+
 }
