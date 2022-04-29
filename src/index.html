@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
   <script type="module" src="./index.js"></script>
   <!--<script src="https://kit.fontawesome.com/737fcc8aee.js" crossorigin="anonymous"></script>-->
-  <title>PitayappPrueba</title>
+  <title>Pitayapp</title>
 </head>
 
 <body>
@@ -22,15 +22,6 @@
           <p class="header-title">Pitayapp</p>
         </div>
       </div>
-      <!-- <div class="menu">
-        <ul>
-          <li>AYÚDANOS</li>
-          <li>ACERCA DE</li>
-          <li>INICIO</li>
-          <li>USO</li>
-          <li>CONTACTO</li>
-        </ul>
-      </div> -->
     </nav>
   </header>
 
@@ -40,19 +31,24 @@
   <div class="swiper-button-next" id="next">
     <span class="iconify" data-icon="dashicons:arrow-right-alt2"></span>
   </div>
+
   <main class="swiper swiper-container swiper-h">
     <div class="swiper-pagination pagination-top" id="navbar-pag"></div>
+    <aside class="hamburguer">
+      <div class="icon">
+        <svg id="menu" height="50" width="50" xmlns="http://www.w3.org/2000/svg">
+          <path id="line1" d="M 0 5 L 50 5" stroke="white" stroke-width="5" />
+          <path id="line2" d="M 0 25 L 50 25" stroke="white" stroke-width="5" />
+          <path id="line3" d="M 0 45 L 50 45" stroke="white" stroke-width="5" />
+        </svg>
+      </div>
+      <div class="swiper-pagination pagination-extra" id="deploy-nav-pag"></div>
+    </aside>
     <div class="swiper-wrapper">
       <div class="swiper-slide">
-        <div class="swiper-button-down" id="up-down">
-          <img class="svg-up-down" src="./svg/swipeupLeft.svg" alt="">
-          <p class="infoSwipeUp">Pulsa aquí</p>
-        </div>
-
         <div class="swiper swiper-container2 swiper-v">
           <div class="swiper-wrapper">
             <div class="swiper-slide" id="donations">
-              <!-- <div class="empty"></div> -->
               <div class="content-donations">
                 <div class="slide-left-2">
                   <div class="center-content">
@@ -62,37 +58,84 @@
                   </div>
                 </div>
               </div>
-              <!-- <div class="popup">
-                <div class="popup-cont">
-                  <div class="popup-svg">
-                    <img src="./svg/swipeupLeft.svg" alt="">
-                  </div>
-                  <div class="popup-title">
-                    <p>Pincha aquí para saber más</p>
-                  </div>
-                </div>
-              </div> -->
             </div>
-            <div class="swiper-slide" id="donations">
-              <div class="content-donations">
-                <div class="slide-left-2">
-                  <div class="center-content">
-                    <div class="donations-title">
-                      <h1>¿Quieres apoyarnos?</h1>
+            <div class="swiper-slide" id="swipe-donations">
+              <div class="layer-white"></div>
+              <div class="layer-brown"></div>
+              <div class="content-swipe-donations">
+                <div class="donations-explain">
+                  <div class="box first-container">
+                    <div class="first-tape">
+                      <img class="left-tape" src="./svg/tapeLeft.svg" alt="">
+                    </div>
+                    <div class="postit-left">
+                      <div class="text">
+                        <p>¿Quieres ayudarnos? De la petanca no se puede vivir, pero queremos compartir y hacer crecer
+                          este proyecto.</p>
+                      </div>
+                    </div>
+                    <div class="second-tape">
+                      <img class="right-tape" src="./svg/tapeRight.svg" alt="">
+                    </div>
+                  </div>
+                  <div class="box second-container">
+                    <div class="icon">
+                      <span class="iconify" data-icon="fxemoji:roundpushpin"></span>
+                    </div>
+                    <div class="postit-center">
+                      <div class="title">
+                        <h1>¿Quieres apoyarnos?</h1>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="box third-container">
+                    <div class="first-tape">
+                      <img class="left-tape" src="./svg/tapeLeft.svg" alt="">
+                    </div>
+                    <div class="postit-right">
+                      <div class="text">
+                        <p>Todos estos gastos irán exclusivamente al mantenimiento y creación de contenido. ¡Una pequeña
+                          cantidad hace la diferencia! :)</p>
+                      </div>
+                    </div>
+                    <div class="second-tape">
+                      <img class="right-tape" src="./svg/tapeRight.svg" alt="">
                     </div>
                   </div>
                 </div>
-              </div>
-              <!-- <div class="popup">
-                <div class="popup-cont">
-                  <div class="popup-svg">
-                    <img src="./svg/swipeupLeft.svg" alt="">
+                <div class="methods-to-donate">
+                  <div class="box first">
+                    <p class="title paypal">Paypal</p>
+                    <a href="" class="btn paypal">
+                      <span class="iconify" data-icon="logos:paypal"></span>
+                    </a>
                   </div>
-                  <div class="popup-title">
-                    <p>Pincha aquí para saber más</p>
+                  <div class="box second">
+                    <p class="title">Bizum</p>
+                    <a href="" class="btn bizum">
+                      <img src="./svg/bizumLogo.svg" alt="">
+                    </a>
+                  </div>
+                  <div class="box third">
+                    <p class="title">Ko-fi</p>
+                    <a href="" class="btn ko-fi">
+                      <span class="iconify" data-icon="cib:ko-fi"></span>
+                    </a>
+                  </div>
+                  <div class="box fourth">
+                    <p class="title">Klarna</p>
+                    <a href="" class="btn klarna">
+                      <span class="iconify" data-icon="simple-icons:klarna"></span>
+                    </a>
+                  </div>
+                  <div class="box fifth">
+                    <p class="title">Crédito</p>
+                    <a href="" class="btn credit">
+                      <span class="iconify" data-icon="noto:credit-card"></span>
+                    </a>
                   </div>
                 </div>
-              </div> -->
+              </div>
             </div>
           </div>
           <div class="swiper-pagination" id="vertical-pag"></div>
@@ -102,7 +145,7 @@
         <div class="swiper swiper-container2 swiper-v">
           <div class="swiper-wrapper">
             <div class="swiper-slide" id="about-us">
-              <div class="empty"></div>
+              <!-- <div class="empty"></div> -->
               <div class="content-about-us">
                 <div class="slide-left-1">
                   <div class="center-content">
@@ -115,7 +158,7 @@
                   </div>
                 </div>
               </div>
-              <div class="popup">
+              <!-- <div class="popup">
                 <div class="popup-container">
                   <div class="popup-title">
                     <p>Despliega para enterarte</p>
@@ -124,7 +167,7 @@
                     <img src="./svg/popupRight.svg" alt="">
                   </div>
                 </div>
-              </div>
+              </div> -->
             </div>
             <div class="swiper-slide" id="about-us">
               <div class="empty"></div>
@@ -140,7 +183,7 @@
                   </div>
                 </div>
               </div>
-              <div class="popup">
+              <!-- <div class="popup">
                 <div class="popup-container">
                   <div class="popup-title">
                     <p>Despliega para enterarte</p>
@@ -149,10 +192,10 @@
                     <img src="./svg/popupRight.svg" alt="">
                   </div>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
-          <div class="swiper-pagination" id="vertical-pag-2"></div>
+          <div class="swiper-pagination" id="vertical-pag"></div>
         </div>
       </div>
       <div class="swiper-slide" id="initial-page">
@@ -170,7 +213,7 @@
               <a class="btn register" href="./pages/register.html">REGÍSTRATE</a>
               <a class="btn sign-in" href="./pages/login.html">INICIAR SESIÓN</a>
             </div>
-            <div class="guest">Entrar como invitado</div>
+            <!-- <div class="guest">Entrar como invitado</div> -->
           </div>
         </div>
       </div>
@@ -196,21 +239,324 @@
               </div>
             </div>
             <div class="swiper-slide" id="how-it-works">
-              <div class="content-how-it-works">
-                <div class="slide-right-1">
-                  <div class="center-content">
-                    <div class="how-it-works-title">
-                      <h1>¿Cómo funciona?</h1>
+              <div class="transparent">
+                <div class="leftcorners">
+                  <svg width="75" height="75" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 75V0H75L25 25L0 75Z" fill="#F9458E" />
+                  </svg>
+                  <svg width="75" height="75" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0V75H75L26 51L0 0Z" fill="#F9458E" />
+                  </svg>
+                </div>
+                <div class="first-container">
+                  <div class="first-text">
+                    <div class="topcorners">
+                      <svg width="63" height="63" viewBox="0 0 63 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_d_767_2)">
+                          <path d="M4 3.27826e-06L4 55H6L8.95 4.95L59 2L59 3.27826e-06L4 3.27826e-06Z" fill="#663C11" />
+                        </g>
+                        <defs>
+                          <filter id="filter0_d_767_2" x="0" y="0" width="63" height="63" filterUnits="userSpaceOnUse"
+                            color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                            <feColorMatrix in="SourceAlpha" type="matrix"
+                              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                            <feOffset dy="4" />
+                            <feGaussianBlur stdDeviation="2" />
+                            <feComposite in2="hardAlpha" operator="out" />
+                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_767_2" />
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_767_2" result="shape" />
+                          </filter>
+                        </defs>
+                      </svg>
+
+                      <svg width="63" height="63" viewBox="0 0 63 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_d_613_27)">
+                          <path d="M59 0L4 0V2L54.05 4.95L57 55L59 55V0Z" fill="#663C11" />
+                        </g>
+                        <defs>
+                          <filter id="filter0_d_613_27" x="0" y="0" width="63" height="63" filterUnits="userSpaceOnUse"
+                            color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                            <feColorMatrix in="SourceAlpha" type="matrix"
+                              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                            <feOffset dy="4" />
+                            <feGaussianBlur stdDeviation="2" />
+                            <feComposite in2="hardAlpha" operator="out" />
+                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_613_27" />
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_613_27" result="shape" />
+                          </filter>
+                        </defs>
+                      </svg>
                     </div>
+                    <div class="middle-text-container">
+                      <h2>La plataforma más sencilla</h2>
+                      <p>
+                        Pitayapp es muy fácil de usar. Tan sólo tienes que
+                        registrarte y empezar a buscar tus recetas favoritas para disfrutarlas.
+                      </p>
+                      <p>¿No sabes qué hacer con lo que tienes en la nevera? No hay
+                        problema, introduce tus ingredientes en el buscador y
+                        observa nuestras sugerencias.
+                      </p>
+                    </div>
+                    <div class="bottomcorners">
+                      <svg width="63" height="63" viewBox="0 0 63 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_d_613_29)">
+                          <path d="M4 55L59 55V53L8.95 50.05L6 -5.36442e-07L4 3.27826e-06L4 55Z" fill="#663C11" />
+                        </g>
+                        <defs>
+                          <filter id="filter0_d_613_29" x="0" y="0" width="63" height="63" filterUnits="userSpaceOnUse"
+                            color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                            <feColorMatrix in="SourceAlpha" type="matrix"
+                              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                            <feOffset dy="4" />
+                            <feGaussianBlur stdDeviation="2" />
+                            <feComposite in2="hardAlpha" operator="out" />
+                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_613_29" />
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_613_29" result="shape" />
+                          </filter>
+                        </defs>
+                      </svg>
+                      <svg width="63" height="63" viewBox="0 0 63 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_d_613_28)">
+                          <path d="M59 55L59 0L57 0L54.05 50.05L4 53L4 55L59 55Z" fill="#663C11" />
+                        </g>
+                        <defs>
+                          <filter id="filter0_d_613_28" x="0" y="0" width="63" height="63" filterUnits="userSpaceOnUse"
+                            color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                            <feColorMatrix in="SourceAlpha" type="matrix"
+                              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                            <feOffset dy="4" />
+                            <feGaussianBlur stdDeviation="2" />
+                            <feComposite in2="hardAlpha" operator="out" />
+                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_613_28" />
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_613_28" result="shape" />
+                          </filter>
+                        </defs>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="space">
+                  <div class="secondary-title">¿Cómo funciona?</div>
+                  <div class="pitayapp-label">PITAYAPP</div>
+                  <div class="knives-container">
                     <div class="knives">
                       <span class="iconify" id="left_knife" data-icon="mdi:knife"></span>
                       <span class="iconify" id="right_knife" data-icon="mdi:knife"></span>
                     </div>
-                    <div class="pink_text">
-                      <p>Pulsa en los cuchillos</p>
+                    <!-- <div class="pink_text">
+                      <p>Pulsa de nuevo para salir</p>
+                    </div> -->
+                  </div>
+                </div>
+                <div class="second-container">
+                  <div class="second-text">
+                    <div class="topcorners">
+                      <svg width="63" height="63" viewBox="0 0 63 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_d_767_2)">
+                          <path d="M4 3.27826e-06L4 55H6L8.95 4.95L59 2L59 3.27826e-06L4 3.27826e-06Z" fill="#663C11" />
+                        </g>
+                        <defs>
+                          <filter id="filter0_d_767_2" x="0" y="0" width="63" height="63" filterUnits="userSpaceOnUse"
+                            color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                            <feColorMatrix in="SourceAlpha" type="matrix"
+                              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                            <feOffset dy="4" />
+                            <feGaussianBlur stdDeviation="2" />
+                            <feComposite in2="hardAlpha" operator="out" />
+                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_767_2" />
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_767_2" result="shape" />
+                          </filter>
+                        </defs>
+                      </svg>
+
+                      <svg width="63" height="63" viewBox="0 0 63 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_d_613_27)">
+                          <path d="M59 0L4 0V2L54.05 4.95L57 55L59 55V0Z" fill="#663C11" />
+                        </g>
+                        <defs>
+                          <filter id="filter0_d_613_27" x="0" y="0" width="63" height="63" filterUnits="userSpaceOnUse"
+                            color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                            <feColorMatrix in="SourceAlpha" type="matrix"
+                              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                            <feOffset dy="4" />
+                            <feGaussianBlur stdDeviation="2" />
+                            <feComposite in2="hardAlpha" operator="out" />
+                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_613_27" />
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_613_27" result="shape" />
+                          </filter>
+                        </defs>
+                      </svg>
+                    </div>
+                    <div class="middle-text-container">
+                      <h2>Participa en la comunidad veggie más divertida</h2>
+                      <p>
+                        En Pitayapp tratamos de dar a nuestra comunidad la
+                        importancia que se merece.
+                      </p>
+                      <p>
+                        Por eso, queremos brindarte la oportunidad de hacerte partícipe compartiendo tus recetas
+                        con el resto de usuarios, guardando las que más te gusten y
+                        puntuándolas para poder recomendar las mejores.
+                      </p>
+                    </div>
+                    <div class="bottomcorners">
+                      <svg width="63" height="63" viewBox="0 0 63 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_d_613_29)">
+                          <path d="M4 55L59 55V53L8.95 50.05L6 -5.36442e-07L4 3.27826e-06L4 55Z" fill="#663C11" />
+                        </g>
+                        <defs>
+                          <filter id="filter0_d_613_29" x="0" y="0" width="63" height="63" filterUnits="userSpaceOnUse"
+                            color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                            <feColorMatrix in="SourceAlpha" type="matrix"
+                              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                            <feOffset dy="4" />
+                            <feGaussianBlur stdDeviation="2" />
+                            <feComposite in2="hardAlpha" operator="out" />
+                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_613_29" />
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_613_29" result="shape" />
+                          </filter>
+                        </defs>
+                      </svg>
+                      <svg width="63" height="63" viewBox="0 0 63 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_d_613_28)">
+                          <path d="M59 55L59 0L57 0L54.05 50.05L4 53L4 55L59 55Z" fill="#663C11" />
+                        </g>
+                        <defs>
+                          <filter id="filter0_d_613_28" x="0" y="0" width="63" height="63" filterUnits="userSpaceOnUse"
+                            color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                            <feColorMatrix in="SourceAlpha" type="matrix"
+                              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                            <feOffset dy="4" />
+                            <feGaussianBlur stdDeviation="2" />
+                            <feComposite in2="hardAlpha" operator="out" />
+                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_613_28" />
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_613_28" result="shape" />
+                          </filter>
+                        </defs>
+                      </svg>
                     </div>
                   </div>
                 </div>
+                <div class="rightcorners">
+                  <svg width="75" height="75" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0H75V75L50 25L0 0Z" fill="#F9458E" />
+                  </svg>
+                  <svg width="75" height="75" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M75 0V75H0L50 50L75 0Z" fill="#F9458E" />
+                  </svg>
+                </div>
+
+                <!-- The following divs are for mobile version of this slider -->
+                <div class="top-container-mobile">¿Cómo funciona?</div>
+                <div class="text-container-mobile">
+                  <div class="topcorners-mobile">
+                    <svg width="63" height="63" viewBox="0 0 63 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g filter="url(#filter0_d_767_2)">
+                        <path d="M4 3.27826e-06L4 55H6L8.95 4.95L59 2L59 3.27826e-06L4 3.27826e-06Z" fill="#663C11" />
+                      </g>
+                      <defs>
+                        <filter id="filter0_d_767_2" x="0" y="0" width="63" height="63" filterUnits="userSpaceOnUse"
+                          color-interpolation-filters="sRGB">
+                          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                          <feColorMatrix in="SourceAlpha" type="matrix"
+                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                          <feOffset dy="4" />
+                          <feGaussianBlur stdDeviation="2" />
+                          <feComposite in2="hardAlpha" operator="out" />
+                          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_767_2" />
+                          <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_767_2" result="shape" />
+                        </filter>
+                      </defs>
+                    </svg>
+
+                    <svg width="63" height="63" viewBox="0 0 63 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g filter="url(#filter0_d_613_27)">
+                        <path d="M59 0L4 0V2L54.05 4.95L57 55L59 55V0Z" fill="#663C11" />
+                      </g>
+                      <defs>
+                        <filter id="filter0_d_613_27" x="0" y="0" width="63" height="63" filterUnits="userSpaceOnUse"
+                          color-interpolation-filters="sRGB">
+                          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                          <feColorMatrix in="SourceAlpha" type="matrix"
+                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                          <feOffset dy="4" />
+                          <feGaussianBlur stdDeviation="2" />
+                          <feComposite in2="hardAlpha" operator="out" />
+                          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_613_27" />
+                          <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_613_27" result="shape" />
+                        </filter>
+                      </defs>
+                    </svg>
+                  </div>
+                  <div class="text-mobile">
+                    <h2>La plataforma más sencilla</h2>
+                    <p>Pitayapp es muy fácil de usar. Tan sólo tienes que registrarte y empezar a buscar tus recetas
+                      favoritas. ¿No sabes qué hacer con lo que tienes en la nevera? No hay problema, introduce tus
+                      ingredientes en el buscador y observa nuestras sugerencias.</p>
+                    <p>Comparte tus mejores recetas, guarda las que más te gusten y puntualas para que podamos
+                      recomendarlas al resto de usuarios.</p>
+                  </div>
+                  <div class="bottomcorners-mobile">
+                    <svg width="63" height="63" viewBox="0 0 63 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g filter="url(#filter0_d_613_29)">
+                        <path d="M4 55L59 55V53L8.95 50.05L6 -5.36442e-07L4 3.27826e-06L4 55Z" fill="#663C11" />
+                      </g>
+                      <defs>
+                        <filter id="filter0_d_613_29" x="0" y="0" width="63" height="63" filterUnits="userSpaceOnUse"
+                          color-interpolation-filters="sRGB">
+                          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                          <feColorMatrix in="SourceAlpha" type="matrix"
+                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                          <feOffset dy="4" />
+                          <feGaussianBlur stdDeviation="2" />
+                          <feComposite in2="hardAlpha" operator="out" />
+                          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_613_29" />
+                          <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_613_29" result="shape" />
+                        </filter>
+                      </defs>
+                    </svg>
+                    <svg width="63" height="63" viewBox="0 0 63 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g filter="url(#filter0_d_613_28)">
+                        <path d="M59 55L59 0L57 0L54.05 50.05L4 53L4 55L59 55Z" fill="#663C11" />
+                      </g>
+                      <defs>
+                        <filter id="filter0_d_613_28" x="0" y="0" width="63" height="63" filterUnits="userSpaceOnUse"
+                          color-interpolation-filters="sRGB">
+                          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                          <feColorMatrix in="SourceAlpha" type="matrix"
+                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                          <feOffset dy="4" />
+                          <feGaussianBlur stdDeviation="2" />
+                          <feComposite in2="hardAlpha" operator="out" />
+                          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_613_28" />
+                          <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_613_28" result="shape" />
+                        </filter>
+                      </defs>
+                    </svg>
+                  </div>
+                </div>
+                <!-- This is the end of mobile version html of slider how it works -->
               </div>
             </div>
           </div>

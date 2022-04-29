@@ -26,10 +26,11 @@ body {
 
     & .swiper {
         @include m.sizing(100%, 100%);
+        z-index: initial;
     }
 
     & .swiper-slide {
-        @include m.fonts('Lora', normal, none, 1.125rem, center);
+        @include m.fonts('Lora', normal, none, 1.125em, center);
         background: #fff;
 
         /* WARNING: Don't touch this properties, don't include in mixins */

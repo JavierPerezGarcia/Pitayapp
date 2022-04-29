@@ -1,5 +1,7 @@
 @use '../mixins/mixins.scss'as m;
 
+
+
 main {
     & #contact-with-us {
         position: relative;
@@ -7,42 +9,322 @@ main {
         @include m.sizing(100vw, 100vh);
         @include m.flex(center, center);
         @include m.backgrounds(url(./img/contactPic.jpg), cover, center, no-repeat);
-
         & .content-contact {
             @include m.sizing(100%, auto);
             @include m.flex(center, center);
             color: #FFFFFF;
-
             & .slide-right-2 {
                 @include m.sizing(auto, 100%);
                 @include m.flex(center, center);
                 flex-direction: column;
-
                 & .center-content {
                     @include m.flex(none, center);
                     flex-direction: column;
-
                     & h1 {
                         @include m.fonts('Lora', italic, none, 9rem, none);
                         @include m.spaces(0, 0);
                         text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
                     }
-
                     & .social-media-logos {
                         @include m.flex(center, center);
                         @include m.sizing(100%, none);
-
                         & .logo-bar {
-
                             @include m.sizing(100%, none);
                             @include m.flex(space-evenly, none);
                             margin-top: 35px;
-
                             svg {
                                 @include m.sizing(5.5rem, 5.5rem);
                                 cursor: pointer;
                                 -webkit-filter: drop-shadow(5px 5px 2px rgba(249, 69, 142, 1));
                                 filter: drop-shadow(5px 5px 2px rgba(249, 69, 142, 1));
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    main {
+        & #contact-with-us {
+            position: relative;
+            z-index: 0;
+            @include m.sizing(100vw, 100vh);
+            @include m.flex(center, center);
+            @include m.backgrounds(url(./img/contactPic.jpg), cover, center, no-repeat);
+
+            & .content-contact {
+                @include m.sizing(100%, auto);
+                @include m.flex(center, center);
+                color: #FFFFFF;
+
+                & .slide-right-2 {
+                    @include m.sizing(auto, 100%);
+                    @include m.flex(center, center);
+                    flex-direction: column;
+
+                    & .center-content {
+                        @include m.flex(none, center);
+                        flex-direction: column;
+
+                        & h1 {
+                            @include m.fonts('Lora', italic, none, 2.5rem, none);
+                            @include m.spaces(0, 0);
+                            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+                        }
+
+                        & .social-media-logos {
+                            @include m.flex(center, center);
+                            @include m.sizing(100%, none);
+
+                            & .logo-bar {
+
+                                @include m.sizing(100%, none);
+                                @include m.flex(space-evenly, none);
+                                margin-top: 35px;
+
+                                svg {
+                                    @include m.sizing(2rem, 2rem);
+                                    cursor: pointer;
+                                    -webkit-filter: drop-shadow(5px 5px 2px rgba(249, 69, 142, 1));
+                                    filter: drop-shadow(5px 5px 2px rgba(249, 69, 142, 1));
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    main {
+        & #contact-with-us {
+            position: relative;
+            z-index: 0;
+            @include m.sizing(100vw, 100vh);
+            @include m.flex(center, center);
+            @include m.backgrounds(url(./img/contactPic.jpg), cover, center, no-repeat);
+
+            & .content-contact {
+                @include m.sizing(100%, auto);
+                @include m.flex(center, center);
+                color: #FFFFFF;
+
+                & .slide-right-2 {
+                    @include m.sizing(auto, 100%);
+                    @include m.flex(center, center);
+                    flex-direction: column;
+
+                    & .center-content {
+                        @include m.flex(none, center);
+                        flex-direction: column;
+
+                        & h1 {
+                            @include m.fonts('Lora', italic, none, 4rem, none);
+                            @include m.spaces(0, 0);
+                            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+                        }
+
+                        & .social-media-logos {
+                            @include m.flex(center, center);
+                            @include m.sizing(100%, none);
+
+                            & .logo-bar {
+
+                                @include m.sizing(100%, none);
+                                @include m.flex(space-evenly, none);
+                                margin-top: 35px;
+
+                                svg {
+                                    @include m.sizing(3rem, 3rem);
+                                    cursor: pointer;
+                                    -webkit-filter: drop-shadow(5px 5px 2px rgba(249, 69, 142, 1));
+                                    filter: drop-shadow(5px 5px 2px rgba(249, 69, 142, 1));
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    main {
+        & #contact-with-us {
+            position: relative;
+            z-index: 0;
+            @include m.sizing(100vw, 100vh);
+            @include m.flex(center, center);
+            @include m.backgrounds(url(./img/contactPic.jpg), cover, center, no-repeat);
+
+            & .content-contact {
+                @include m.sizing(100%, auto);
+                @include m.flex(center, center);
+                color: #FFFFFF;
+
+                & .slide-right-2 {
+                    @include m.sizing(auto, 100%);
+                    @include m.flex(center, center);
+                    flex-direction: column;
+
+                    & .center-content {
+                        @include m.flex(none, center);
+                        flex-direction: column;
+
+                        & h1 {
+                            @include m.fonts('Lora', italic, none, 5.5rem, none);
+                            @include m.spaces(0, 0);
+                            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+                        }
+
+                        & .social-media-logos {
+                            @include m.flex(center, center);
+                            @include m.sizing(100%, none);
+
+                            & .logo-bar {
+
+                                @include m.sizing(100%, none);
+                                @include m.flex(space-evenly, none);
+                                margin-top: 35px;
+
+                                svg {
+                                    @include m.sizing(5rem, 5rem);
+                                    cursor: pointer;
+                                    -webkit-filter: drop-shadow(5px 5px 2px rgba(249, 69, 142, 1));
+                                    filter: drop-shadow(5px 5px 2px rgba(249, 69, 142, 1));
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    main {
+        & #contact-with-us {
+            position: relative;
+            z-index: 0;
+            @include m.sizing(100vw, 100vh);
+            @include m.flex(center, center);
+            @include m.backgrounds(url(./img/contactPic.jpg), cover, center, no-repeat);
+
+            & .content-contact {
+                @include m.sizing(100%, auto);
+                @include m.flex(center, center);
+                color: #FFFFFF;
+
+                & .slide-right-2 {
+                    @include m.sizing(auto, 100%);
+                    @include m.flex(center, center);
+                    flex-direction: column;
+
+                    & .center-content {
+                        @include m.flex(none, center);
+                        flex-direction: column;
+
+                        & h1 {
+                            @include m.fonts('Lora', italic, none, 6.5rem, none);
+                            @include m.spaces(0, 0);
+                            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+                        }
+
+                        & .social-media-logos {
+                            @include m.flex(center, center);
+                            @include m.sizing(100%, none);
+
+                            & .logo-bar {
+
+                                @include m.sizing(100%, none);
+                                @include m.flex(space-evenly, none);
+                                margin-top: 35px;
+
+                                svg {
+                                    @include m.sizing(6.5rem, 6.5rem);
+                                    cursor: pointer;
+                                    -webkit-filter: drop-shadow(5px 5px 2px rgba(249, 69, 142, 1));
+                                    filter: drop-shadow(5px 5px 2px rgba(249, 69, 142, 1));
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+@media only screen and (min-width: 1200px) {
+    main {
+        & #contact-with-us {
+            position: relative;
+            z-index: 0;
+            @include m.sizing(100vw, 100vh);
+            @include m.flex(center, center);
+            @include m.backgrounds(url(./img/contactPic.jpg), cover, center, no-repeat);
+
+            & .content-contact {
+                @include m.sizing(100%, auto);
+                @include m.flex(center, center);
+                color: #FFFFFF;
+
+                & .slide-right-2 {
+                    @include m.sizing(auto, 100%);
+                    @include m.flex(center, center);
+                    flex-direction: column;
+
+                    & .center-content {
+                        @include m.flex(none, center);
+                        flex-direction: column;
+
+                        & h1 {
+                            @include m.fonts('Lora', italic, none, 9rem, none);
+                            @include m.spaces(0, 0);
+                            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+                        }
+
+                        & .social-media-logos {
+                            @include m.flex(center, center);
+                            @include m.sizing(100%, none);
+
+                            & .logo-bar {
+
+                                @include m.sizing(100%, none);
+                                @include m.flex(space-evenly, none);
+                                margin-top: 35px;
+
+                                svg {
+                                    @include m.sizing(6rem, 6rem);
+                                    cursor: pointer;
+                                    -webkit-filter: drop-shadow(5px 5px 2px rgba(249, 69, 142, 1));
+                                    filter: drop-shadow(5px 5px 2px rgba(249, 69, 142, 1));
+                                }
                             }
                         }
                     }

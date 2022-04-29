@@ -5,8 +5,8 @@ header {
     & nav {
         position: absolute;
         z-index: 2;
-        @include m.sizing(45%, 7.5rem);
-        @include m.flex(space-between, none);
+        @include m.sizing(100%, 7.5rem);
+        @include m.flex(space-between, center);
 
         & .logo {
             @include m.sizing(15.625rem, none);
@@ -14,7 +14,7 @@ header {
 
             & img {
                 @include m.sizing(4.5rem, 4.5rem);
-                margin-left: 45px;
+                margin-left: 3rem;
                 cursor: pointer;
 
                 -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, .3));
@@ -25,26 +25,31 @@ header {
                 color: white;
                 @include m.fonts('Lora', normal, bold, 1.5rem, none);
                 @include m.flex(none, flex-end);
-                margin-left: 8px;
+                margin-left: 0.5rem;
                 //visibility: hidden;
             }
         }
+    }
+}
 
-        & .menu {
-            @include m.sizing(65rem, auto);
-            @include m.flex(center, center);
+@media (max-width: 1350px) {
 
-            & ul {
-                list-style: none;
-                color: white;
-                @include m.fonts('Lora', normal, bold, 1.8rem, none);
-                @include m.flex(space-evenly, center);
-                @include m.spaces(0, 0);
-                @include m.sizing(100%, 100%);
-                text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.3);
+    #menu {
+        display: block !important;
+    }
+}
 
-                li {
-                    cursor: pointer;
+@media (max-width: 640px) {
+    header {
+        & nav {
+            & .logo {
+                & img {
+                    margin-left: 1rem;
+                }
+
+                & .title {
+                    margin-left: 0;
+                    margin-right: 1rem;
                 }
             }
         }
