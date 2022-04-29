@@ -9,7 +9,7 @@ main {
         flex-direction: column;
 
         & .empty {
-            @include m.sizing(100%, 20vh);
+            @include m.sizing(100%, 10vh);
         }
 
         & .content-about-us {
@@ -47,35 +47,722 @@ main {
                 }
             }
         }
+    }
 
-        & .popup {
-            @include m.sizing(100%, 20vh);
-            @include m.flex(end, end);
+    & #swipe-up-about-us {
+        position: relative;
+        @include m.sizing(100vw, 100vh);
+        @include m.backgrounds(url(./img/aboutUsPic.jpg), cover, center, no-repeat);
+        @include m.flex(center, center);
+        // @include flex(space-between, center);
 
-            & .popup-container {
-                @include m.sizing(30%, 50%);
-                @include m.flex(space-evenly, center);
-                margin-bottom: 20px;
-                z-index: 1;
+        & .pink-background{
+            position: fixed;
+            @include m.sizing(100vw, 100vh);
+            background-color: rgba(249, 69, 142, 0.4);
+            z-index: -1;
 
-                & .popup-title {
-                    @include m.flex(none, center);
-                    @include m.fonts('Lora', italic, 700, 2rem, none);
-                    color: #F9458E;
-                    margin-top: 30px;
+            & .empty {
+                @include m.sizing(100%, 20vh);
+            }
 
-                    p {
-                        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                & .slide-swipe-up{
+                    @include m.flex(space-around, center);
+                    margin-left: 10%;
+                    margin-right: 10%;
+
+                    & .swiper-up-left-content {
+                        display: flex;
+                        flex-direction: column;
+                        color: #FFFFFF;
+                        @include m.sizing(30%, 100%);
+                        line-height: 25px;
+
+                        & .about-us-title-team{
+                            display: flex;
+                            justify-content: flex-start;
+
+
+                            & h2{
+                                font-size: 3rem;
+                            }
+                        }
+
+                        & .sub-title-team {
+                            text-align: left;
+
+                            & #paragraph {
+                                font-weight: bold;
+                                font-size: 1.4rem;
+                            }
+                        }
                     }
+
+                        & .swipe-up-center-content{
+                            // @include flex(center, center);
+                            flex-direction: column;
+                            color: white;
+                            @include m.sizing(10%, 100%);
+
+                            & .our-team-title{
+                                font-size: 2rem;
+                                font-weight: bold;
+
+                            }
+
+                            & #github{
+                                margin-top: 30px;
+                                @include m.sizing(6.5rem, 6.5rem);
+                            }
+
+                            & .team-arrow{
+                                @include m.sizing(7.5rem, 7.5rem);
+                                transform: rotate(30deg);
+                                margin-top: 30px;
+                                margin-left: 40px;
+                            }
+
+                        }
+
+                        & .circle-container{
+                            background-color: #FFFFFF;
+                            color: black;
+                            border-radius: 100%;
+                            @include m.sizing(400px, 400px);
+                            padding: 30px;
+                            display: grid;
+                            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+                            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+                            gap: 15px;
+
+                            & .div1 {
+                                @include m.backgrounds(url(./img/javi-pitayappteam.jpg), cover, center, no-repeat);
+                                grid-row-start: 1;
+                                grid-column-start: 2;
+                                grid-row-end: 3;
+                                grid-column-end: 4;
+                                border-radius: 100%;
+
+                                & .javi-container{
+
+                                        @include m.sizing(100%, 100%);
+                                        @include m.flex(center, center);
+                                        border-radius: 100%;
+                                        opacity: 0;
+                                        transition: .6s ease;
+
+                                    & .javi {
+                                        color: white;
+                                        font-size: 20px;
+                                        text-align: center;
+                                        text-decoration: none;
+                                        margin: 20px;
+
+                                        }
+
+                                        &:hover{
+                                        background-color: #000;
+                                        opacity: 0.7;
+                                        transition: .5s ease-in-out;
+                                        }
+                                    }
+
+
+                            }
+                            & .div2 {
+                                @include m.backgrounds(url(./img/antonio-pitayappteam.jpg), cover, center, no-repeat);
+                                grid-row-start: 1;
+                                grid-column-start: 4;
+                                grid-row-end: 3;
+                                grid-column-end: 6;
+                                border-radius: 100%;
+
+                                & .antonio-container{
+
+                                        @include m.sizing(100%, 100%);
+                                        @include m.flex(center, center);
+                                        border-radius: 100%;
+                                        opacity: 0;
+                                        transition: .6s ease;
+
+                                    & .antonio {
+                                        color: white;
+                                        font-size: 20px;
+                                        text-align: center;
+                                        text-decoration: none;
+                                        margin: 20px;
+
+                                        }
+
+                                        &:hover{
+                                        background-color: #000;
+                                        opacity: 0.7;
+                                        transition: .5s ease-in-out;
+                                        }
+                                    }
+                            }
+
+                            & .div3 {
+                                @include m.backgrounds(url(./img/andrea-pitayappteam.jpg), cover, center, no-repeat);
+                                grid-row-start: 3;
+                                grid-column-start: 1;
+                                grid-row-end: 5;
+                                grid-column-end: 3;
+                                border-radius: 100%;
+
+                                & .andrea-container{
+
+                                        @include m.sizing(100%, 100%);
+                                        @include m.flex(center, center);
+                                        border-radius: 100%;
+                                        opacity: 0;
+                                        transition: .6s ease;
+
+                                    & .andrea {
+                                        color: white;
+                                        font-size: 20px;
+                                        text-align: center;
+                                        text-decoration: none;
+                                        margin: 20px;
+
+                                        }
+
+                                        &:hover{
+                                        background-color: #000;
+                                        opacity: 0.7;
+                                        transition: .5s ease-in-out;
+                                        }
+                                    }
+                            }
+
+                            & .div4 {
+                                background-color: rgb(218, 218, 218);
+                                grid-row-start: 3;
+                                grid-column-start: 3;
+                                grid-row-end: 5;
+                                grid-column-end: 5;
+                                border-radius: 100%;
+
+
+                            }
+
+                            & .div5 {
+                                @include m.backgrounds(url(./img/irene-pitayappteam.jpg), cover, center, no-repeat);
+                                grid-row-start: 3;
+                                grid-column-start: 5;
+                                grid-row-end: 5;
+                                grid-column-end: 7;
+                                border-radius: 100%;
+
+                                & .irene-container{
+
+                                        @include m.sizing(100%, 100%);
+                                        @include m.flex(center, center);
+                                        border-radius: 100%;
+                                        opacity: 0;
+                                        transition: .6s ease;
+
+                                    & .irene {
+                                        color: white;
+                                        font-size: 20px;
+                                        text-align: center;
+                                        text-decoration: none;
+                                        margin: 20px;
+
+                                        }
+
+                                        &:hover{
+                                        background-color: #000;
+                                        opacity: 0.7;
+                                        transition: .5s ease-in-out;
+                                        }
+                                    }
+                            }
+
+                            & .div6 {
+                                @include m.backgrounds(url(./img/regy-pitayappteam.jpg), cover, center, no-repeat);
+                                grid-row-start: 5;
+                                grid-column-start: 2;
+                                grid-row-end: 7;
+                                grid-column-end: 4;
+                                border-radius: 100%;
+
+                                & .regina-container{
+
+                                        @include m.sizing(100%, 100%);
+                                        @include m.flex(center, center);
+                                        border-radius: 100%;
+                                        opacity: 0;
+                                        transition: .6s ease;
+
+                                    & .regina {
+                                        color: white;
+                                        font-size: 20px;
+                                        text-align: center;
+                                        text-decoration: none;
+                                        margin: 20px;
+
+                                        }
+
+                                        &:hover{
+                                        background-color: #000;
+                                        opacity: 0.7;
+                                        transition: .5s ease-in-out;
+                                        }
+                                    }
+                            }
+                            & .div7 {
+                                background-color: rgb(218, 218, 218);
+                                grid-row-start: 5;
+                                grid-column-start: 4;
+                                grid-row-end: 7;
+                                grid-column-end: 6;
+                                border-radius: 100%;
+
+                                & .noelia-container{
+
+                                        @include m.sizing(100%, 100%);
+                                        @include m.flex(center, center);
+                                        border-radius: 100%;
+                                        opacity: 0;
+                                        transition: .6s ease;
+
+                                    & .noelia {
+                                        color: white;
+                                        font-size: 20px;
+                                        text-align: center;
+                                        text-decoration: none;
+
+
+                                        }
+
+                                        &:hover{
+                                        background-color: #000;
+                                        opacity: 0.7;
+                                        transition: .5s ease-in-out;
+                                        }
+                                    }
+                            }
+
+                        }
+
                 }
 
-                & .popup-svg {
-                    cursor: pointer;
-                    -webkit-filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, .3));
-                    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, .3));
-                    //Similar syntax to box-shadow
+        }
+
+    }
+}
+
+@media only screen and (max-width: 640px){
+
+    main {
+
+        & #about-us {
+            & .empty {
+                @include m.sizing(100%, 10vh);
+            }
+
+            & .content-about-us {
+
+                & .slide-left-1 {
+
+                    & .center-content {
+
+                        & .about-us-title {
+                            h1 {
+                                font-size: 4.5rem;
+                                line-height: 70px;
+                            }
+                        }
+
+                        & .sub-title {
+                            h2 {
+                                font-size: 3rem;
+                                margin-top: 10px;
+                                margin-left: 0;
+                            }
+                        }
+                    }
                 }
             }
         }
+
+    & #swipe-up-about-us {
+        position: relative;
+        @include m.sizing(100vw, 100vh);
+
+        & .pink-background{
+            position: fixed;
+            @include m.sizing(100vw, 100vh);
+            background-color: rgba(249, 69, 142, 0.6);
+            z-index: -1;
+
+            & .empty {
+                @include m.sizing(100%, 12vh);
+            }
+
+                & .slide-swipe-up{
+                    @include m.flex(space-around, center);
+                    flex-direction: column;
+                    margin-left: 0%;
+                    margin-right: 0%;
+
+                    & .swiper-up-left-content {
+                        display: flex;
+                        flex-direction: column;
+                        color: #FFFFFF;
+                        @include m.sizing(80%, 100%);
+                        line-height: 20px;
+
+                        & .about-us-title-team{
+                            @include m.flex(center, flex-end);
+
+                            & h2{
+                                font-size: 1.5rem;
+                            }
+                        }
+
+                        & .sub-title-team {
+                            text-align: center;
+
+                            & #paragraph {
+                                font-weight: bold;
+                                font-size: 0.8rem;
+                            }
+                        }
+                    }
+
+                        & .swipe-up-center-content{
+                            // @include flex(center, center);
+                            flex-direction: column;
+                            color: white;
+                            @include m.sizing(80%, 100%);
+
+                            & .our-team-title{
+                                font-size: 1.5rem;
+                                font-weight: bold;
+
+                            }
+
+                            & #github{
+                                margin-top: 10px;
+                                @include m.sizing(2.5rem, 2.5rem);
+                            }
+
+                            & .team-arrow{
+                                display: none;
+                            }
+
+                        }
+
+                        & .circle-container{
+
+                            @include m.sizing(250px, 250px);
+                            padding: 25px;
+                            display: grid;
+                            margin-top: 20px;
+                            gap: 15px;
+
+                            & .div1 {
+                                @include m.sizing(80px, 80px);
+
+                                & .javi-container{
+
+                                    & .javi {
+                                        font-size: 15px;
+
+                                        }
+
+                                    }
+
+                            }
+                            & .div2 {
+
+                                @include m.sizing(80px, 80px);
+
+                                & .antonio-container{
+
+                                    & .antonio {
+                                        font-size: 15px;
+
+                                        }
+
+                                    }
+                            }
+
+                            & .div3 {
+                                @include m.sizing(80px, 80px);
+
+                                & .andrea-container{
+
+                                    & .andrea {
+
+                                        font-size: 15px;
+
+                                        }
+
+                                    }
+                            }
+
+                            & .div4 {
+                                @include m.sizing(80px, 80px);
+
+                            }
+
+                            & .div5 {
+                                @include m.sizing(80px, 80px);
+
+                                & .irene-container{
+
+                                    & .irene {
+
+                                        font-size: 15px;
+
+                                        }
+
+                                    }
+                            }
+
+                            & .div6 {
+                                @include m.sizing(80px, 80px);
+
+                                & .regina-container{
+
+                                    & .regina {
+
+                                        font-size: 15px;
+
+                                        }
+
+                                    }
+                            }
+                            & .div7 {
+                                @include m.sizing(80px, 80px);
+
+                                & .noelia-container{
+
+                                    & .noelia {
+
+                                        font-size: 15px;
+
+                                        }
+
+                                    }
+                            }
+                        }
+
+                }
+
+            }
+
+        }
     }
+
+}
+
+@media only screen and (max-width: 1280px) and (min-width: 640px){
+
+    main {
+
+        & #about-us {
+            & .empty {
+                @include m.sizing(100%, 5vh);
+            }
+
+            & .content-about-us {
+
+                & .slide-left-1 {
+
+                    & .center-content {
+
+                        & .about-us-title {
+                            h1 {
+                                font-size: 6.5rem;
+                                line-height: 100px;
+                            }
+                        }
+
+                        & .sub-title {
+                            h2 {
+                                font-size: 5rem;
+                                margin-top: 10px;
+                                margin-left: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    & #swipe-up-about-us {
+        position: relative;
+        @include m.sizing(100vw, 100vh);
+
+        & .pink-background{
+            position: fixed;
+            @include m.sizing(100vw, 100vh);
+            background-color: rgba(249, 69, 142, 0.6);
+            z-index: -1;
+
+            & .empty {
+                @include m.sizing(100%, 10vh);
+            }
+
+                & .slide-swipe-up{
+                    @include m.flex(space-around, center);
+                    flex-direction: column;
+                    margin-left: 0%;
+                    margin-right: 0%;
+
+                    & .swiper-up-left-content {
+                        display: flex;
+                        flex-direction: column;
+                        color: #FFFFFF;
+                        @include m.sizing(70%, 100%);
+                        line-height: 25px;
+
+                        & .about-us-title-team{
+                            @include m.flex(center, flex-end);
+
+                            & h2{
+                                font-size: 2.5rem;
+                            }
+                        }
+
+                        & .sub-title-team {
+                            text-align: center;
+
+                            & #paragraph {
+                                font-weight: bold;
+                                font-size: 1.3rem;
+                            }
+                        }
+                    }
+
+                        & .swipe-up-center-content{
+                            // @include flex(center, center);
+                            flex-direction: column;
+                            color: white;
+                            @include m.sizing(80%, 100%);
+
+                            & .our-team-title{
+                                font-size: 2.5rem;
+                                font-weight: bold;
+
+                            }
+
+                            & #github{
+                                margin-top: 10px;
+                                @include m.sizing(4.5rem, 4.5rem);
+                            }
+
+                            & .team-arrow{
+                                display: none;
+                            }
+
+                        }
+
+                        & .circle-container{
+
+                            @include m.sizing(350px, 350px);
+                            padding: 30px;
+                            display: grid;
+                            margin-top: 20px;
+                            gap: 25px;
+
+                            & .div1 {
+                                @include m.sizing(100px, 100px);
+
+                                & .javi-container{
+
+                                    & .javi {
+                                        font-size: 15px;
+
+                                        }
+
+                                    }
+
+                            }
+                            & .div2 {
+
+                                @include m.sizing(100px, 100px);
+
+                                & .antonio-container{
+
+                                    & .antonio {
+                                        font-size: 15px;
+
+                                        }
+
+                                    }
+                            }
+
+                            & .div3 {
+                                @include m.sizing(100px, 100px);
+
+                                & .andrea-container{
+
+                                    & .andrea {
+
+                                        font-size: 15px;
+
+                                        }
+
+                                    }
+                            }
+
+                            & .div4 {
+                                @include m.sizing(100px, 100px);
+
+                            }
+
+                            & .div5 {
+                                @include m.sizing(100px, 100px);
+
+                                & .irene-container{
+
+                                    & .irene {
+
+                                        font-size: 15px;
+
+                                        }
+
+                                    }
+                            }
+
+                            & .div6 {
+                                @include m.sizing(100px, 100px);
+
+                                & .regina-container{
+
+                                    & .regina {
+
+                                        font-size: 15px;
+
+                                        }
+
+                                    }
+                            }
+                            & .div7 {
+                                @include m.sizing(100px, 100px);
+
+                                & .noelia-container{
+
+                                    & .noelia {
+
+                                        font-size: 15px;
+
+                                        }
+
+                                    }
+                            }
+                        }
+
+                }
+
+            }
+
+        }
+    }
+
 }
