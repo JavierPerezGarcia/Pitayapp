@@ -1,5 +1,4 @@
 @use '../mixins/mixins.scss'as m;
-
 main {
     & #initial-page {
         position: relative;
@@ -7,40 +6,37 @@ main {
         @include m.sizing(100vw, 100vh);
         @include m.backgrounds(url(./img/mainPic.jpg), cover, center, no-repeat);
         @include m.flex(center, center);
-
         & .initial-content {
             @include m.sizing(100%, auto);
             @include m.flex(center, none);
             color: #FFFFFF;
-
             & .initial-slide {
                 @include m.sizing(auto, 100%);
                 @include m.flex(center, center);
                 flex-direction: column;
-
                 & .center-content {
                     @include m.flex(none, center);
                     flex-direction: column;
-
                     & .initial-title {
-
                         h1 {
                             @include m.fonts('Lora', italic, none, 9rem, none);
                             @include m.spaces(0, 0);
                             text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
                         }
                     }
-
                     & .description {
                         @include m.fonts('Lora', normal, none, 2rem, center);
                         text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+                        p {
+                            flex-grow: 1;
+                            display: 'inline-block';
+                            text-align: 'justify';
+                        }
                     }
                 }
-
                 & .buttons {
                     display: flex;
                     margin-top: 0.5rem;
-
                     & .btn {
                         @include m.spaces(0px 12px, 12px);
                         @include m.fonts('Lora', italic, 700, 1.6rem, center);
@@ -53,12 +49,10 @@ main {
                         cursor: pointer;
                         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25)
                     }
-
                     a {
                         text-decoration: none;
                     }
                 }
-
                 & .guest {
                     color: #FFFFFF;
                     @include m.fonts('Lora', normal, bold, 1.8rem, none);
@@ -69,5 +63,72 @@ main {
                 }
             }
         }
+    }
+}
+
+
+/*responsive */
+
+@media (max-width: 375px) {
+    .center-content {
+        width: 30rem !important;
+        & .initial-title {
+            h1 {
+                font-size: 3.5rem !important;
+            }
+        }
+    }
+    .description {
+        font-size: 1rem !important;
+        width: 350px !important;
+    }
+    .buttons {
+        width: 375px !important;
+        display: flex;
+        justify-content: center;
+        align-items: center !important;
+        & a {
+            width: 100px !important;
+            height: 30px !important;
+            font-size: 0.8rem !important;
+            text-align: center;
+            line-height: 15px !important;
+        }
+    }
+    #horizontal-pag {
+        width: 80% !important;
+        left: 10% !important;
+    }
+}
+
+@media (max-width: 390px) {
+    .center-content {
+        width: 30rem !important;
+        & .initial-title {
+            h1 {
+                font-size: 4.5rem !important;
+            }
+        }
+    }
+    .description {
+        font-size: 1rem !important;
+        width: 350px !important;
+    }
+    .buttons {
+        width: 375px !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & a {
+            width: 100px !important;
+            height: 30px !important;
+            font-size: 0.8rem !important;
+            text-align: center;
+            line-height: 15px !important;
+        }
+    }
+    #horizontal-pag {
+        width: 80% !important;
+        left: 10% !important;
     }
 }
