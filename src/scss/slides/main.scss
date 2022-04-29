@@ -86,7 +86,7 @@ main {
         width: 375px !important;
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: center !important;
         & a {
             width: 100px !important;
             height: 30px !important;
