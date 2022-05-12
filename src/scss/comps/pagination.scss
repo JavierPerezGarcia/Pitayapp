@@ -11,6 +11,7 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
+        z-index: 3;
     }
 
     & #navbar-pag>.swiper-pagination-bullet-active {
@@ -24,6 +25,7 @@ body {
         border-radius: 50%;
         border: 2px solid #979797;
         opacity: 1;
+        @include m.spaces(0px 10px, 0);
     }
 
     & #horizontal-pag>.swiper-pagination-bullet-active {
@@ -62,7 +64,7 @@ body {
     & #navbar-pag {
         width: 55%;
         height: 7.5rem;
-        left: 45%;
+        left: 44%;
         top: 0%;
         @include m.flex(space-evenly, center);
 
@@ -74,17 +76,201 @@ body {
 
     & #vertical-pag {
         right: 1%;
-        top: 95%;
+        top: 96%;
         transform: translate3d(0px, -73%, 0);
         color: #000000;
     }
 
-    & #vertical-pag-2 {
+    /* & #vertical-pag-2 {
         // right: none;
         left: 1%;
         top: 95%;
         transform: translate3d(0px, -73%, 0);
         color: #000000;
         z-index: 15;
+    } */
+
+    & aside {
+        position: absolute;
+        visibility: hidden;
+    }
+}
+
+@media (max-width: 1700px) {
+    #navbar-pag {
+
+        left: 43% !important;
+
+        span {
+            font-size: 1.6rem !important;
+        }
+    }
+}
+
+@media (max-width: 1350px) {
+
+    #navbar-pag {
+        visibility: hidden !important;
+    }
+
+    aside {
+        position: absolute;
+        top: 1rem;
+        right: 3rem;
+        padding: 1.5rem 1rem;
+        z-index: 2;
+        width: 10.8rem;
+        display: flex;
+        justify-content: end;
+        height: 23rem;
+        background-color: transparent;
+        -webkit-clip-path: polygon(67% 4%, 95% 4%, 95% 18%, 67% 18%);
+        clip-path: polygon(67% 4%, 95% 4%, 95% 18%, 67% 18%);
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+        -webkit-transition-duration: 0.75s;
+        transition-duration: 0.75s;
+        border-radius: 0.4rem;
+        visibility: visible !important;
+
+        & .icon {
+            @include m.sizing(auto, 3.125rem);
+
+            & #menu {
+                display: none;
+                cursor: pointer;
+                //Doesn't work in CSS and HTML, we need to fix it
+                /* path {
+                    stroke-linecap: round;
+                } */
+            }
+
+            path {
+                transition: all 1s ease;
+            }
+
+            & .deploy {
+                #line1 {
+                    d: path("M 0 0 L 50 50");
+                    stroke: #F9458E;
+                }
+
+                #line2 {
+                    d: path("M 25 25 L 25 25");
+                    stroke: #F9458E;
+                }
+
+                #line3 {
+                    d: path("M 0 50 L 50 0");
+                    stroke: #F9458E;
+                }
+            }
+        }
+
+        & #deploy-nav-pag {
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            height: 20rem;
+            width: auto;
+            //left: auto;
+            right: 0;
+
+            span {
+                @include m.fonts('Lora', normal, bold, 1.8rem, none);
+                color: #F9458E;
+            }
+        }
+
+        & #deploy-nav-pag>.swiper-pagination-bullet {
+            background-color: transparent;
+            @include m.sizing(auto, 3rem);
+            @include m.spaces(0.8rem, 0rem 0.5rem);
+            border-radius: 5px;
+            opacity: 1;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            z-index: 3;
+        }
+
+        & #deploy-nav-pag>.swiper-pagination-bullet-active {
+            color: white;
+            background-color: #F9458E;
+        }
+    }
+
+    .completed {
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+        -webkit-transition-duration: 0.75s;
+        transition-duration: 0.75s;
+        -webkit-clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 0%);
+        clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 0%);
+        background-color: white;
+    }
+}
+
+@media (max-width: 640px) {
+    body {
+        & aside {
+
+            right: 1rem;
+        }
+
+        & #vertical-pag {
+            right: 2%;
+            top: 95%;
+        }
+
+        & #horizontal-pag {
+            margin-bottom: 1rem;
+            width: 52%;
+            left: 24%;
+        }
+
+        & #horizontal-pag>.swiper-pagination-bullet {
+            @include m.sizing(1.5rem, 1.5rem);
+        }
+    }
+}
+
+/* @media (max-width: 480px) {
+    body {
+        & #horizontal-pag {
+            margin-bottom: 1rem;
+            width: 35%;
+            left: 32.5%;
+        }
+    }
+}
+
+@media (max-width: 460px) {
+    body {
+        & #horizontal-pag {
+            margin-bottom: 1rem;
+            width: 40%;
+            left: 30%;
+        }
+    }
+} */
+
+@media (max-width: 480px) {
+    body {
+        & #horizontal-pag {
+            margin-bottom: 1rem;
+            width: 38%;
+            left: 31%;
+        }
+    }
+}
+
+@media (max-width: 380px) {
+    body {
+        & #horizontal-pag {
+            margin-bottom: 1rem;
+            width: 40%;
+            left: 30%;
+        }
     }
 }

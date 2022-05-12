@@ -1,6 +1,7 @@
 @use '../mixins/mixins.scss'as m;
 
-/*
+
+
 main {
     & #contact-with-us {
         position: relative;
@@ -8,37 +9,29 @@ main {
         @include m.sizing(100vw, 100vh);
         @include m.flex(center, center);
         @include m.backgrounds(url(./img/contactPic.jpg), cover, center, no-repeat);
-
         & .content-contact {
             @include m.sizing(100%, auto);
             @include m.flex(center, center);
             color: #FFFFFF;
-
             & .slide-right-2 {
                 @include m.sizing(auto, 100%);
                 @include m.flex(center, center);
                 flex-direction: column;
-
                 & .center-content {
                     @include m.flex(none, center);
                     flex-direction: column;
-
                     & h1 {
                         @include m.fonts('Lora', italic, none, 9rem, none);
                         @include m.spaces(0, 0);
                         text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
                     }
-
                     & .social-media-logos {
                         @include m.flex(center, center);
                         @include m.sizing(100%, none);
-
                         & .logo-bar {
-
                             @include m.sizing(100%, none);
                             @include m.flex(space-evenly, none);
                             margin-top: 35px;
-
                             svg {
                                 @include m.sizing(5.5rem, 5.5rem);
                                 cursor: pointer;
@@ -52,7 +45,7 @@ main {
         }
     }
 }
-*/
+
 
 
 
@@ -340,6 +333,3 @@ main {
         }
     }
 }
-
-
-
